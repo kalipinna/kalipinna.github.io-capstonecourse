@@ -1,0 +1,254 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+  <title>portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <script src="//kit.fontawesome.com/85c606ef5c.js" crossorigin="anonymous"></script>
+
+  <style>
+    * {
+      margin: 0px;
+      padding: 0px;
+      box-sizing: border-box;
+    }
+    
+    body {
+      background-color: aliceblue;
+      margin: 0px;
+      padding: 0px;
+      font-size: 1em;
+      line-height: 2em;
+    }
+    
+    img {
+      max-width: 100vw;
+      height: auto;
+    }
+    
+    section,
+    footer,
+    nav {
+      width: 100vw;
+    }
+    
+    #navigation {
+      background-color: #000000;
+      color: #ffffff;
+      position: relative;
+      display: flex;
+      z-index: 9;
+      left: 0px;
+      box-sizing: border-box;
+      justify-content: space-around;
+      flex-flow: row nowrap;
+    }
+    
+    #navigation a {
+      display: inline-block;
+      color: #fff;
+      text-decoration: none;
+      border: 1px solid #fff;
+      height: max-content;
+      margin: 0.5% 1%;
+      padding: 0.5px 1%;
+    }
+    
+    #header {
+      background-color: #ff8800b3;
+      background-image: linear-gradient(to right, #ff8800b3, #da1b61ac);
+      background-image: url('images/13.jpg');
+      background-size: cover;
+      background-position: center;
+      padding: 4vh 4vw;
+      position: relative;
+      width: 100vw;
+      display: block;
+      color: #ffffff;
+      text-shadow: 2px 2px 2px #000000;
+    }
+    
+    h1 {
+      font-size: 2.4em;
+      line-height: 1.2em;
+      border-bottom: 3px double #fff;
+    }
+    
+    .title {
+      margin: auto;
+      min-height: 10vh;
+      max-width: 80vw;
+      width: max-content;
+      text-align: center;
+      display: block;
+      /* background-color: rgba(255, 255, 255, 50%); */
+      border-radius: 8px;
+      padding: 2%;
+    }
+    
+    .subtitle {
+      margin-top: 2%;
+    }
+    
+    .portrait {
+      border-radius: 100%;
+      margin-top: 4%;
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      box-shadow: 0px 0px 10px #ffffff;
+      border: 2px solid #ffffff
+    }
+    
+    .description {
+      margin: auto;
+      display: block;
+      position: relative;
+      max-width: 85vw;
+      font-size: 1em;
+      font-style: italic;
+      text-align: center;
+      margin-top: 6vh;
+      margin-bottom: 6vh;
+      display: block;
+      background-color: rgba(0, 0, 0, 50%);
+      border-radius: 4px;
+      padding: 2px;
+      line-height: 1.4em;
+    }
+    
+    .works {
+      position: relative;
+      display: block;
+      background-color: red;
+      height: 40vh;
+    }
+    
+    .about {
+      background-color: blueviolet;
+      position: relative;
+      display: block;
+      height: 40vh;
+    }
+    
+    .contact-me {
+      background-color: green;
+      position: relative;
+      display: block;
+      height: 40vh;
+    }
+    
+    #footer {
+      bottom: 0px;
+      background-color: orange;
+      left: 0px;
+      width: 100%;
+      position: relative;
+    }
+    
+    a {
+      text-decoration: none;
+      color: #000000;
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav id="navigation">
+
+    <a href="/">works</a>
+    <a href="/">about me</a>
+    <a href="/">linkedin</a>
+    <a href="/">github</a>
+    <a href="#footer">credits</a>
+
+  </nav>
+
+  <header id="header">
+
+    <div class="title" data-aos="zoom-in" data-aos-duration="2600" data-aos-easing="ease-in-out">
+      <h1>Mariangela Pinna</h1>
+      <h2 class="subtitle">web designer, writer, tvshow-enthusiast</h2>
+      <img src="images/9.gif" alt="portrait that is meant to represent me" class="portrait">
+
+    </div>
+    <div class="description" data-aos="zoom-in" data-aos-duration="3000" data-aos-delay="100" data-aos-easing="ease-in-out">*most of what you can find in this portfolio is made up. This portfolio is being created as a capstone for a web-design course but my life is currently very boring and I don't have much to showcase. I did make tumblr themes before and edited images,
+      but the 'about me' section will be 'embellished' and I'm not featured in any image.</div>
+  </header>
+
+  <section class="works">
+
+    <a href="/works.html">
+      <h2>what can I do? <br>What am I working on?<br> Click to find out!</h2>
+    </a>
+    <img src="images/theme5.gif" alt="works.html">
+  </section>
+
+
+  <section class="about">about me
+
+    <h2>some title which is a link</h2>
+    <img src="/" alt="img which is a link">
+  </section>
+
+
+  <section class="contact-me">
+    <h2>contact me</h2> form here</section>
+
+  <footer id="footer"> credits and stuff </footer>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+
+</html>
+
+
+<!--
+    I hope that people will be more concerned with their learning than their grade on this assignment.  But I understand that people want to make sure they receive full credit so I will provide the grading rubric that will be used.  Feel free to structure your page around it.
+
+Does the site validate? 10pts
+Is the site responsive? 20pts
+Is the site well-styled? 10pts
+Are the images incorporated effectively? 5pts
+Successfully demonstrated the ability to enhance their site?  40pts
+Does the site validate? 
+10pts – Fully validates (warnings are fine) 
+8 pts – There are errors, but the student has shown (in their write-up or video) that they are caused by plugins and can not be fixed. 
+6 pts – There are at most 3 errors for the entire site 
+3pts – They have only shown that part of the site validates.  (For instance, only tested one of the files in a multi-file site.) 
+0 pts – More than three errors  were left or the site was not tested at all.
+Is the site responsive?
+20pts Yes, the site has a unique look/layout for each of the views.
+10pts The site has a unique look, but not a unique layout.  (For example, they changed only colors of fonts, not the actual layout.)
+6pts Only some of the pages are responsive - not all of them.
+0pts The site is not responsive
+ 
+
+Is the site well-styled?
+This is very objective.  It should be difficult to score a high score, but not difficult to receive the majority of the points.  It is important that everyone create a unique style sheet, even if using a template or framework.  Look for feedback in Week Five to improve your score.
+
+10pts – The site is incredibly well-styled and the author went beyond the required (animation, hovering, etc done with CSS)
+8pt – The site is very well styled.   The content has a layout that is easy to follow and a variety of colors and fonts were used. - Most students can expect to receive this score.
+4pts – The styling is lacking or the author relied almost exclusively on a template/framework.
+0pts – Less than 9 unique CSS rules were used.
+ 
+
+Enhancements!!
+You need to add four elements to your site that are unique – something beyond what we did in the four previous courses.  You are encouraged to be as creative as you would like (and creative does not need to mean time-intensive).  Some options for these "extras" include:
+
+Add custom JavaScript (e.g. incorporate dynamic content, use JS to perform verification, modify the DOM)
+Enhance the accessibility of your page (e.g. put your site through the some subset of the WebAim quick evaluation reference - http://webaim.org/resources/evalquickref/)
+Incorporate plugins  (e.g. Google Calendar, a map, parallax, etc.)  You will need to show what you did other than just copying code.  Did you need to change any of the attributes?  Change any of the links?
+Include a Carousel for your images (don't forget to turn off the automatic start feature if you can!!)
+Use a sticky footer to create a consistent look across different browser heights (we usually only consider widths…)
+Add a third viewport layout (e.g. a table view that is different than mobile or large-screen) 
+Again, these are just suggestions, please feel free to let your own creativity be your guide.
+
+Each extra will be worth 10 pts, for a total of 40 pts.
+-->
