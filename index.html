@@ -9,29 +9,31 @@
   <script src="//kit.fontawesome.com/85c606ef5c.js" crossorigin="anonymous"></script>
 
   <style>
-    * {
-      margin: 0px;
-      padding: 0px;
-      box-sizing: border-box;
-    }
-    
     body {
-      background-color: aliceblue;
       margin: 0px;
+      width: 100%;
+      box-sizing: border-box;
       padding: 0px;
-      font-size: 1em;
+      font-size: 14px;
       line-height: 2em;
+      overflow-x: hidden;
     }
     
     img {
-      max-width: 100vw;
+      max-width: 100%;
       height: auto;
     }
     
     section,
+    header,
     footer,
     nav {
       width: 100vw;
+      box-sizing: border-box;
+    }
+    
+    section {
+      padding: 4vh 4vw;
     }
     
     #navigation {
@@ -57,23 +59,26 @@
     }
     
     #header {
-      background-color: #ff8800b3;
-      background-image: linear-gradient(to right, #ff8800b3, #da1b61ac);
-      background-image: url('images/13.jpg');
+      background-color: #000000;
+      background-image: url('images/13.jpg'), linear-gradient(to right, #ff8800b3, #da1b61ac);
       background-size: cover;
       background-position: center;
-      padding: 4vh 4vw;
-      position: relative;
-      width: 100vw;
+      padding: 4vh 0;
       display: block;
       color: #ffffff;
       text-shadow: 2px 2px 2px #000000;
     }
     
     h1 {
-      font-size: 2.4em;
+      font-size: 4rem;
       line-height: 1.2em;
+      text-align: center;
       border-bottom: 3px double #fff;
+    }
+    
+    h2 {
+      font-size: 2em;
+      line-height: 1.5em;
     }
     
     .title {
@@ -83,9 +88,6 @@
       width: max-content;
       text-align: center;
       display: block;
-      /* background-color: rgba(255, 255, 255, 50%); */
-      border-radius: 8px;
-      padding: 2%;
     }
     
     .subtitle {
@@ -107,7 +109,7 @@
       display: block;
       position: relative;
       max-width: 85vw;
-      font-size: 1em;
+      font-size: 1.2em;
       font-style: italic;
       text-align: center;
       margin-top: 6vh;
@@ -121,30 +123,69 @@
     
     .works {
       position: relative;
+      background-image: url('images/8.jpg'), linear-gradient(#740396, #d979f6);
+      background-blend-mode: color-burn;
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: max-content;
+    }
+    
+    .works img,
+    .about img {
       display: block;
-      background-color: red;
-      height: 40vh;
+      margin: auto;
+    }
+    
+    .worktitle {
+      color: #ffffff;
+      text-shadow: 2px 2px 2px #000000;
+      padding: 2%;
+      margin-left: 3vw;
+      display: block;
+      width: max-content;
+      z-index: 9;
     }
     
     .about {
-      background-color: blueviolet;
+      background-color: #8a2be2;
+      background-image: url('images/14.jpg');
+      background-blend-mode: color-burn;
       position: relative;
       display: block;
-      height: 40vh;
+    }
+    
+    .about img {
+      max-width: 50vw;
+    }
+    
+    .fa-gamepad {
+      color: #fff;
+      font-size: 6em;
+      float: left;
+    }
+    
+    .about-title {
+      color: #ffffff;
+      text-shadow: 2px 2px 2px #000000;
+      padding: 2%;
+      width: 80vw;
+      right: 0px;
+      text-align: right;
+      display: block;
+      z-index: 9;
     }
     
     .contact-me {
       background-color: green;
       position: relative;
       display: block;
-      height: 40vh;
     }
     
     #footer {
       bottom: 0px;
       background-color: orange;
       left: 0px;
-      width: 100%;
+      width: 100vw;
       position: relative;
     }
     
@@ -182,16 +223,24 @@
   <section class="works">
 
     <a href="/works.html">
-      <h2>what can I do? <br>What am I working on?<br> Click to find out!</h2>
+      <h2 data-aos="slide-right" data-aos-duration="2500" class="worktitle">what can I do? <br>What am I working on?<br> Click to find out! </h2>
+
+      <img src="images/theme5.gif" alt="preview of a previous job and link to new page" data-aos="flip-left" data-aos-duration="3000" data-aos-delay="1000" class="previewimg1">
+      <img src="images/theme1.gif" alt="second preview of a previous job and link to new page" data-aos="flip-right" data-aos-duration="3000" data-aos-delay="1500" class="previewimg2">
     </a>
-    <img src="images/theme5.gif" alt="works.html">
   </section>
 
 
-  <section class="about">about me
+  <section class="about">
 
-    <h2>some title which is a link</h2>
-    <img src="/" alt="img which is a link">
+    <a href="/about.html">
+      <i class="fas fa-gamepad"></i>
+
+      <h2 data-aos="slide-left" data-aos-duration="2500" data-aos-delay="0" class="about-title">about me!</h2>
+
+      <img src="images/17.jpg" alt="">
+
+    </a>
   </section>
 
 
@@ -203,7 +252,134 @@
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
     AOS.init();
+    // You can also pass an optional settings object
+    // below listed default settings
+    AOS.init({
+      // Global settings:
+      disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+      startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
+      initClassName: 'aos-init', // class applied after initialization
+      animatedClassName: 'aos-animate', // class applied on animation
+      useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
+      disableMutationObserver: false, // disables automatic mutations' detections (advanced)
+      debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+      throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+
+
+      // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+      offset: 120, // offset (in px) from the original trigger point
+      delay: 0, // values from 0 to 3000, with step 50ms
+      duration: 400, // values from 0 to 3000, with step 50ms
+      easing: 'ease', // default easing for AOS animations
+      once: true, // whether animation should happen only once - while scrolling down
+      mirror: false, // whether elements should animate out while scrolling past them
+      anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
+
+    });
   </script>
 </body>
 
 </html>
+
+
+<!--
+  Animations
+Fade animations:
+
+fade
+fade-up
+fade-down
+fade-left
+fade-right
+fade-up-right
+fade-up-left
+fade-down-right
+fade-down-left
+Flip animations:
+
+flip-up
+flip-down
+flip-left
+flip-right
+Slide animations:
+
+slide-up
+slide-down
+slide-left
+slide-right
+Zoom animations:
+
+zoom-in
+zoom-in-up
+zoom-in-down
+zoom-in-left
+zoom-in-right
+zoom-out
+zoom-out-up
+zoom-out-down
+zoom-out-left
+zoom-out-right
+
+Easing functions:
+linear
+ease
+ease-in
+ease-out
+ease-in-out
+ease-in-back
+ease-out-back
+ease-in-out-back
+ease-in-sine
+ease-out-sine
+ease-in-out-sine
+ease-in-quad
+ease-out-quad
+ease-in-out-quad
+ease-in-cubic
+ease-out-cubic
+ease-in-out-cubic
+ease-in-quart
+ease-out-quart
+ease-in-out-quart
+ 
+
+Does the site validate? 10pts
+Is the site responsive? 20pts
+Is the site well-styled? 10pts
+Are the images incorporated effectively? 5pts
+Successfully demonstrated the ability to enhance their site?  40pts
+Does the site validate? 
+10pts – Fully validates (warnings are fine) 
+8 pts – There are errors, but the student has shown (in their write-up or video) that they are caused by plugins and can not be fixed. 
+6 pts – There are at most 3 errors for the entire site 
+3pts – They have only shown that part of the site validates.  (For instance, only tested one of the files in a multi-file site.) 
+0 pts – More than three errors  were left or the site was not tested at all.
+Is the site responsive?
+20pts Yes, the site has a unique look/layout for each of the views.
+10pts The site has a unique look, but not a unique layout.  (For example, they changed only colors of fonts, not the actual layout.)
+6pts Only some of the pages are responsive - not all of them.
+0pts The site is not responsive
+ 
+
+Is the site well-styled?
+This is very objective.  It should be difficult to score a high score, but not difficult to receive the majority of the points.  It is important that everyone create a unique style sheet, even if using a template or framework.  Look for feedback in Week Five to improve your score.
+
+10pts – The site is incredibly well-styled and the author went beyond the required (animation, hovering, etc done with CSS)
+8pt – The site is very well styled.   The content has a layout that is easy to follow and a variety of colors and fonts were used. - Most students can expect to receive this score.
+4pts – The styling is lacking or the author relied almost exclusively on a template/framework.
+0pts – Less than 9 unique CSS rules were used.
+ 
+
+Enhancements!!
+You need to add four elements to your site that are unique – something beyond what we did in the four previous courses.  You are encouraged to be as creative as you would like (and creative does not need to mean time-intensive).  Some options for these "extras" include:
+
+Add custom JavaScript (e.g. incorporate dynamic content, use JS to perform verification, modify the DOM)
+Enhance the accessibility of your page (e.g. put your site through the some subset of the WebAim quick evaluation reference - http://webaim.org/resources/evalquickref/)
+Incorporate plugins  (e.g. Google Calendar, a map, parallax, etc.)  You will need to show what you did other than just copying code.  Did you need to change any of the attributes?  Change any of the links?
+Include a Carousel for your images (don't forget to turn off the automatic start feature if you can!!)
+Use a sticky footer to create a consistent look across different browser heights (we usually only consider widths…)
+Add a third viewport layout (e.g. a table view that is different than mobile or large-screen) 
+Again, these are just suggestions, please feel free to let your own creativity be your guide.
+
+Each extra will be worth 10 pts, for a total of 40 pts.
+-->
