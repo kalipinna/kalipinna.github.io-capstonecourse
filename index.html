@@ -8,7 +8,31 @@
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <script src="//kit.fontawesome.com/85c606ef5c.js" crossorigin="anonymous"></script>
 
+  <script>
+    function ita() {
+      document.getElementById('subtitle').innerHTML = "web designer, scrittrice, fan di troppi telefilm";
+      document.getElementById('description').innerHTML = "*questo portfolio è stato creato per l'esame finale di un corso di webdesign, ma la mia vita non è esattamente 'piena di avventure': è vero che ho creato blogs per tumblr e photoshoppato foto e dipinti, ma la pagina 'su di me' sarà imbellita.<br>Questo perchè tutto il mio tempo libero è speso al pc, il che non è molto <strong>emozionante</strong>.";
+      document.getElementById('worktitle').innerHTML = "Cosa so fare?<br>Su cosa sto lavorando?<br>Clicca per scoprirlo!"
+      document.getElementById('about-title').innerHTML = "Su di me!"
+    }
+
+    function eng() {
+
+      document.getElementById('subtitle').innerHTML = "web designer, writer, tvshow-enthusiast*";
+      document.getElementById('description').innerHTML = "*this portfolio is a capstone for a web-design course, but my life is not exactly full of adventure and I don't have much to showcase: I did make tumblr themes before and edited images, but the 'about me' section will be 'embellished' a lot.<br>This because all my free time is actually spent at my laptop and that's not exactly <strong> cool</strong>.";
+      document.getElementById('worktitle').innerHTML = "What can I do? <br>What am I working on?<br> Click to find out!"
+      document.getElementById('about-title').innerHTML = "about me!"
+    }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Raleway:wght@600&display=swap" rel="stylesheet">
+
   <style>
+    * {
+      max-width: 100%;
+    }
+    
     body {
       margin: 0px;
       width: 100%;
@@ -17,11 +41,21 @@
       font-size: 14px;
       line-height: 2em;
       overflow-x: hidden;
+      font-family: 'Raleway', sans-serif;
     }
     
     img {
-      max-width: 100%;
       height: auto;
+      display: block;
+      margin: auto;
+      box-shadow: 0px 0px 10px #ffffff;
+      transition: box-shadow 0.6s;
+    }
+    
+    img:hover,
+    img:focus {
+      box-shadow: 0px 0px 20px #c68efa;
+      transition: box-shadow 0.6s;
     }
     
     section,
@@ -41,21 +75,32 @@
       color: #ffffff;
       position: relative;
       display: flex;
-      z-index: 9;
       left: 0px;
       box-sizing: border-box;
-      justify-content: space-around;
-      flex-flow: row nowrap;
+      justify-content: space-evenly;
+      flex-flow: row wrap;
     }
     
-    #navigation a {
+    #navigation a,
+    #navigation span {
       display: inline-block;
       color: #fff;
+      background-color: #000000;
       text-decoration: none;
       border: 1px solid #fff;
       height: max-content;
       margin: 0.5% 1%;
       padding: 0.5px 1%;
+      font-size: 1em;
+      transition: all 0.4s linear;
+    }
+    
+    #navigation a:hover,
+    #navigation a:focus,
+    #navigation span:hover,
+    #navigation span:focus {
+      background-color: #740396;
+      transition: all 0.6s linear;
     }
     
     #header {
@@ -70,28 +115,33 @@
     }
     
     h1 {
-      font-size: 4rem;
-      line-height: 1.2em;
+      font-size: 3.7rem;
+      word-break: normal;
+      line-height: 1.1em;
       text-align: center;
       border-bottom: 3px double #fff;
+      word-break: break-all;
     }
     
     h2 {
-      font-size: 2em;
+      font-size: 2.5em;
       line-height: 1.5em;
+      color: #fff;
     }
     
     .title {
       margin: auto;
       min-height: 10vh;
-      max-width: 80vw;
+      max-width: 80%;
       width: max-content;
       text-align: center;
       display: block;
     }
     
-    .subtitle {
-      margin-top: 2%;
+    #subtitle {
+      margin-top: 1%;
+      font-size: 1.8em;
+      font-family: 'Montserrat', sans-serif;
     }
     
     .portrait {
@@ -101,10 +151,17 @@
       height: 200px;
       object-fit: cover;
       box-shadow: 0px 0px 10px #ffffff;
-      border: 2px solid #ffffff
+      border: 2px solid #ffffff;
+      transition: all 0.6s linear;
     }
     
-    .description {
+    .portrait:hover,
+    .portrait:focus {
+      transition: all 0.6s linear;
+      border: 2px solid #8a2be2;
+    }
+    
+    #description {
       margin: auto;
       display: block;
       position: relative;
@@ -117,11 +174,12 @@
       display: block;
       background-color: rgba(0, 0, 0, 50%);
       border-radius: 4px;
-      padding: 2px;
+      padding: 4px 2px;
       line-height: 1.4em;
+      font-family: 'Montserrat', sans-serif;
     }
     
-    .works {
+    #works {
       position: relative;
       background-image: url('images/8.jpg'), linear-gradient(#740396, #d979f6);
       background-blend-mode: color-burn;
@@ -130,14 +188,7 @@
       height: max-content;
     }
     
-    .works img,
-    .about img {
-      display: block;
-      margin: auto;
-    }
-    
-    .worktitle {
-      color: #ffffff;
+    #worktitle {
       text-shadow: 2px 2px 2px #000000;
       padding: 2%;
       margin-left: 3vw;
@@ -146,7 +197,7 @@
       z-index: 9;
     }
     
-    .about {
+    #about {
       background-color: #8a2be2;
       background-image: url('images/14.jpg');
       background-blend-mode: color-burn;
@@ -154,8 +205,8 @@
       display: block;
     }
     
-    .about img {
-      max-width: 50vw;
+    #about img {
+      max-width: 60vw;
     }
     
     .fa-gamepad {
@@ -164,8 +215,7 @@
       float: left;
     }
     
-    .about-title {
-      color: #ffffff;
+    #about-title {
       text-shadow: 2px 2px 2px #000000;
       padding: 2%;
       width: 80vw;
@@ -175,7 +225,7 @@
       z-index: 9;
     }
     
-    .contact-me {
+    #contact-me {
       background-color: green;
       position: relative;
       display: block;
@@ -191,7 +241,16 @@
     
     a {
       text-decoration: none;
-      color: #000000;
+    }
+    
+     ::-webkit-scrollbar {
+      width: 3px;
+      height: 0px;
+      background-color: #000000;
+    }
+    
+     ::-webkit-scrollbar-thumb {
+      background-color: #c68efa;
     }
   </style>
 </head>
@@ -199,11 +258,12 @@
 <body>
 
   <nav id="navigation">
-
-    <a href="/">works</a>
-    <a href="/">about me</a>
+    <span onclick="ita()">ita</span>
+    <span onclick="eng()">eng</span>
+    <a href="works.html">works</a>
+    <a href="about.html">about me</a>
     <a href="/">linkedin</a>
-    <a href="/">github</a>
+    <a href="https://imagesbyele.tumblr.com">tumblr</a>
     <a href="#footer">credits</a>
 
   </nav>
@@ -211,40 +271,43 @@
   <header id="header">
 
     <div class="title" data-aos="zoom-in" data-aos-duration="2600" data-aos-easing="ease-in-out">
-      <h1>Mariangela Pinna</h1>
-      <h2 class="subtitle">web designer, writer, tvshow-enthusiast</h2>
+      <h1 id="name">Kali Pinna</h1>
+      <h2 id="subtitle">web designer, writer, tvshow-enthusiast*</h2>
       <img src="images/9.gif" alt="portrait that is meant to represent me" class="portrait">
 
     </div>
-    <div class="description" data-aos="zoom-in" data-aos-duration="3000" data-aos-delay="100" data-aos-easing="ease-in-out">*most of what you can find in this portfolio is made up. This portfolio is being created as a capstone for a web-design course but my life is currently very boring and I don't have much to showcase. I did make tumblr themes before and edited images,
-      but the 'about me' section will be 'embellished' and I'm not featured in any image.</div>
+    <div id="description" data-aos="zoom-in" data-aos-duration="3000" data-aos-delay="100" data-aos-easing="ease-in-out">*this portfolio is a capstone for a web-design course, but my life is not exactly full of adventure and I don't have much to showcase: I did make tumblr themes before and edited images, but the 'about me' section will be 'embellished' a lot.<br>This
+      because all my free time is actually spent at my laptop and that's not exactly <strong> cool</strong>.</div>
   </header>
 
-  <section class="works">
+  <section id="works">
 
-    <a href="/works.html">
-      <h2 data-aos="slide-right" data-aos-duration="2500" class="worktitle">what can I do? <br>What am I working on?<br> Click to find out! </h2>
+    <a href="works.html">
+      <h2 data-aos="slide-right" data-aos-duration="2500" id="worktitle">What can I do? <br>What am I working on?<br> Click to find out! </h2>
+    </a>
 
-      <img src="images/theme5.gif" alt="preview of a previous job and link to new page" data-aos="flip-left" data-aos-duration="3000" data-aos-delay="1000" class="previewimg1">
-      <img src="images/theme1.gif" alt="second preview of a previous job and link to new page" data-aos="flip-right" data-aos-duration="3000" data-aos-delay="1500" class="previewimg2">
+    <a href="works.html"> <img src="images/theme5.gif" alt="preview of a previous job and link to new page" data-aos="flip-left" data-aos-delay="700" class="previewimg1"> </a>
+    <a href="works.html"></a> <img src="images/theme1.gif" alt="second preview of a previous job and link to new page" data-aos="flip-right" data-aos-delay="1500" class="previewimg2">
     </a>
   </section>
 
 
-  <section class="about">
+  <section id="about">
 
-    <a href="/about.html">
-      <i class="fas fa-gamepad"></i>
+    <a href="about.html">
+      <i class="fas fa-gamepad" data-aos="fade-in" data-aos-duration="3000" data-aos-delay="1050"></i>
+    </a>
+    <a href="about.html">
+      <h2 data-aos="slide-left" data-aos-duration="2500" data-aos-delay="0" id="about-title">about me!</h2>
+    </a>
 
-      <h2 data-aos="slide-left" data-aos-duration="2500" data-aos-delay="0" class="about-title">about me!</h2>
-
-      <img src="images/17.jpg" alt="">
+    <a href="about.html"> <img src="images/17.jpg" alt="woman at laptop" data-aos="fade-in">
 
     </a>
   </section>
 
 
-  <section class="contact-me">
+  <section id="contact-me">
     <h2>contact me</h2> form here</section>
 
   <footer id="footer"> credits and stuff </footer>
@@ -269,7 +332,7 @@
       // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
       offset: 120, // offset (in px) from the original trigger point
       delay: 0, // values from 0 to 3000, with step 50ms
-      duration: 400, // values from 0 to 3000, with step 50ms
+      duration: 3000, // values from 0 to 3000, with step 50ms
       easing: 'ease', // default easing for AOS animations
       once: true, // whether animation should happen only once - while scrolling down
       mirror: false, // whether elements should animate out while scrolling past them
