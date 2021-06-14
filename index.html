@@ -11,7 +11,7 @@
   <script>
     function ita() {
       document.getElementById('subtitle').innerHTML = "web designer, scrittrice, fan di troppi telefilm";
-      document.getElementById('description').innerHTML = "*questo portfolio è stato creato per l'esame finale di un corso di webdesign, ma la mia vita non è esattamente 'piena di avventure': è vero che ho creato blogs per tumblr e photoshoppato foto e dipinti, ma la pagina 'su di me' sarà imbellita.<br>Questo perchè tutto il mio tempo libero è speso al pc, il che non è molto <strong>emozionante</strong>.";
+      document.getElementById('description').innerHTML = "*questo portfolio è stato creato per l'esame finale di un corso di webdesign, ciò che troverete nella pagina 'su di me' non rispecchia necessariamente la realtà: è vero che ho creato blogs per tumblr e praticato un po' di 'photo-editing', ma tutto il mio tempo libero è speso al pc per cui non ho molte 'avventure' da mostrare.";
       document.getElementById('worktitle').innerHTML = "Cosa so fare?<br>Su cosa sto lavorando?<br>Clicca per scoprirlo!"
       document.getElementById('about-title').innerHTML = "Su di me!"
     }
@@ -28,7 +28,7 @@
 
   <script>
     /* When the user clicks on the button, 
-              toggle between hiding and showing the dropdown content */
+                          toggle between hiding and showing the dropdown content */
     function myFunction() {
       document.getElementById("myDropdown").classList.toggle("show");
     }
@@ -54,7 +54,6 @@
     
     body {
       margin: 0px;
-      width: 100%;
       box-sizing: border-box;
       padding: 0px;
       font-size: 12px;
@@ -95,35 +94,35 @@
       position: relative;
       display: flex;
       left: 0px;
-      box-sizing: border-box;
       justify-content: space-evenly;
       flex-flow: row nowrap;
     }
     
     #navigation a,
-    #navigation span {
-      color: #fff;
+    #navigation span,
+    dropdown,
+    .dropbtn {
+      color: #ffffff;
       background-color: #000000;
       text-decoration: none;
       border: 1px solid #fff;
-      height: max-content;
-      margin: 0.5% 1%;
       padding: 0.5px 1%;
       font-size: 1em;
       transition: all 0.4s linear;
       font-family: inherit;
     }
     
-    #navigation span {
-      margin-top: 1em;
-      line-height: 2em;
-      display: inline-block;
+    #navigation span,
+    .dropbtn {
+      margin: 1em 1%;
     }
     
     #navigation a:hover,
     #navigation a:focus,
     #navigation span:hover,
-    #navigation span:focus {
+    #navigation span:focus,
+    .dropbtn:hover,
+    .dropbtn:focus {
       background-color: #740396;
       transition: all 0.6s linear;
     }
@@ -140,7 +139,7 @@
     }
     
     h1 {
-      font-size: 3rem;
+      font-size: 2.2rem;
       word-break: normal;
       line-height: 1.1em;
       text-align: center;
@@ -149,8 +148,7 @@
     }
     
     h2 {
-      font-size: 2.1em;
-      line-height: 1.5em;
+      font-size: 1.5rem;
       color: #fff;
     }
     
@@ -165,15 +163,15 @@
     
     #subtitle {
       margin-top: 1%;
-      font-size: 1.8em;
+      font-size: 1.2rem;
       font-family: 'Montserrat', sans-serif;
     }
     
     .portrait {
       border-radius: 100%;
       margin-top: 4%;
-      width: 200px;
-      height: 200px;
+      width: 100px;
+      height: 100px;
       object-fit: cover;
       box-shadow: 0px 0px 10px #ffffff;
       border: 2px solid #ffffff;
@@ -191,7 +189,7 @@
       display: block;
       position: relative;
       max-width: 85vw;
-      font-size: 1.2em;
+      font-size: 1rem;
       font-style: italic;
       text-align: center;
       margin-top: 6vh;
@@ -200,7 +198,7 @@
       background-color: rgba(0, 0, 0, 50%);
       border-radius: 4px;
       padding: 4px 2px;
-      line-height: 1.4em;
+      line-height: 1.2rem;
       font-family: 'Montserrat', sans-serif;
     }
     
@@ -235,7 +233,7 @@
     
     .fa-gamepad {
       color: #fff;
-      font-size: 6em;
+      font-size: 4em;
       float: left;
     }
     
@@ -281,23 +279,10 @@
       overflow: hidden;
     }
     
-    .dropdown .dropbtn {
-      cursor: pointer;
-      font-size: 16px;
-      border: none;
-      outline: none;
-      color: white;
-      padding: 14px 16px;
-      background-color: inherit;
-      font-family: inherit;
-      margin: 0;
-    }
-    
     .dropdown-content {
       display: none;
       position: absolute;
       left: 0px;
-      background-color: inherit;
       width: 100%;
       box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
       z-index: 1;
@@ -305,11 +290,10 @@
     
     .dropdown-content a {
       float: none;
-      color: black;
-      padding: 12px 16px;
       text-decoration: none;
       display: block;
       text-align: left;
+      margin: 0px;
     }
     
     .show {
@@ -337,7 +321,7 @@
     </div>
 
 
-  </nav>
+  </nav> 
 
   <header id="header">
 
@@ -367,7 +351,7 @@
       <i class="fas fa-gamepad" data-aos="fade-in" data-aos-duration="3000" data-aos-delay="100" aria-label="gamepad icon"></i>
 
       <h2 data-aos="fade-left" data-aos-duration="2000" data-aos-delay="0" id="about-title">about me!</h2>
-      <img src="images/17.jpg" alt="woman at laptop" data-aos="fade-in">
+      <img src="images/17.jpg" alt="woman at laptop" data-aos="fade-in" data-aos-delay="0">
 
     </a>
   </section>
