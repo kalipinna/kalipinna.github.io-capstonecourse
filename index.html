@@ -19,8 +19,8 @@
       document.getElementById('labelname').innerHTML = "Il tuo nome:<input type='text' id = 'name'   placeholder='Mario Rossi'>";
       document.getElementById('submit').setAttribute("value", "invio");
       document.getElementById('credits').innerHTML = "crediti";
-      document.getElementById('p1').innerHTML = "icone: fontawesome <br> immagini di sfondo: @pixabay <br> fonts:google fonts";
-      document.getElementById('p2').innerHTML = "portfolio creato per il corso 'Web Design for Everybody: Basics of Web Development & Coding Specialization'<br>Mario che corre <a href='https://gifer.com/en/33HU'>@gifer</a>";
+      document.getElementById('p1').innerHTML = "icone: fontawesome <br>Mario che corre <a href='https://gifer.com/en/33HU'>@gifer</a> <br> fonts:google fonts";
+      document.getElementById('p2').innerHTML = "portfolio creato per il corso 'Web Design for Everybody: Basics of Web Development & Coding Specialization'";
       document.getElementById('dropbutton').innerHTML = "altro <i class='fa fa-caret-down'></i>";
     }
 
@@ -35,8 +35,8 @@
       document.getElementById('labelname').innerHTML = "Your name:<input type='text' id = 'name'   placeholder='John Smith'>";
       document.getElementById('submit').setAttribute("value", "send");
       document.getElementById('credits').innerHTML = "credits";
-      document.getElementById('p1').innerHTML = "icons: @fontawesome <br> background images: @pixabay <br> fonts:google fonts";
-      document.getElementById('p2').innerHTML = "portfolio created for 'Web Design for Everybody: Basics of Web Development & Coding Specialization'<br>animated Mario running @<a href='https://gifer.com/en/33HU'>gifer</a>";
+      document.getElementById('p1').innerHTML = "icons: @fontawesome <br>animated Mario running @<a href='https://gifer.com/en/33HU'>gifer</a> <br> fonts:google fonts";
+      document.getElementById('p2').innerHTML = "portfolio created for 'Web Design for Everybody: Basics of Web Development & Coding Specialization'";
       document.getElementById('dropbutton').innerHTML = "more links <i class='fa fa-caret-down'></i>";
 
     }
@@ -196,9 +196,10 @@
       z-index: 99;
       position: relative;
       display: flex;
+      top: 0px;
       left: 0px;
-      min-height: 4rem;
-      padding-top: 1rem;
+      height: 4rem;
+      position: fixed;
       justify-content: space-evenly;
       flex-flow: row nowrap;
       height: max-content;
@@ -271,6 +272,7 @@
       background-repeat: no-repeat;
       padding: 1vh 0px;
       color: #ffffff;
+      margin-top: 2rem;
       text-shadow: 2px 2px 2px #000000;
     }
     
@@ -533,10 +535,18 @@
     
     #footer {
       bottom: 0px;
+      margin-bottom: 0px;
       background-color: #000000;
       width: 100vw;
       position: relative;
+      height: max-content;
       text-align: center;
+      padding: 2vh 2vw;
+    }
+    
+    #p1,
+    #p2 {
+      display: block;
     }
     
     @media all and (min-width: 760px) {
@@ -589,14 +599,12 @@
         margin-right: 4vw;
         float: left;
       }
-      footer {
-        padding: 1vh 10vw;
-      }
       footer p {
         display: inline-block;
         width: 30vw;
         font-size: 1.1rem;
         text-align: left;
+        background-color: inherit;
       }
       hr {
         display: none;
@@ -649,7 +657,7 @@
 
     <h2 id="worktitle">What can I do? <br>What am I working on?<br> Click to find out! </h2>
     <div id="imgcontainer">
-      <a href="works.html" target="_blank"><img src="images/theme5.gif" alt="preview of a previous job and link to new page" id="previewimg1"> </a>
+      <a href="works.html" target="_blank"><img src="images/theme5.gif" alt="first preview of a previous job and link to new page" id="previewimg1"> </a>
       <a href="works.html" target="_blank"><img src="images/theme1.gif" alt="second preview of a previous job and link to new page" id="previewimg2"> </a>
     </div>
 
@@ -664,13 +672,13 @@
 
 
       <div id="icons">
-        <i class="fas fa-gamepad" aria-label="gamepad icon"></i>
-        <i class="fas fa-bed" aria-label="bed icon"></i>
-        <i class="fas fa-tv" aria-label="tv icon"></i>
-        <i class="fas fa-pizza-slice" aria-label="slice of pizza icon"></i>
+        <i class="fas fa-gamepad" aria-label="gamepad icon meant to represent I love videogames"></i>
+        <i class="fas fa-bed" aria-label="bed icon meant to represent I'm lazy"></i>
+        <i class="fas fa-tv" aria-label="tv icon meant to represent I love tv"></i>
+        <i class="fas fa-pizza-slice" aria-label="slice of pizza icon meant to represent I love food and especially pizza"></i>
       </div>
     </div>
-    <a href="about.html" target="_blank"> <img src="images/17.jpg" alt="woman at laptop" id="previewimg3"></a>
+    <a href="about.html" target="_blank"> <img src="images/17.jpg" alt="woman working with laptop and coffee" id="previewimg3"></a>
 
     <img src="images/mario.gif" alt="super mario running as a decoration" id="mario">
   </section>
@@ -696,12 +704,13 @@
 
   <footer id="footer">
     <h2 id="credits">credits:</h2>
-    <p id="p1">icons: fontawesome <br> background images: @pixabay <br> fonts:google fonts </p>
+
+    <p id="p1">icons: fontawesome <br> animated Mario running @<a href="https://gifer.com/en/33HU">gifer</a> <br> fonts:google fonts</p>
     <hr>
     <p id="p2">
-      portfolio created for 'Web Design for Everybody: Basics of Web Development & Coding Specialization'<br> animated Mario running @<a href="https://gifer.com/en/33HU">gifer</a>
-
+      portfolio created for 'Web Design for Everybody: Basics of Web Development & Coding Specialization'
     </p>
+
   </footer>
 
 </body>
