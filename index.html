@@ -139,6 +139,7 @@
     
     body {
       margin: 0px;
+      color: #fff;
       box-sizing: border-box;
       padding: 0px;
       font-size: 12px;
@@ -459,14 +460,16 @@
   <section id="contact-me">
     <h2>Feel free to say hello!</h2>
 
-    <form>
-      <!-- action sends to a sever or in this case mailto sends to an email, method post is best for sensitive information, enctype is for post method -->
+    <form method="post" action="contact.php">
       <fieldset>
+
+        <label>What's up? <input type="text" id="hello" name="hello" style="min-height:100px;width:80%;margin:auto;display: block;" placeholder="hi! I'm writing you because..."> </label> <br>
+        <!-- action sends to a sever or in this case mailto sends to an email, method post is best for sensitive information, enctype is for post method -->
 
         <label>Name and Last Name: <input type='text' id = 'name' name = 'name' placeholder="John Smith""></label>
         <br>
 
-        <label>Feel free to say hello!  <input type="text" id="hello" name="hello" placeholder="hi! I'm writing you because..."> </label> <br>
+
         <label>Your email:
       <input type="email" id="email_addr" name="email1" placeholder = "something@something.com" required></label>
         <br>
