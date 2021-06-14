@@ -127,6 +127,7 @@
     body {
       margin: 0px;
       color: #fff;
+      background-color: #000000;
       box-sizing: border-box;
       padding: 0px;
       font-size: 12px;
@@ -205,8 +206,30 @@
       transition: all 0.6s linear;
     }
     
+    .dropdown {
+      overflow: hidden;
+    }
+    
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      left: 0px;
+      width: 100%;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+    }
+    
+    .dropdown-content a {
+      float: none;
+      display: block;
+      text-align: center;
+    }
+    
+    .show {
+      display: block;
+    }
+    
     #header {
-      background-color: #000000;
       background-image: url('images/13.jpg'), linear-gradient(to right, #ff8800b3, #da1b61ac);
       background-size: cover;
       background-position: center;
@@ -217,7 +240,7 @@
     
     h1 {
       font-size: 2.5rem;
-      line-height: 1.1em;
+      line-height: 1.2em;
       text-align: center;
       border-bottom: 3px double #fff;
       word-break: break-all;
@@ -241,7 +264,6 @@
     }
     
     #subtitle {
-      margin-top: 1%;
       font-size: 1.2rem;
       font-family: 'Montserrat', sans-serif;
     }
@@ -318,8 +340,8 @@
     }
     
     #about {
-      background-color: #8a2be2;
       background-image: url('images/14.jpg');
+      background-color: #c68efa;
       background-blend-mode: color-burn;
       position: relative;
     }
@@ -351,39 +373,75 @@
     }
     
     #contact-me {
-      background-color: green;
+      background-image: url('images/10.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
       position: relative;
+    }
+    
+    #contact-title {
+      background-color: rgba(0, 0, 0, 50%);
+      max-width: max-content;
+      padding: 2%;
+      border-radius: 2px;
+    }
+    
+    form {
+      background-color: rgba(0, 0, 0, 50%);
+      display: block;
+    }
+    
+    fieldset {
+      border: none;
+      padding: 2%;
+    }
+    
+    label {
+      margin-top: 2%;
+      margin-bottom: 1%;
+      display: block;
+      font-size: 1.2rem;
+    }
+    
+    input {
+      display: block;
+      background-color: rgba(151, 148, 154, 30%);
+      line-height: 2em;
+      font-size: 1.1rem;
+      transition: all 1s linear;
+    }
+    
+    input:focus,
+    input:hover {
+      background-color: #ffffff;
+      transition: all 1s linear;
+    }
+    
+    #name {
+      width: 100%;
+      line-height: 2em;
+    }
+    
+    #message {
+      width: 100%;
+      min-height: 50px;
+      height: max-content;
+    }
+    
+    #submit {
+      display: block;
+      background-color: #ffffff;
+      margin: auto;
     }
     
     #footer {
       bottom: 0px;
-      background-color: orange;
-      left: 0px;
+      background-color: #000000;
       width: 100vw;
       position: relative;
-    }
-    
-    .dropdown {
-      overflow: hidden;
-    }
-    
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      left: 0px;
-      width: 100%;
-      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-      z-index: 1;
-    }
-    
-    .dropdown-content a {
-      float: none;
-      display: block;
       text-align: center;
-    }
-    
-    .show {
-      display: block;
+      padding: 1vh 4vw;
     }
   </style>
 </head>
@@ -412,7 +470,7 @@
   <header id="header">
 
     <div class="titlebox zoom-in">
-      <h1 id="name">Mariangela<br>Pinna</h1>
+      <h1 id="myname">Mariangela<br>Pinna</h1>
       <h2 id="subtitle">web designer, writer, tvshow-enthusiast*</h2>
       <img src="images/9.gif" alt="portrait that is meant to represent me" class="portrait">
 
@@ -445,24 +503,34 @@
 
 
   <section id="contact-me">
-    <h2>Feel free to say hello!</h2>
+    <h2 id="contact-title">Feel free to say hello!</h2>
 
     <form action="mailto:fakeemail@hotmail.it" method="post" enctype="text/plain">
+      <!-- action sends to a sever or in this case mailto sends to an email, method post is best for sensitive information, enctype is for post method -->
       <fieldset>
 
-        <label><input type="text" id="message" name="message" style="min-height:100px;width:80%;margin:auto;display: block;" placeholder="hi! I'm writing here you because..."> </label> <br>
-        <!-- action sends to a sever or in this case mailto sends to an email, method post is best for sensitive information, enctype is for post method -->
+        <label><input type="text" id="message" placeholder="hi!..." required> </label>
 
-        <label>Name: <input type='text' id = 'name' name = 'name' placeholder="John Smith""></label>
-        <br>
 
-        <input type='submit' value="send">
+        <label>Your name: <input type='text' id = 'name'   placeholder="John Smith""></label>
+
+        <!-- didn't add the 'name' attribute because this is meant to be sent as an email-->
+
+        <input type='submit' id="submit" value="send">
       </fieldset>
     </form>
 
   </section>
 
-  <footer id="footer"> credits and stuff </footer>
+  <footer id="footer">
+    <h2>credits:</h2>
+    <p>icons: @fontawesome <br> background images: @pixabay <br> fonts:google fonts </p>
+    <hr>
+    <p>
+      preview images and gifs: by me <br> portfolio created for 'Web Design for Everybody: Basics of Web Development & Coding Specialization'
+
+    </p>
+  </footer>
 
 </body>
 
