@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <script src="//kit.fontawesome.com/85c606ef5c.js" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
   <script>
     function ita() {
@@ -24,11 +25,17 @@
       document.getElementById('about-title').innerHTML = "about me!"
     }
   </script>
-
+<!--
+  <script>
+    $(document).ready(function() {
+      $("#noani").click(function() {
+        $("*").removeClass("aos-init aos-animate");
+      });
+    });
+  </script>-->
 
   <script>
-    /* When the user clicks on the button, 
-                          toggle between hiding and showing the dropdown content */
+    /* When the user clicks on the button, toggle between hiding and showing the dropdown content */
     function myFunction() {
       document.getElementById("myDropdown").classList.toggle("show");
     }
@@ -60,6 +67,10 @@
       line-height: 2em;
       overflow-x: hidden;
       font-family: 'Raleway', sans-serif;
+    }
+    
+    a {
+      text-decoration: none;
     }
     
     img {
@@ -132,14 +143,14 @@
       background-image: url('images/13.jpg'), linear-gradient(to right, #ff8800b3, #da1b61ac);
       background-size: cover;
       background-position: center;
-      padding: 1vh 0;
+      padding: 1vh 0px;
       display: block;
       color: #ffffff;
       text-shadow: 2px 2px 2px #000000;
     }
     
     h1 {
-      font-size: 2.2rem;
+      font-size: 2.5rem;
       word-break: normal;
       line-height: 1.1em;
       text-align: center;
@@ -152,7 +163,7 @@
       color: #fff;
     }
     
-    .title {
+    .titlebox {
       margin: auto;
       min-height: 10vh;
       max-width: 80%;
@@ -189,7 +200,7 @@
       display: block;
       position: relative;
       max-width: 85vw;
-      font-size: 1rem;
+      font-size: 0.8rem;
       font-style: italic;
       text-align: center;
       margin-top: 6vh;
@@ -261,10 +272,6 @@
       position: relative;
     }
     
-    a {
-      text-decoration: none;
-    }
-    
      ::-webkit-scrollbar {
       width: 3px;
       height: 0px;
@@ -290,10 +297,8 @@
     
     .dropdown-content a {
       float: none;
-      text-decoration: none;
       display: block;
-      text-align: left;
-      margin: 0px;
+      text-align: center;
     }
     
     .show {
@@ -307,6 +312,7 @@
   <nav id="navigation">
     <span onclick="ita()">ita</span>
     <span onclick="eng()">eng</span>
+    <span id="noani" onclick="noAnimation()">remove animation</span>
     <div class="dropdown">
       <button class="dropbtn" onclick="myFunction()">more links
         <i class="fa fa-caret-down"></i>
@@ -321,11 +327,11 @@
     </div>
 
 
-  </nav> 
+  </nav>
 
   <header id="header">
 
-    <div class="title" data-aos="zoom-in" data-aos-duration="2600" data-aos-easing="ease-in-out">
+    <div class="titlebox" data-aos="zoom-in" data-aos-duration="2600" data-aos-easing="ease-in-out">
       <h1 id="name">Mariangela<br>Pinna</h1>
       <h2 id="subtitle">web designer, writer, tvshow-enthusiast*</h2>
       <img src="images/9.gif" alt="portrait that is meant to represent me" class="portrait">
@@ -339,8 +345,8 @@
 
     <a href="works.html">
       <h2 data-aos="fade-right" data-aos-duration="2500" id="worktitle">What can I do? <br>What am I working on?<br> Click to find out! </h2>
-      <img src="images/theme5.gif" alt="preview of a previous job and link to new page" data-aos="flip-left" data-aos-delay="700" class="previewimg1">
-      <img src="images/theme1.gif" alt="second preview of a previous job and link to new page" data-aos="flip-right" data-aos-delay="800" class="previewimg2">
+      <img src="images/theme5.gif" alt="preview of a previous job and link to new page" data-aos="flip-left" data-aos-delay="300" class="previewimg1">
+      <img src="images/theme1.gif" alt="second preview of a previous job and link to new page" data-aos="flip-right" data-aos-delay="400" class="previewimg2">
     </a>
   </section>
 
@@ -358,7 +364,7 @@
 
 
   <section id="contact-me">
-    <h2>contact me</h2> form to be added here here</section>
+    <h2>contact me</h2> form to be added here</section>
 
   <footer id="footer"> credits and stuff </footer>
 
