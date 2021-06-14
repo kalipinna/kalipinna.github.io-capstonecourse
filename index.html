@@ -15,8 +15,9 @@
       document.getElementById('worktitle').innerHTML = "Cosa so fare?<br>Su cosa sto lavorando?<br>Clicca per scoprirlo!";
       document.getElementById('about-title').innerHTML = "Su di me!";
       document.getElementById('contact-title').innerHTML = "Contattami";
-      document.getElementById('labelmessage').innerHTML = "Hi and welcome! Currently I'm not taking any job, but feel free to say hello!<input type='text' id='message' placeholder='hi!...'' required>";
-      document.getElementById('labelname').innerHTML = "Your name:<input type='text' id = 'name'   placeholder='Mario Rossi'>";
+      document.getElementById('labelmessage').innerHTML = "Ciao e benvenuto! Al momento non sono alla ricerca di lavoro ma puoi comunque mandarmi un saluto!<input type='text' id='message' placeholder='Ciao!...'' required> ";
+      document.getElementById('labelname').innerHTML = "Il tuo nome:<input type='text' id = 'name'   placeholder='Mario Rossi'>";
+      document.getElementById('submit').setAttribute("value", "send");
       document.getElementById('submit').setAttribute("value", "invio");
       document.getElementById('credits').innerHTML = "crediti";
       document.getElementById('p1').innerHTML = "icone: @fontawesome <br> immagini di sfondo: @pixabay <br> fonts:google fonts";
@@ -32,9 +33,11 @@
       document.getElementById('worktitle').innerHTML = "What can I do? <br>What am I working on?<br> Click to find out!"
       document.getElementById('about-title').innerHTML = "about me!"
       document.getElementById('contact-title').innerHTML = "contact me:";
-      document.getElementById('labelmessage').innerHTML = "Ciao e benvenuto! Al momento non sono alla ricerca di lavoro ma puoi comunque mandarmi un saluto!<input type='text' id='message' placeholder='Ciao!...'' required> ";
-      document.getElementById('labelname').innerHTML = "Il tuo nome:<input type='text' id = 'name'   placeholder='John Smith'>";
-      document.getElementById('submit').setAttribute("value", "send");
+
+      document.getElementById('labelmessage').innerHTML = "Hi and welcome! Currently I'm not taking any job, but feel free to say hello!<input type='text' id='message' placeholder='hi!...'' required>";
+      document.getElementById('labelname').innerHTML = "Your name:<input type='text' id = 'name'   placeholder='John Smith'>";
+
+
 
       document.getElementById('credits').innerHTML = "credits";
       document.getElementById('p1').innerHTML = "icons: @fontawesome <br> background images: @pixabay <br> fonts:google fonts";
@@ -332,7 +335,7 @@
     
     #worktitle {
       text-shadow: 2px 2px 2px #000000;
-      padding: 2%;
+      padding: 2% 5%;
       display: block;
       opacity: 0;
       z-index: 9;
@@ -350,6 +353,7 @@
     
     #previewimg1 {
       animation-delay: 1s;
+      margin: 3%;
       display: block;
       margin: auto;
     }
@@ -358,6 +362,7 @@
       animation-delay: 1.5s;
       display: block;
       margin: auto;
+      margin-top: 2%;
     }
     
     #about {
@@ -386,8 +391,9 @@
     
     #previewimg3 {
       border-radius: 50%;
-      height: 200px;
-      width: 200px;
+      height: 150px;
+      flex-shrink: 0;
+      width: 150px;
       clear: both;
     }
     
@@ -498,7 +504,6 @@
       }
       #previewimg1 {
         float: left;
-        margin: 2%;
       }
       #previewimg2 {
         float: right;
