@@ -11,7 +11,7 @@
 
 
   <script>
-    $(window).one('scroll', function A() {
+    $(window).one('scroll', function() {
       if ($("#worktitle").is(':visible')) {
         $("#worktitle").addClass(" zoom-in-left");
       }
@@ -20,7 +20,7 @@
   </script>
 
   <script>
-    $(window).one('scroll', function B() {
+    $(window).one('scroll', function() {
       if ($("#previewimg1, #icons i, #previewimg2, #previewimg3").is(':visible')) {
         $("#previewimg1, #previewimg2, #previewimg3, #icons i").addClass(" zoom-in-center");
       }
@@ -28,7 +28,7 @@
     });
   </script>
   <script>
-    $(window).one('scroll', function C() {
+    $(window).one('scroll', function() {
       if ($("#about-title").is(':visible')) {
         $("#about-title").addClass(" zoom-in-right");
       }
@@ -379,6 +379,15 @@
       background-repeat: no-repeat;
     }
     
+    #about {
+      background-image: url('images/20.gif');
+      background-color: #c68efa;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: relative;
+    }
+    
     #worktitle {
       text-shadow: 2px 2px 2px #000000;
       padding: 2% 5%;
@@ -410,15 +419,16 @@
       opacity: 0;
     }
     
-    #about {
-      background-image: url('images/20.gif');
-      background-color: #c68efa;
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      position: relative;
-      margin-left: 0px;
-      min-height: 40vh;
+    #previewimg3 {
+      border-radius: 100%;
+      opacity: 0;
+      display: block;
+      margin-top: 3%;
+      width: 40vw;
+      height: auto;
+      animation-fill-mode: forwards;
+      animation-duration: 5s;
+      animation-delay: 2s;
     }
     
     #about-title {
@@ -427,7 +437,6 @@
       text-align: right;
       float: right;
       border-radius: 4px;
-      z-index: 9;
       opacity: 0;
       font-size: 3rem;
       animation-duration: 4s;
@@ -435,21 +444,12 @@
       animation-fill-mode: forwards;
     }
     
-    #previewimg3 {
-      border-radius: 100%;
-      min-width: 100px;
-      display: block;
-      margin-top: 3%;
-      width: 40vw;
-      height: auto;
-      margin: auto;
-      float: right;
-      animation-delay: 2s;
-    }
-    
     #icons {
       display: block;
       max-width: 6vw;
+      animation-fill-mode: forwards;
+      animation-duration: 3s;
+      animation-delay: 2s;
     }
     
     #container {
@@ -460,9 +460,6 @@
       color: #fff;
       font-size: 4rem;
       opacity: 0;
-      animation-fill-mode: forwards;
-      animation-duration: 3s;
-      animation-delay: 2s;
     }
     
     #mario {
@@ -609,7 +606,7 @@
         font-size: 20px;
       }
       #previewimg3 {
-        width: auto;
+        width: 500px;
         height: auto;
       }
       #imgcontainer {
