@@ -45,9 +45,9 @@
 
   <script>
     $(window).one('scroll', function() {
-      if ($("#worktitle, #previewimg1, #about-title, #previewimg2, #previewimg3").is(':visible')) {
+      if ($("#worktitle, #previewimg1, #about-title, .fa-gamepad, #previewimg2, #previewimg3").is(':visible')) {
         $("#worktitle").addClass(" zoom-in-left");
-        $("#previewimg1, #previewimg2, #previewimg3 .fa-gamepad").addClass(" zoom-in-center");
+        $("#previewimg1, #previewimg2, #previewimg3 ,.fa-gamepad").addClass(" zoom-in-center");
         $("#about-title").addClass(" zoom-in-right");
       }
 
@@ -306,15 +306,15 @@
     #previewimg3 {
       opacity: 0;
       animation-fill-mode: forwards;
-      animation-duration: 5s;
+      animation-duration: 4s;
     }
     
     #previewimg1 {
-      animation-delay: 2s;
+      animation-delay: 1s;
     }
     
     #previewimg2 {
-      animation-delay: 3s;
+      animation-delay: 1.5s;
     }
     
     #about {
