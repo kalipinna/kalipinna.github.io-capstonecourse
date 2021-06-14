@@ -5,7 +5,6 @@
 <head>
   <title>portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <script src="//kit.fontawesome.com/85c606ef5c.js" crossorigin="anonymous"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
@@ -25,14 +24,6 @@
       document.getElementById('about-title').innerHTML = "about me!"
     }
   </script>
-<!--
-  <script>
-    $(document).ready(function() {
-      $("#noani").click(function() {
-        $("*").removeClass("aos-init aos-animate");
-      });
-    });
-  </script>-->
 
   <script>
     /* When the user clicks on the button, toggle between hiding and showing the dropdown content */
@@ -51,12 +42,99 @@
     }
   </script>
 
+
+  <script>
+    $(window).one('scroll', function() {
+      if ($("#worktitle, #previewimg1, #about-title, #previewimg2, #previewimg3").is(':visible')) {
+        $("#worktitle").addClass(" zoom-in-left");
+        $("#previewimg1, #previewimg2, #previewimg3 .fa-gamepad").addClass(" zoom-in-center");
+        $("#about-title").addClass(" zoom-in-right");
+      }
+
+    });
+  </script>
+
+
+  <script>
+    function check() {
+      var email1 = document.getElementById('email_addr');
+      var email2 = document.getElementById('email_repeat');
+      if (email1.value != email2.value) {
+        alert("Whoops! The two emails must match!!");
+        return false; // 
+      }
+    }
+  </script>
+
+
+
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Raleway:wght@600&display=swap" rel="stylesheet">
 
   <style>
+    /* various elements and animations */
+    
     * {
       max-width: 100%;
+    }
+    
+     ::-webkit-scrollbar {
+      width: 3px;
+      height: 0px;
+      background-color: #000000;
+    }
+    
+     ::-webkit-scrollbar-thumb {
+      background-color: #c68efa;
+    }
+    
+    .zoom-in-left {
+      animation-name: zoom-in-left;
+    }
+    
+    @keyframes zoom-in-left {
+      0% {
+        opacity: 0;
+        transform: scale(0.5);
+        margin-left: -100%;
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1);
+        margin-left: 0;
+      }
+    }
+    
+    .zoom-in-center {
+      animation-name: zoom-in-center;
+    }
+    
+    @keyframes zoom-in-center {
+      0% {
+        opacity: 0;
+        transform: scale(0.7);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+    
+    .zoom-in-right {
+      animation-name: zoom-in-right;
+    }
+    
+    @keyframes zoom-in-right {
+      0% {
+        opacity: 0;
+        margin-right: -100%;
+        transform: scale(0.5);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1);
+        margin-right: 0;
+      }
     }
     
     body {
@@ -93,6 +171,7 @@
     nav {
       width: 100vw;
       box-sizing: border-box;
+      display: block;
     }
     
     section {
@@ -144,14 +223,12 @@
       background-size: cover;
       background-position: center;
       padding: 1vh 0px;
-      display: block;
       color: #ffffff;
       text-shadow: 2px 2px 2px #000000;
     }
     
     h1 {
       font-size: 2.5rem;
-      word-break: normal;
       line-height: 1.1em;
       text-align: center;
       border-bottom: 3px double #fff;
@@ -170,6 +247,9 @@
       width: max-content;
       text-align: center;
       display: block;
+      animation-name: zoom-in-center;
+      animation-duration: 4s;
+      animation-fill-mode: forwards;
     }
     
     #subtitle {
@@ -197,7 +277,6 @@
     
     #description {
       margin: auto;
-      display: block;
       position: relative;
       max-width: 85vw;
       font-size: 0.8rem;
@@ -211,6 +290,9 @@
       padding: 4px 2px;
       line-height: 1.2rem;
       font-family: 'Montserrat', sans-serif;
+      animation-name: zoom-in-center;
+      animation-duration: 7s;
+      animation-fill-mode: forwards;
     }
     
     #works {
@@ -224,10 +306,27 @@
     #worktitle {
       text-shadow: 2px 2px 2px #000000;
       padding: 2%;
-      margin-left: 3vw;
-      display: block;
       width: max-content;
+      opacity: 0;
       z-index: 9;
+      animation-fill-mode: forwards;
+      animation-duration: 2s;
+    }
+    
+    #previewimg1,
+    #previewimg2,
+    #previewimg3 {
+      opacity: 0;
+      animation-fill-mode: forwards;
+      animation-duration: 5s;
+    }
+    
+    #previewimg1 {
+      animation-delay: 2s;
+    }
+    
+    #previewimg2 {
+      animation-delay: 3s;
     }
     
     #about {
@@ -235,33 +334,37 @@
       background-image: url('images/14.jpg');
       background-blend-mode: color-burn;
       position: relative;
-      display: block;
     }
     
     #about img {
       max-width: 60vw;
+      clear: both;
+      margin: auto;
     }
     
     .fa-gamepad {
       color: #fff;
       font-size: 4em;
-      float: left;
+      opacity: 0;
+      animation-fill-mode: forwards;
+      animation-duration: 3s;
     }
     
     #about-title {
       text-shadow: 2px 2px 2px #000000;
       padding: 2%;
-      width: 80vw;
-      right: 0px;
+      width: max-content;
+      float: right;
       text-align: right;
-      display: block;
       z-index: 9;
+      opacity: 0;
+      animation-duration: 4s;
+      animation-fill-mode: forwards;
     }
     
     #contact-me {
       background-color: green;
       position: relative;
-      display: block;
     }
     
     #footer {
@@ -270,16 +373,6 @@
       left: 0px;
       width: 100vw;
       position: relative;
-    }
-    
-     ::-webkit-scrollbar {
-      width: 3px;
-      height: 0px;
-      background-color: #000000;
-    }
-    
-     ::-webkit-scrollbar-thumb {
-      background-color: #c68efa;
     }
     
     .dropdown {
@@ -312,16 +405,15 @@
   <nav id="navigation">
     <span onclick="ita()">ita</span>
     <span onclick="eng()">eng</span>
-    <span id="noani" onclick="noAnimation()">remove animation</span>
     <div class="dropdown">
       <button class="dropbtn" onclick="myFunction()">more links
         <i class="fa fa-caret-down"></i>
       </button>
       <div class="dropdown-content" id="myDropdown">
-        <a href="works.html">works</a>
-        <a href="about.html">about me</a>
-        <a href="https://www.linkedin.com/in/mariangela-pinna/">linkedin</a>
-        <a href="https://imagesbyele.tumblr.com">tumblr</a>
+        <a href="works.html" target="_blank">works</a>
+        <a href="about.html" target="_blank">about me</a>
+        <a href="https://www.linkedin.com/in/mariangela-pinna/" target="_blank">linkedin</a>
+        <a href="https://imagesbyele.tumblr.com" target="_blank">tumblr</a>
         <a href="#footer">credits</a>
       </div>
     </div>
@@ -331,71 +423,106 @@
 
   <header id="header">
 
-    <div class="titlebox" data-aos="zoom-in" data-aos-duration="2600" data-aos-easing="ease-in-out">
+    <div class="titlebox zoom-in">
       <h1 id="name">Mariangela<br>Pinna</h1>
       <h2 id="subtitle">web designer, writer, tvshow-enthusiast*</h2>
       <img src="images/9.gif" alt="portrait that is meant to represent me" class="portrait">
 
     </div>
-    <div id="description" data-aos="zoom-in" data-aos-duration="3000" data-aos-delay="100" data-aos-easing="ease-in-out">*this portfolio is a capstone for a web-design course, but my life is not exactly full of adventure and I don't have much to showcase: I did make tumblr themes before and edited images, but the 'about me' section will be 'embellished' a lot.<br>This
+    <div id="description" class="zoom-in">*this portfolio is a capstone for a web-design course, but my life is not exactly full of adventure and I don't have much to showcase: I did make tumblr themes before and edited images, but the 'about me' section will be 'embellished' a lot.<br>This
       because all my free time is actually spent at my laptop and that's not exactly <strong> cool</strong>.</div>
   </header>
 
   <section id="works">
 
-    <a href="works.html">
-      <h2 data-aos="fade-right" data-aos-duration="2500" id="worktitle">What can I do? <br>What am I working on?<br> Click to find out! </h2>
-      <img src="images/theme5.gif" alt="preview of a previous job and link to new page" data-aos="flip-left" data-aos-delay="300" class="previewimg1">
-      <img src="images/theme1.gif" alt="second preview of a previous job and link to new page" data-aos="flip-right" data-aos-delay="400" class="previewimg2">
+    <a href="works.html" target="_blank">
+      <h2 id="worktitle">What can I do? <br>What am I working on?<br> Click to find out! </h2>
     </a>
+    <img src="images/theme5.gif" alt="preview of a previous job and link to new page" id="previewimg1">
+    <img src="images/theme1.gif" alt="second preview of a previous job and link to new page" id="previewimg2">
+
   </section>
 
 
   <section id="about">
 
-    <a href="about.html">
-      <i class="fas fa-gamepad" data-aos="fade-in" data-aos-duration="3000" data-aos-delay="100" aria-label="gamepad icon"></i>
+    <a href="about.html" target="_blank">
+      <i class="fas fa-gamepad"></i>
 
-      <h2 data-aos="fade-left" data-aos-duration="2000" data-aos-delay="0" id="about-title">about me!</h2>
-      <img src="images/17.jpg" alt="woman at laptop" data-aos="fade-in" data-aos-delay="0">
+      <h2 id="about-title">about me!</h2>
+      <img src="images/17.jpg" alt="woman at laptop" id="previewimg3">
 
     </a>
   </section>
 
 
   <section id="contact-me">
-    <h2>contact me</h2> form to be added here</section>
+    <h2>Feel free to say hello!</h2>
+
+    <form>
+      <!-- action sends to a sever or in this case mailto sends to an email, method post is best for sensitive information, enctype is for post method -->
+      <fieldset>
+
+        <label>Name and Last Name: <input type='text' id = 'name' name = 'name' placeholder="John Smith""></label>
+        <br>
+
+        <label>Feel free to say hello!  <input type="text" id="hello" name="hello" placeholder="hi! I'm writing you because..."> </label> <br>
+        <label>Your email:
+      <input type="email" id="email_addr" name="email1" placeholder = "something@something.com" required></label>
+        <br>
+        <label>Write your email again, please:
+      <input type="email" id="email_repeat" name="email2" required onchange="check()"></label>
+        <br>
+        <input type='submit' value="Confirm Emails!">
+      </fieldset>
+    </form>
+
+  </section>
 
   <footer id="footer"> credits and stuff </footer>
 
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <script>
-    AOS.init();
-    // You can also pass an optional settings object
-    // below listed default settings
-    AOS.init({
-      // Global settings:
-      disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
-      startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
-      initClassName: 'aos-init', // class applied after initialization
-      animatedClassName: 'aos-animate', // class applied on animation
-      useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
-      disableMutationObserver: false, // disables automatic mutations' detections (advanced)
-      debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
-      throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
-
-
-      // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
-      offset: 120, // offset (in px) from the original trigger point
-      delay: 0, // values from 0 to 3000, with step 50ms
-      duration: 3000, // values from 0 to 3000, with step 50ms
-      easing: 'ease', // default easing for AOS animations
-      once: true, // whether animation should happen only once - while scrolling down
-      mirror: false, // whether elements should animate out while scrolling past them
-      anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
-
-    });
-  </script>
 </body>
 
 </html>
+
+<!--
+  Does the site validate? 10pts
+Is the site responsive? 20pts
+Is the site well-styled? 10pts
+Are the images incorporated effectively? 5pts
+Successfully demonstrated the ability to enhance their site?  40pts
+Does the site validate? 
+10pts – Fully validates (warnings are fine) 
+8 pts – There are errors, but the student has shown (in their write-up or video) that they are caused by plugins and can not be fixed. 
+6 pts – There are at most 3 errors for the entire site 
+3pts – They have only shown that part of the site validates.  (For instance, only tested one of the files in a multi-file site.) 
+0 pts – More than three errors  were left or the site was not tested at all.
+Is the site responsive?
+20pts Yes, the site has a unique look/layout for each of the views.
+10pts The site has a unique look, but not a unique layout.  (For example, they changed only colors of fonts, not the actual layout.)
+6pts Only some of the pages are responsive - not all of them.
+0pts The site is not responsive
+ 
+
+Is the site well-styled?
+This is very objective.  It should be difficult to score a high score, but not difficult to receive the majority of the points.  It is important that everyone create a unique style sheet, even if using a template or framework.  Look for feedback in Week Five to improve your score.
+
+10pts – The site is incredibly well-styled and the author went beyond the required (animation, hovering, etc done with CSS)
+8pt – The site is very well styled.   The content has a layout that is easy to follow and a variety of colors and fonts were used. - Most students can expect to receive this score.
+4pts – The styling is lacking or the author relied almost exclusively on a template/framework.
+0pts – Less than 9 unique CSS rules were used.
+ 
+
+Enhancements!!
+You need to add four elements to your site that are unique – something beyond what we did in the four previous courses.  You are encouraged to be as creative as you would like (and creative does not need to mean time-intensive).  Some options for these "extras" include:
+
+Add custom JavaScript (e.g. incorporate dynamic content, use JS to perform verification, modify the DOM)
+Enhance the accessibility of your page (e.g. put your site through the some subset of the WebAim quick evaluation reference - http://webaim.org/resources/evalquickref/)
+Incorporate plugins  (e.g. Google Calendar, a map, parallax, etc.)  You will need to show what you did other than just copying code.  Did you need to change any of the attributes?  Change any of the links?
+Include a Carousel for your images (don't forget to turn off the automatic start feature if you can!!)
+Use a sticky footer to create a consistent look across different browser heights (we usually only consider widths…)
+Add a third viewport layout (e.g. a table view that is different than mobile or large-screen) 
+Again, these are just suggestions, please feel free to let your own creativity be your guide.
+
+Each extra will be worth 10 pts, for a total of 40 pts.
+-->
