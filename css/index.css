@@ -70,7 +70,7 @@
 @keyframes zoom-in-center {
   0% {
     opacity: 0;
-    transform: scale(0.7);
+    transform: scale(0.5);
   }
   100% {
     opacity: 1;
@@ -85,7 +85,7 @@
 @keyframes zoom-in-icons {
   0% {
     opacity: 0;
-    transform: scale(0.8);
+    transform: scale(0.6);
   }
   100% {
     opacity: 1;
@@ -241,11 +241,12 @@ dropdown {
   width: 110%;
   position: absolute;
   top: 0px;
+  padding: 4vh 4vw;
   left: 0px;
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 3.2rem;
   line-height: 1.2em;
   text-align: center;
   font-family: berkshire, 'montserrat', Arial, Helvetica, sans-serif;
@@ -392,7 +393,7 @@ h2 {
   border-radius: 4px;
   opacity: 0;
   animation-duration: 4s;
-  animation-delay: 2s;
+  animation-delay: 3s;
   animation-fill-mode: forwards;
 }
 
@@ -438,13 +439,23 @@ h2 {
   -webkit-text-stroke-color: #6a6d6d;
 }
 
+#mariocontainer {
+  position: absolute;
+  height: 11vh;
+  width: 100vw;
+  bottom: 0px;
+}
+
 #mario {
   border: none;
   box-shadow: none;
   position: absolute;
   bottom: 0px;
   height: 10vh;
-  animation: 18s run linear infinite;
+  animation-name: run;
+  animation-duration: 12s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
 }
 
 @keyframes run {
@@ -452,7 +463,7 @@ h2 {
     margin-left: -100%
   }
   100% {
-    margin-right: -110%;
+    margin-left: 110%;
   }
 }
 
@@ -578,6 +589,9 @@ input:hover {
   #previewimg2 {
     float: right;
   }
+  #mario {
+    animation-duration: 17s;
+  }
 }
 
 @media all and (min-width:1023px) {
@@ -608,5 +622,8 @@ input:hover {
   }
   #p2 {
     float: right;
+  }
+  #mario {
+    animation-duration: 20s;
   }
 }
