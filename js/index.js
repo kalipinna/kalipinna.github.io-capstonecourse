@@ -5,14 +5,14 @@ $(window).one('scroll', function() {
 
 });
 $(window).one('scroll', function() {
-  if ($("#previewimg1, #icons i, #previewimg2, #previewimg3").is(':visible')) {
-    $("#previewimg1, #previewimg2, #previewimg3, #icons i").addClass(" zoom-in-center");
+  if ($("#previewimg1, #previewimg2, #previewimg3, #about-title").is(':visible')) {
+    $("#previewimg1, #previewimg2, #previewimg3, #about-title").addClass(" zoom-in-center");
   }
 
 });
 $(window).one('scroll', function() {
-  if ($("#about-title").is(':visible')) {
-    $("#about-title").addClass(" zoom-in-right");
+  if ($("#icons").is(':visible')) {
+    $("#icons").addClass(" zoom-in-right");
   }
 
 });
