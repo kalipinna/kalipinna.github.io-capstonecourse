@@ -96,13 +96,16 @@
   }
 }
 
-body {
+body,
+html {
   margin: 0px;
   color: #fff;
   background-color: #000000;
   box-sizing: border-box;
   padding: 0px;
   line-height: 2em;
+  width: 100vw;
+  max-width: 100%;
   overflow-x: hidden;
   font-family: 'Raleway', sans-serif;
 }
@@ -148,7 +151,6 @@ section {
   border-bottom: 1vh solid #000000;
   color: #ffffff;
   z-index: 99;
-  position: relative;
   display: flex;
   top: 0px;
   left: 0px;
