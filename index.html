@@ -72,7 +72,6 @@
     @keyframes zoom-in-icons {
       0% {
         opacity: 0;
-        margin-left: -10%;
         transform: scale(0.8);
       }
       100% {
@@ -105,6 +104,7 @@
     }
     
     img {
+      max-width: 96%;
       height: auto;
       box-shadow: 0px 0px 10px #ffffff;
       transition: box-shadow 0.6s;
@@ -128,8 +128,8 @@
     }
     
     section {
-      padding: 4vh 0vw;
-      min-height: 65vh;
+      padding: 2vh 0vw;
+      height: max-content;
     }
     
     #navigation {
@@ -212,8 +212,10 @@
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
+      background-attachment: fixed;
       padding: 2vh 0vw;
       color: #ffffff;
+      min-height: 90vh;
       margin-top: 2rem;
       text-shadow: 2px 2px 2px #000000;
     }
@@ -229,7 +231,7 @@
     }
     
     h1 {
-      font-size: 2.5rem;
+      font-size: 3rem;
       line-height: 1.2em;
       text-align: center;
       border-bottom: 3px double #fff;
@@ -237,8 +239,8 @@
     }
     
     h2 {
-      font-size: 2rem;
-      line-height: 2rem;
+      font-size: 2.6rem;
+      line-height: 2.5rem;
       color: #fff;
     }
     
@@ -262,8 +264,8 @@
     .portrait {
       border-radius: 100%;
       margin-top: 1rem;
-      width: 100px;
-      height: 100px;
+      width: 20vh;
+      height: 20vh;
       object-fit: cover;
       box-shadow: 0px 0px 10px #ffffff;
       border: 2px solid #ffffff;
@@ -283,12 +285,12 @@
       font-size: 0.8rem;
       font-style: italic;
       text-align: center;
-      margin-top: 6vh;
+      margin-top: 9vh;
       margin-bottom: 2vh;
       display: block;
       background-color: rgba(0, 0, 0, 50%);
       border-radius: 4px;
-      padding: 4px 2px;
+      padding: 2vh 2vw;
       line-height: 1.2rem;
       font-family: 'Montserrat', sans-serif;
       animation-name: zoom-in-center;
@@ -302,6 +304,7 @@
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
+      min-height: 78vh;
     }
     
     #worktitle {
@@ -312,27 +315,31 @@
       z-index: 9;
       animation-fill-mode: forwards;
       animation-duration: 2s;
-      animation-delay: 0.3s;
+    }
+    
+    #imgcontainer {
+      padding: 0vh 3vw;
+      margin: 2vh 3vw;
     }
     
     #previewimg1 {
       animation-delay: 2s;
-      margin: 3%;
+      margin: 10vh 3vw;
       display: block;
-      margin: auto;
       opacity: 0;
       animation-duration: 4s;
       animation-fill-mode: forwards;
+      animation-delay: 0.3s;
     }
     
     #previewimg2 {
       animation-delay: 2.5s;
       display: block;
-      margin: auto;
-      margin-top: 2%;
+      margin: 3% auto;
+      opacity: 0;
       animation-fill-mode: forwards;
       animation-duration: 5s;
-      opacity: 0;
+      animation-delay: 0.3s;
     }
     
     #about {
@@ -360,11 +367,11 @@
     #about-title {
       text-shadow: 2px 2px 2px #000000;
       text-align: right;
+      margin-left: -2vw;
       display: block;
       width: 100%;
       border-radius: 4px;
       opacity: 0;
-      font-size: 3rem;
       animation-duration: 4s;
       animation-delay: 1s;
       animation-fill-mode: forwards;
@@ -387,7 +394,7 @@
     
     #icons i {
       color: #fff;
-      font-size: 4rem;
+      font-size: 3rem;
       margin: 2%;
       display: inline-block;
     }
@@ -430,31 +437,31 @@
     
     form {
       display: block;
-      max-width: 900px;
       width: 90vw;
       margin: auto;
-      padding: 2vh 2vw;
       z-index: 9;
+      border: 2px dotted;
     }
     
     fieldset {
-      margin: auto;
       border: none;
-      padding: 2%;
+      padding: 4vh 4vw;
       background-color: rgba(0, 0, 0, 50%);
     }
     
     label {
       display: block;
+      text-align: center;
       font-size: 1.2rem;
-      line-height: 6rem;
+      line-height: 1.4rem;
+      margin-bottom: 3vh;
     }
     
     input {
       display: block;
       background-color: rgba(151, 148, 154, 30%);
       line-height: 2em;
-      font-size: 1.1rem;
+      font-size: 1.5rem;
       transition: all 1s linear;
     }
     
@@ -465,13 +472,15 @@
     }
     
     #name {
-      width: 100%;
+      width: 80%;
+      margin: 2vh auto;
     }
     
     #message {
-      width: 100%;
       min-height: 50px;
       height: max-content;
+      width: 80%;
+      margin: 2vh auto;
     }
     
     #submit {
@@ -517,8 +526,8 @@
         display: block;
       }
       .portrait {
-        height: 200px;
-        width: 200px;
+        height: 25vh;
+        width: 25vh;
       }
       #description {
         max-width: 80vw;
@@ -545,9 +554,8 @@
       }
       #imgcontainer {
         display: block;
-        max-width: 900px;
-        margin-right: 4vw;
-        float: left;
+        max-width: 90vw;
+        margin: auto;
       }
       footer p {
         display: inline-block;
@@ -575,13 +583,14 @@
     <a tabindex="0" href="javascript:void(0);" onclick="ita()">ita</a>
     <a tabindex="0" href="javascript:void(0);" onclick="eng()">eng</a>
     <div class="dropdown">
-      <button id="dropbutton" class="dropbtn" onclick="myFunction()">more links
+      <button id="dropbutton" class="dropbtn" onclick="myFunction()" aria-label="opens dropdown menu with more links">more links
         <i class="fa fa-caret-down"></i>
       </button>
       <div class="dropdown-content" id="myDropdown">
-        <a href="works.html" target="_blank">works</a>
-        <a href="about.html" target="_blank">about me</a>
-        <a href="https://imagesbyele.tumblr.com" target="_blank">tumblr</a>
+        <a href="works.html" target="_blank">works page</a>
+        <a href="about.html" target="_blank">about me page</a>
+        <a href="https://imagesbyele.tumblr.com" target="_blank">my tumblr blog</a>
+        <a href="https://ko-fi.com/kalipinna" target="_blank">my ko-fi page</a>
         <a href="#footer">credits</a>
       </div>
     </div>
@@ -612,7 +621,6 @@
 
   </section>
 
-
   <section id="about">
     <div id="fourthbg"></div>
 
@@ -638,11 +646,11 @@
 
   <section id="contact-me">
 
-    <h2 id="contact-title">send me an email:</h2>
+    <h2 id="contact-title">how to contact me:</h2>
     <form action="mailto:fakeemail@hotmail.it" method="post" enctype="text/plain">
 
       <fieldset>
-        <label id="labelmessage">Hi and welcome! Currently I'm not taking any job, but feel free to say hello!<input type='text' id='message' placeholder='hi!...' required> </label>
+        <label id="labelmessage">Hi and welcome! Currently I'm not taking any job, but feel free to say hello!<input type='text' id='message' placeholder='hi!...' required></label>
 
 
         <label id="labelname">Your name:<input type='text' id = 'name'   placeholder='John Smith'></label>
