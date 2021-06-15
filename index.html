@@ -127,6 +127,7 @@
     
     section {
       padding: 4vh 0vw;
+      min-height: 60vh;
     }
     
     #navigation {
@@ -301,15 +302,6 @@
       background-repeat: no-repeat;
     }
     
-    #about {
-      background-image: url('images/20.gif');
-      background-color: #c68efa;
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      position: relative;
-    }
-    
     #worktitle {
       text-shadow: 2px 2px 2px #000000;
       padding: 2% 5%;
@@ -341,12 +333,22 @@
       opacity: 0;
     }
     
+    #about {
+      background-image: url('images/20.gif');
+      background-color: #c68efa;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: relative;
+    }
+    
     #previewimg3 {
       border-radius: 100%;
       opacity: 0;
       display: block;
-      margin-top: 3%;
-      width: 40vw;
+      margin-top: 7vh;
+      margin: auto;
+      max-width: 50vw;
       height: auto;
       animation-fill-mode: forwards;
       animation-duration: 5s;
@@ -355,9 +357,11 @@
     
     #about-title {
       text-shadow: 2px 2px 2px #000000;
-      padding: 2rem;
+      padding: 1rem;
       text-align: right;
+      display: block;
       float: right;
+      width: 100%;
       border-radius: 4px;
       opacity: 0;
       font-size: 3rem;
@@ -369,9 +373,11 @@
     #icons {
       display: block;
       opacity: 0;
+      margin: auto;
+      width: 40vw;
       animation-fill-mode: forwards;
       animation-duration: 3s;
-      animation-delay: 2s;
+      animation-delay: 1s;
     }
     
     #container {
@@ -381,6 +387,7 @@
     #icons i {
       color: #fff;
       font-size: 4rem;
+      margin: 2%;
     }
     
     #mario {
@@ -389,7 +396,7 @@
       position: absolute;
       bottom: 0px;
       height: 10vh;
-      animation: 20s run linear infinite;
+      animation: 18s run linear infinite;
     }
     
     @keyframes run {
@@ -397,7 +404,7 @@
         margin-left: -100%
       }
       100% {
-        margin-right: -100%;
+        margin-right: -110%;
       }
     }
     
@@ -407,13 +414,13 @@
       background-repeat: no-repeat;
       background-position: center;
       position: relative;
-      padding-left: 0px;
+      min-height: max-content;
     }
     
     #contact-title {
       background-color: rgba(0, 0, 0, 50%);
       max-width: max-content;
-      padding: 2%;
+      padding: 2vh 2vw;
       text-align: center;
       margin: auto;
       border-radius: 2px;
@@ -422,13 +429,14 @@
     form {
       display: block;
       max-width: 900px;
-      width: 98vw;
-      padding: 2%;
+      width: 90vw;
       margin: auto;
+      padding: 2vh 2vw;
       z-index: 9;
     }
     
     fieldset {
+      margin: auto;
       border: none;
       padding: 2%;
       background-color: rgba(0, 0, 0, 50%);
@@ -437,7 +445,7 @@
     label {
       display: block;
       font-size: 1.2rem;
-      line-height: 2rem;
+      line-height: 6rem;
     }
     
     input {
@@ -568,7 +576,6 @@
       <div class="dropdown-content" id="myDropdown">
         <a href="works.html" target="_blank">works</a>
         <a href="about.html" target="_blank">about me</a>
-        <a href="https://www.linkedin.com/in/mariangela-pinna/" target="_blank">linkedin</a>
         <a href="https://imagesbyele.tumblr.com" target="_blank">tumblr</a>
         <a href="#footer">credits</a>
       </div>
@@ -604,17 +611,19 @@
   <section id="about">
     <div id="fourthbg"></div>
 
-    <div id="container">
-      <h2 id="about-title">about me!</h2>
+    <h2 id="about-title">about me!</h2>
 
 
-      <div id="icons">
-        <i class="fas fa-gamepad" aria-label="gamepad icon meant to represent I love videogames"></i>
-        <i class="fas fa-bed" aria-label="bed icon meant to represent I'm lazy"></i>
-        <i class="fas fa-tv" aria-label="tv icon meant to represent I love tv"></i>
-        <i class="fas fa-pizza-slice" aria-label="slice of pizza icon meant to represent I love food and especially pizza"></i>
-      </div>
+    <div id="icons">
+
+      <i class="fas fa-gamepad" aria-label="gamepad icon meant to represent I love videogames"></i>
+      <i class="fas fa-tv" aria-label="tv icon meant to represent I love tv"></i>
+      <i class="fas fa-bed" aria-label="bed icon meant to represent I'm lazy"></i>
+      <i class="fas fa-pizza-slice" aria-label="slice of pizza icon meant to represent I love food and especially pizza"></i>
+
     </div>
+    <!-- end of icons-->
+
     <a href="about.html" target="_blank"> <img src="images/17.jpg" alt="woman working with laptop and coffee" id="previewimg3"></a>
 
     <img src="images/mario.gif" alt="super mario running as a decoration" id="mario">
