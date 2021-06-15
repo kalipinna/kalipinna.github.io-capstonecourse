@@ -1,0 +1,14 @@
+@font-face {
+  font-family: boecklins;
+  src: url('../fonts/boecklins-universe.regular.ttf');
+}
+
+@font-face {
+  font-family: berkshire;
+  src: url(../fonts/berkshire-swash.regular.ttf);
+}
+
+@font-face {
+  font-family: underground;
+  src: url(../fonts/underground.regular.ttf);
+}
