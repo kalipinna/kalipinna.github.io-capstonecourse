@@ -9,6 +9,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
   <script src="js/index.js"></script>
+  <script src="Tooltip.js" type="text/javascript"></script>
 
 
   <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -595,16 +596,24 @@
         float: right;
       }
     }
+    
+    #tooltip {
+      position: absolute;
+      background: #DB2A64;
+      color: #ffffff;
+      padding: 8px;
+    }
   </style>
 </head>
 
 <body>
 
   <nav id="navigation">
-    <a tabindex="0" href="javascript:void(0);" onclick="ita()">ita</a>
-    <a tabindex="0" href="javascript:void(0);" onclick="eng()">eng</a>
+    <a href="https://kalipinna.github.io"><i class="fas fa-redo" aria-label="refresh page"></i></a>
+    <a tabindex="0" href="javascript:void(0);" onclick="ita()" data-tooltip title="translate in italian/traduci in italiano">ita</a>
+    <a tabindex="0" href="javascript:void(0);" onclick="eng()" title="translate back to english/torna all'inglese">eng</a>
     <div class="dropdown">
-      <button id="dropbutton" class="dropbtn" onclick="myFunction()" aria-label="opens dropdown menu with more links">more links
+      <button id="dropbutton" class="dropbtn" onclick="myFunction()" aria-label="opens dropdown menu with more links" title="more links/altri link">more links
         <i class="fa fa-caret-down"></i>
       </button>
       <div class="dropdown-content" id="myDropdown">
