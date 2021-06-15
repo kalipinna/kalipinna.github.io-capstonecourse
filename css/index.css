@@ -566,7 +566,7 @@ input:hover {
   display: block;
 }
 
-@media all and (min-width: 760px) {
+@media all and (min-width: 600px) {
    :root {
     font-size: 16px;
   }
@@ -609,10 +609,10 @@ input:hover {
     font-size: 20px;
   }
   h1 {
-    font-size: 4rem;
+    font-size: 3.5rem;
   }
   #about-title {
-    font-size: 3.4rem;
+    font-size: 3.1rem;
   }
   #previewimg3 {
     width: 500px;
