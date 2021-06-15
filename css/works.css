@@ -156,12 +156,56 @@ dropdown {
 
 #header {
   color: #ffffff;
-  background-image: url('../images/23.jpg');
+  background-image: url('../images/12.gif');
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
   border-top: 2vh solid black;
-  padding: 4vh 0vw;
   min-height: max-content;
   margin-top: 2rem;
+  min-height: 90vh;
   text-shadow: 2px 2px 2px #000000;
+}
+
+#bursts {
+  position: absolute;
+  margin-top: 0px;
+  margin-left: 0px;
+  max-width: 30vh;
+  float: left;
+}
+
+#burstsB {
+  position: relative;
+  margin-top: 0px;
+  margin-right: 0px;
+  max-width: 30vh;
+  float: right;
+}
+
+#stars {
+  display: block;
+  margin: auto;
+  top: -20vh;
+  max-width: 700px;
+  position: relative;
+  clear: both;
+  width: 80%;
+}
+
+#title {
+  z-index: 9;
+}
+
+#titlebox {
+  background-image: url('images/rectangle.gif');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 50vw;
+  max-width: 700px;
+  margin: auto;
+  margin-top: 5vh;
 }
 
 h1 {
