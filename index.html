@@ -5,12 +5,24 @@
 <head>
   <title>portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://kit.fontawesome.com/85c606ef5c.js" crossorigin="anonymous"></script>
+
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
   <script src="js/index.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
 
+  <script src="js/jquery.style-my-tooltips.js"></script>
 
+  <script>
+    (function($) {
+      $(document).ready(function() {
+        $("[title]").style_my_tooltips();
+      });
+    })(jQuery);
+  </script>
+
+  <script src="https://kit.fontawesome.com/85c606ef5c.js" crossorigin="anonymous"></script>
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Raleway:wght@600&display=swap" rel="stylesheet">
 
@@ -19,6 +31,30 @@
     
     * {
       max-width: 100%;
+    }
+    /* style-my-tootltips plugin, tooltip styling */
+    
+    #s-m-t-tooltip {
+      /* basic */
+      max-width: 300px;
+      z-index: 10;
+      margin: 24px 14px 7px 12px;
+      /* style and design */
+      padding: 8px;
+      background: #222;
+      /* fallback if rgba not supported */
+      background: rgba(0, 0, 0, 0.8);
+      -moz-border-radius: 3px;
+      -webkit-border-radius: 3px;
+      border-radius: 3px;
+      -moz-box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.15), -1px -1px 0 rgba(255, 255, 255, 0.3);
+      -webkit-box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.15), -1px -1px 0 rgba(255, 255, 255, 0.3);
+      box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.15), -1px -1px 0 rgba(255, 255, 255, 0.3);
+      /* font */
+      font-family: 'raleway', Georgia, 'Times New Roman', Times, sans-serif;
+      font-size: 1rem;
+      line-height: 1.2rem;
+      color: #fff;
     }
     
      ::-webkit-scrollbar {
@@ -608,7 +644,7 @@
 <body>
 
   <nav id="navigation">
-    <a href="https://kalipinna.github.io"><i class="fas fa-redo" aria-label="refresh page"></i></a>
+    <a href="https://kalipinna.github.io" title="refresh/aggiorna"><i class="fas fa-redo" aria-label="refresh page"></i></a>
     <a tabindex="0" href="javascript:void(0);" onclick="ita()" title="translate in italian/traduci in italiano">ita</a>
     <a tabindex="0" href="javascript:void(0);" onclick="eng()" title="translate back to english/torna all'inglese">eng</a>
     <div class="dropdown">
@@ -644,8 +680,8 @@
 
     <h2 id="worktitle">What can I do? <br>What am I working on?<br> Click to find out! </h2>
     <div id="imgcontainer">
-      <a href="works.html" target="_blank"><img src="images/theme5.gif" alt="first preview of a previous job and link to new page" id="previewimg1"> </a>
-      <a href="works.html" target="_blank"><img src="images/theme1.gif" alt="second preview of a previous job and link to new page" id="previewimg2"> </a>
+      <a href="works.html" target="_blank" title="go to works page"><img src="images/theme5.gif" alt="first preview of a previous job and link to new page" id="previewimg1"> </a>
+      <a href="works.html" target="_blank" title="go to works page"><img src="images/theme1.gif" alt="second preview of a previous job and link to new page" id="previewimg2"> </a>
     </div>
 
   </section>
@@ -665,7 +701,7 @@
 
     </div>
     <!-- end of icons-->
-    <a href="about.html" target="_blank"> <img src="images/17.jpg" alt="woman working with laptop and coffee" id="previewimg3"></a>
+    <a href="about.html" title="go to about me page" target="_blank"> <img src="images/17.jpg" alt="woman working with laptop and coffee" id="previewimg3"></a>
 
 
 
