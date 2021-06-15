@@ -198,22 +198,33 @@ dropdown {
 }
 
 #titlebox {
-  background-image: url('images/rectangle.gif');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 50vw;
-  max-width: 700px;
+  background-color: rgba(0, 0, 0, 60%);
+  width: 80vw;
+  max-width: 650px;
   margin: auto;
   margin-top: 5vh;
+  border-radius: 8px;
+  padding: 1%;
+  animation: scalefade 5s forwards;
+}
+
+@keyframes scalefade {
+  0% {
+    transform: scale(.5);
+    opacity: 0
+  }
 }
 
 h1 {
   font-size: 3rem;
+  background-image: url('../images/rectangle.gif');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   line-height: 1.2em;
   text-align: center;
   word-break: normal, break-all;
-  max-width: 60vw;
+  max-width: 70vw;
   margin: auto;
   font-family: boecklins, Arial, Helvetica, sans-serif;
 }
@@ -222,6 +233,11 @@ h2 {
   font-size: 2.6rem;
   line-height: 2.5rem;
   color: #fff;
+}
+
+#past {
+  background-color: blue;
+  height: 20vh;
 }
 
 #footer {
