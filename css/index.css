@@ -248,6 +248,7 @@ h1 {
   font-size: 3rem;
   line-height: 1.2em;
   text-align: center;
+  font-family: berkshire, 'montserrat', Arial, Helvetica, sans-serif;
   border-bottom: 3px double #fff;
   word-break: break-all;
 }
