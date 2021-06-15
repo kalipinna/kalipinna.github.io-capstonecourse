@@ -32,6 +32,10 @@
     * {
       max-width: 100%;
     }
+    
+     :root {
+      font-size: 12px;
+    }
     /* style-my-tootltips plugin, tooltip styling */
     
     #s-m-t-tooltip {
@@ -117,10 +121,6 @@
         margin-left: 0px;
         margin: auto;
       }
-    }
-    
-     :root {
-      font-size: 12px;
     }
     
     body {
@@ -251,7 +251,7 @@
       background-attachment: fixed;
       color: #ffffff;
       padding: 4vh 0vw;
-      max-height: calc(99vh - 2rem);
+      min-height: max-content;
       margin-top: 2rem;
       text-shadow: 2px 2px 2px #000000;
     }
