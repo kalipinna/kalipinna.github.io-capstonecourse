@@ -22,7 +22,7 @@ function ita() {
   document.getElementById('description').innerHTML = "*questo portfolio è stato creato per l'esame finale di un corso di webdesign, ciò che troverete nella pagina 'su di me' non rispecchia necessariamente la realtà: è vero che ho creato blogs per tumblr e praticato un po' di 'photo-editing', ma tutto il mio tempo libero è speso al pc per cui non ho molte 'avventure' da mostrare.";
   document.getElementById('worktitle').innerHTML = "Cosa so fare?<br>Su cosa sto lavorando?<br>Clicca per scoprirlo!";
   document.getElementById('about-title').innerHTML = "Su di me!";
-  document.getElementById('contact-title').innerHTML = "Contattami";
+  document.getElementById('contact-title').innerHTML = "Come contattarmi:";
   document.getElementById('labelmessage').innerHTML = "Ciao e benvenuto! Al momento non sono alla ricerca di lavoro ma puoi comunque mandarmi un saluto!<input type='text' id='message' placeholder='Ciao!...'' required> ";
   document.getElementById('labelname').innerHTML = "Il tuo nome:<input type='text' id='name' placeholder='Mario Rossi'>";
   document.getElementById('submit').setAttribute("value", "invio");
@@ -38,7 +38,7 @@ function eng() {
   document.getElementById('description').innerHTML = "*this portfolio is a capstone for a web-design course, but my life is not exactly full of adventure and I don't have much to showcase: I did make tumblr themes before and edited images, but the 'about me' section will be 'embellished' a lot.<br>This because all my free time is actually spent at my laptop and that's not exactly <strong> cool</strong>.";
   document.getElementById('worktitle').innerHTML = "What can I do? <br>What am I working on?<br> Click to find out!"
   document.getElementById('about-title').innerHTML = "about me!"
-  document.getElementById('contact-title').innerHTML = "contact me:";
+  document.getElementById('contact-title').innerHTML = "how to contact me:";
   document.getElementById('labelmessage').innerHTML = "Hi and welcome! Currently I'm not taking any job, but feel free to say hello!<input type='text' id='message' placeholder='hi!...'' required>";
   document.getElementById('labelname').innerHTML = "Your name:<input type='text' id='name' placeholder='John Smith'>";
   document.getElementById('submit').setAttribute("value", "send");
