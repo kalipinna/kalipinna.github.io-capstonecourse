@@ -12,7 +12,7 @@ $(window).one('scroll', function() {
 });
 $(window).one('scroll', function() {
   if ($("#icons").is(':visible')) {
-    $("#icons").addClass(" zoom-in-right");
+    $("#icons").addClass(" zoom-in-icons");
   }
 
 });
