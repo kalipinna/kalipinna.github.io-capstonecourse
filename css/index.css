@@ -467,13 +467,13 @@ h2 {
 
 @keyframes run {
   0% {
-    margin-left: 0px;
+    margin-left: 1vw;
   }
   50% {
-    margin-left: 80%;
+    margin-left: 80vw;
   }
   100% {
-    margin-left: 0%;
+    margin-left: 1vw;
   }
 }
 
