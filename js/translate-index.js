@@ -6,9 +6,9 @@ function ita() {
   document.getElementById('contact-title').innerHTML = "Come contattarmi:";
   document.getElementById('labelmessage').innerHTML = "Ciao e benvenuto! Al momento non sono alla ricerca di lavoro ma puoi comunque mandarmi un saluto!<input type='text' id='message' placeholder='Ciao!...'' required> ";
   document.getElementById('labelname').innerHTML = "Il tuo nome:<input type='text' id='name' placeholder='Mario Rossi'>";
-  document.getElementById('submit').setAttribute("value", "invio");
+  document.getElementById('submit').setAttribute("value", "invia email");
   document.getElementById('credits').innerHTML = "crediti";
-  document.getElementById('p1').innerHTML = "icone: fontawesome <br>Mario che corre <a href='https://gifer.com/en/33HU'>@gifer</a> <br> fonts:google fonts";
+  document.getElementById('p1').innerHTML = "icone: fontawesome <br>Mario che corre <a href='https://gifer.com/en/33HU'>@gifer</a> <br> fonts:google fonts e 1001fonts";
   document.getElementById('p2').innerHTML = "portfolio creato per il corso 'Web Design for Everybody: Basics of Web Development & Coding Specialization'";
   document.getElementById('dropbutton').innerHTML = "altro <i class='fa fa-caret-down'></i>";
 }
@@ -22,9 +22,9 @@ function eng() {
   document.getElementById('contact-title').innerHTML = "how to contact me:";
   document.getElementById('labelmessage').innerHTML = "Hi and welcome! Currently I'm not taking any job, but feel free to say hello!<input type='text' id='message' placeholder='hi!...'' required>";
   document.getElementById('labelname').innerHTML = "Your name:<input type='text' id='name' placeholder='John Smith'>";
-  document.getElementById('submit').setAttribute("value", "send");
+  document.getElementById('submit').setAttribute("value", "send email");
   document.getElementById('credits').innerHTML = "credits";
-  document.getElementById('p1').innerHTML = "icons: @fontawesome <br>animated Mario running @<a href='https://gifer.com/en/33HU'>gifer</a> <br> fonts:google fonts";
+  document.getElementById('p1').innerHTML = "icons: @fontawesome <br>animated Mario running @<a href='https://gifer.com/en/33HU'>gifer</a> <br> fonts:google fonts and 1001fonts";
   document.getElementById('p2').innerHTML = "portfolio created for 'Web Design for Everybody: Basics of Web Development & Coding Specialization'";
   document.getElementById('dropbutton').innerHTML = "more links <i class='fa fa-caret-down'></i>";
 
