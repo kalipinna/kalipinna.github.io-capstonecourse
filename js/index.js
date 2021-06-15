@@ -21,7 +21,7 @@ function ita() {
   document.getElementById('subtitle').innerHTML = "web designer, scrittrice, fan di troppi telefilm";
   document.getElementById('description').innerHTML = "*questo portfolio è stato creato per l'esame finale di un corso di webdesign, ciò che troverete nella pagina 'su di me' non rispecchia necessariamente la realtà: è vero che ho creato blogs per tumblr e praticato un po' di 'photo-editing', ma tutto il mio tempo libero è speso al pc per cui non ho molte 'avventure' da mostrare.";
   document.getElementById('worktitle').innerHTML = "Cosa so fare?<br>Su cosa sto lavorando?<br>Clicca per scoprirlo!";
-  document.getElementById('about-title').innerHTML = "Su di me!";
+  document.getElementById('about-title').innerHTML = "su di me!";
   document.getElementById('contact-title').innerHTML = "Come contattarmi:";
   document.getElementById('labelmessage').innerHTML = "Ciao e benvenuto! Al momento non sono alla ricerca di lavoro ma puoi comunque mandarmi un saluto!<input type='text' id='message' placeholder='Ciao!...'' required> ";
   document.getElementById('labelname').innerHTML = "Il tuo nome:<input type='text' id='name' placeholder='Mario Rossi'>";
