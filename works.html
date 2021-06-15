@@ -18,20 +18,7 @@
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <style>
-    #header {
-      color: #ffffff;
-      background-image: url('images/12.gif');
-      background-color: #102997;
-      background-blend-mode: hard-light;
-      background-size: cover;
-      background-position: center top;
-      background-repeat: no-repeat;
-      border-top: 2vh solid black;
-      min-height: max-content;
-      margin-top: 2rem;
-      min-height: 90vh;
-      text-shadow: 2px 2px 2px #000000;
-    }
+
   </style>
 </head>
 
@@ -57,45 +44,60 @@
   </nav>
 
   <header id="header">
-    <div id="titlebox">
-      <h1 id="title">past and future projects</h1>
+    <div id="headerbox">
+      <div id="titlebox">
+        <h1 id="title">past and future projects</h1>
+      </div>
+      <img src="images/bursts.gif" id="bursts" alt="decoration with circles growing and disappearing">
+      <img src="images/bursts.gif" id="burstsB" alt="second decoration with circles growing and disappearing">
+
     </div>
-    <img src="images/bursts.gif" id="bursts" alt="decoration with circles growing and disappearing">
-    <img src="images/bursts.gif" id="burstsB" alt="second decoration with circles growing and disappearing">
 
-    <!--    <img src="images/stars.gif" alt="stars" id="stars"> -->
-
-
+    <h2 id="subtitle">You'll find me on tumblr as imagesbyele, making themes/blogs, edits, giftsets and manips on my spare time - see some examples below</h2>
 
   </header>
 
   <section id="past">
+    <div id="past-text">
+      <div id="butthen"> <em>but then</em>,<span style="  font-family: 'Raleway', sans-serif; font-size:1.7rem;"> you could ask,</span> <em>why did you take an introduction to web design course?</em>
+      </div>
+      <div id="because"> because:
+        <ol>
+          <li>because I learned what I know by editing other people's codes and I wanted to see what basic rules I had missed</li><br>
+          <li>
+            ...and because coding is <span style="font-style:italic;text-decoration: underline; ">so much fun</span> and I'll take any excuse to do it some more</li>
+        </ol><br>
+      </div>
+    </div>
+    <img src="images/stars.gif " alt="stars" id="stars">
+
+    <div id="happier">you won't find someone happier to code for you!</div>
 
 
   </section>
 
-  <footer id="footer">
-    <h2 id="credits">credits:</h2>
+  <footer id="footer ">
+    <h2 id="credits ">credits:</h2>
 
-    <p id="p1">icons: fontawesome <br> animated Mario running @<a href="https://gifer.com/en/33HU">gifer</a> <br> fonts:google fonts</p>
+    <p id="p1 ">icons: fontawesome <br> animated Vivi running @<a href="https://gifer.com/en/33HU ">gifer</a> <br> fonts:google fonts</p>
     <hr>
-    <p id="p2">
+    <p id="p2 ">
       portfolio created for 'Web Design for Everybody: Basics of Web Development & Coding Specialization'
     </p>
 
   </footer>
-  <script src="js/jquery.style-my-tooltips.js"></script>
+  <script src="js/jquery.style-my-tooltips.js "></script>
 
 
   <script>
     (function($) {
       $(document).ready(function() {
-        $("[title]").style_my_tooltips();
+        $("[title] ").style_my_tooltips();
       });
     })(jQuery);
   </script>
 
-  <script src="js/dropdown.js"></script>
+  <script src="js/dropdown.js "></script>
 </body>
 
 </html>

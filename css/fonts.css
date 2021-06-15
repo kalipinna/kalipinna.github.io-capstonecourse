@@ -12,3 +12,28 @@
   font-family: underground;
   src: url(../fonts/underground.regular.ttf);
 }
+
+@font-face {
+  font-family: marker;
+  src: url(../fonts/permanent-marker.regular.ttf);
+}
+
+@font-face {
+  font-family: sedwick;
+  src: url(../fonts/sedgwick-ave-display.regular.ttf);
+}
+
+@font-face {
+  font-family: dancing script;
+  src: url(../fonts/dancing-script.regular.ttf);
+}
+
+@font-face {
+  font-family: chopin;
+  src: url(../fonts/chopin-script.regular.ttf);
+}
+
+@font-face {
+  font-family: 'team spirit';
+  src: url(../fonts/teamspirit.regular.ttf);
+}
