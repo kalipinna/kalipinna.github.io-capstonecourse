@@ -65,15 +65,15 @@
       }
     }
     
-    .zoom-in-right {
-      animation-name: zoom-in-right;
+    .zoom-in-icons {
+      animation-name: zoom-in-icons;
     }
     
-    @keyframes zoom-in-right {
+    @keyframes zoom-in-icons {
       0% {
         opacity: 0;
-        margin-right: -100%;
-        transform: scale(0.5);
+        margin-left: -10%;
+        transform: scale(0.8);
       }
       100% {
         opacity: 1;
@@ -359,10 +359,8 @@
     
     #about-title {
       text-shadow: 2px 2px 2px #000000;
-      padding: 1rem;
       text-align: right;
       display: block;
-      float: right;
       width: 100%;
       border-radius: 4px;
       opacity: 0;
@@ -373,14 +371,14 @@
     }
     
     #icons {
-      display: block;
+      display: inline-block;
       opacity: 0;
       margin: auto;
       z-index: 9;
-      width: 40vw;
       animation-fill-mode: forwards;
       animation-duration: 3s;
       animation-delay: 1s;
+      width: 80vw;
     }
     
     #container {
@@ -391,6 +389,7 @@
       color: #fff;
       font-size: 4rem;
       margin: 2%;
+      display: inline-block;
     }
     
     #mario {
@@ -626,8 +625,9 @@
 
     </div>
     <!-- end of icons-->
-
     <a href="about.html" target="_blank"> <img src="images/17.jpg" alt="woman working with laptop and coffee" id="previewimg3"></a>
+
+
 
     <img src="images/mario.gif" alt="super mario running as a decoration" id="mario">
   </section>
