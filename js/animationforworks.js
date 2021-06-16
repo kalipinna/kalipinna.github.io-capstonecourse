@@ -1,5 +1,5 @@
 $(window).one('scroll', function() {
-  if ($("#footer").is(':visible')) {
+  if ($("#intro").is(':visible')) {
     $("#intro").addClass(" scalefade");
   }
 
@@ -15,29 +15,28 @@ $(window).one('scroll', function() {
 
 
 $(window).one('scroll', function() {
-  if ($("#because").is(':visible')) {
+  if ($("#slideshow-container").is(':visible')) {
     $("#slideshow-container").addClass(" scalefade");
   }
 
 });
 
 $(window).one('scroll', function() {
-  if ($("#footer").is(':visible')) {
+  if ($("#butthen").is(':visible')) {
     $("#butthen").addClass(" grows");
   }
 });
 
 $(window).one('scroll', function() {
-  if ($("#footer").is(':visible')) {
+  if ($("#happier").is(':visible')) {
     $("#happier").addClass(" type");
   }
 
 });
 
 $(window).one('scroll', function() {
-  if ($("#footer").is(':visible')) {
+  if ($("#free").is(':visible')) {
     $("#free").addClass(" colorscale");
-
   }
 
 });
