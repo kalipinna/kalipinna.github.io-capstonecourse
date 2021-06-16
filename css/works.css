@@ -28,8 +28,8 @@ img {
 
 #secondbg {
   background-color: rgba(0, 0, 0, 30%);
-  height: 100%;
-  width: 100%;
+  height: calc(100% + 20vh);
+  width: calc(100% + 20vw);
   position: absolute;
   top: 0px;
   left: 0px;
@@ -48,7 +48,6 @@ a {
   background-repeat: no-repeat;
   background-attachment: fixed;
   border-top: 2vh solid black;
-  min-height: 90vh;
   margin-top: 2rem;
   height: max-content;
   text-shadow: 2px 2px 2px #000000;
@@ -101,6 +100,7 @@ a {
   width: 90vw;
   margin-top: 45vh;
   max-width: 1100px;
+  z-index: 2;
   animation: scalefade 10s forwards;
 }
 
@@ -125,9 +125,8 @@ h2 {
 }
 
 #past {
-  min-height: 70vh;
   background-color: #000;
-  background-image: linear-gradient(#000, #4b1072, #000);
+  background-image: url(../images/universestarsmoving.gif), linear-gradient(#000, #4b1072, #000);
   padding: 3vw 3vh;
 }
 
@@ -136,6 +135,10 @@ h2 {
   animation-duration: 6s;
   animation-fill-mode: forwards;
   opacity: 0;
+  width: 90vw;
+  max-width: 1200px;
+  display: block;
+  margin: auto;
   margin-bottom: 4vh;
 }
 
@@ -147,6 +150,7 @@ h2 {
 #sentimental {
   animation-duration: 15s;
   opacity: 0;
+  animation-delay: 2s;
   animation-fill-mode: forwards;
   font-style: italic;
 }
@@ -165,10 +169,8 @@ h2 {
 }
 
 #wondering {
-  min-height: 80vh;
   padding: 13vh 3vw;
   height: max-content;
-  background-image: linear-gradient(#000, #820986);
 }
 
 #butthen {
@@ -182,6 +184,7 @@ h2 {
   display: block;
   width: 90vw;
   position: relative;
+  opacity: 0;
   border-bottom: 2px solid #fff;
   max-width: 1000px;
   animation-duration: 4.5s;
@@ -230,10 +233,26 @@ li:last-of-type {
   position: relative;
   font-style: normal;
   font-size: 1.7rem;
-  background-image: linear-gradient(to right, rgba(168, 14, 14, 50%), rgba(20, 17, 196, 0.5));
   animation-duration: 4s;
   animation-fill-mode: forwards;
   text-decoration: underline wavy;
+}
+
+#soon {
+  max-width: 80vw;
+  margin: 10vh auto;
+  opacity: 0;
+  animation-duration: 4s;
+  animation-fill-mode: forwards;
+}
+
+#previewimg {
+  border: 2px solid #fff;
+  display: block;
+  margin: 5vh auto;
+  opacity: 0;
+  animation-duration: 4s;
+  animation-fill-mode: forwards;
 }
 
 @media all and (min-width:0px) and (max-width:759px) {
@@ -327,8 +346,8 @@ li:last-of-type {
 }
 
 @keyframes grows {
-  0% {
-    opacity: 0;
+  1% {
+    opacity: 1;
   }
   60% {
     margin-top: 20px;
@@ -340,6 +359,7 @@ li:last-of-type {
   100% {
     margin-top: 20px;
     transform: rotate(0deg);
+    opacity: 1;
   }
 }
 
