@@ -38,6 +38,17 @@ img {
   max-width: 80vw;
 }
 
+#slideshow-container img:hover,
+#slideshow-container img:focus,
+#previewimg:hover,
+#previewimg:focus,
+a:hover,
+a:focus {
+  border: 2px solid #857881;
+  box-shadow: 0px 0px 10px #d63aaf;
+  transition: all 1s linear;
+}
+
 #secondbg {
   background-color: rgba(0, 0, 0, 30%);
   height: calc(100% + 20vh);
@@ -48,7 +59,7 @@ img {
 }
 
 a {
-  text-decoration: none;
+  transition: all 0.6 linear;
   color: inherit;
 }
 
@@ -458,13 +469,12 @@ li:last-of-type {
 
 @keyframes bordercolor {
   0% {
-    border: #d63aaf 2px dotted;
-    color: #d63aaf
+    border: #f7a1e1 2px dotted;
+    color: #f7a1e1;
   }
-  ;
   20% {
     border: #42ccdf 2px dotted;
-    color: #42ccdf
+    color: #42ccdf;
   }
   40% {
     border: #675cc7 2px dotted;
