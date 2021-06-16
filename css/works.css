@@ -255,7 +255,7 @@ li:last-of-type {
   font-style: normal;
   font-size: 1.7rem;
   animation-duration: 4s;
-  animation-delay: 1s;
+  animation-delay: 0.6s;
   animation-fill-mode: forwards;
   text-decoration: underline wavy;
 }
