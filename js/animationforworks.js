@@ -28,7 +28,7 @@ $(window).one('scroll', function() {
 });
 
 $(window).one('scroll', function() {
-  if ($("#wondering").is(':visible')) {
+  if ($("#butthen").is(':visible')) {
     $("#butthen").addClass(" grows");
   }
 });
