@@ -2,7 +2,7 @@
 
 #slideshow-container {
   width: 90vw;
-  max-width: 600px;
+  max-width: 650px;
   position: relative;
   top: 5vh;
   opacity: 0;
@@ -22,7 +22,7 @@
 .next {
   cursor: pointer;
   position: absolute;
-  top: 20%;
+  top: 20px;
   width: auto;
   padding: 16px;
   color: white;
@@ -55,7 +55,7 @@
 
 #past .text {
   font-family: raleway;
-  font-size: 1.2rem;
+  font-size: 1rem;
   line-height: normal;
   color: #fff;
   margin-top: 10px;
