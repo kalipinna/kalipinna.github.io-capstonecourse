@@ -6,7 +6,6 @@
   position: relative;
   top: 5vh;
   margin: auto;
-  animation-name: scalefade;
   animation-fill-mode: forwards;
   animation-duration: 6s;
 }

@@ -1,3 +1,13 @@
+::-webkit-scrollbar {
+  width: 3px;
+  height: 0px;
+  background-color: #000000;
+}
+
+ ::-webkit-scrollbar-thumb {
+  background-color: #2b62b6;
+}
+
 body,
 html {
   margin: 0px;
@@ -44,14 +54,6 @@ a {
   margin-left: 0px;
   max-width: 30vh;
   float: left;
-}
-
-#burstsB {
-  position: relative;
-  margin-top: 0px;
-  margin-right: 0px;
-  max-width: 30vh;
-  float: right;
 }
 
 #stars {
@@ -117,14 +119,15 @@ h2 {
 }
 
 #past {
+  min-width: 70vh;
   background-color: #000;
-  background-image: linear-gradient(#000, #000, #4b1072, #000);
+  background-image: linear-gradient(#000, #4b1072, #000), -moz-linear-gradient(#000, #4b1072, #000), -o-linear-gradient(#000, #4b1072, #000);
   padding: 3vw 3vh;
 }
 
 #intro {
   font-family: raleway;
-  animation-duration: 5s;
+  animation-duration: 9s;
   animation-fill-mode: forwards;
   opacity: 0;
   margin-bottom: 4vh;
@@ -137,18 +140,19 @@ h2 {
 
 #sentimental {
   animation-duration: 10s;
+  opacity: 0;
   animation-fill-mode: forwards;
   animation-delay: 4s;
   font-style: italic;
 }
 
 #free {
-  animation: color 20s linear infinite;
   text-align: right;
   font-family: raleway;
   font-size: 1.5rem;
   margin-right: 3vw;
-  margin-top: 6vh;
+  position: relative;
+  margin-top: 10vh;
 }
 
 #past img {
@@ -159,7 +163,7 @@ h2 {
   min-height: 80vh;
   padding: 13vh 3vw;
   height: max-content;
-  background-image: linear-gradient(#000, rgb(13, 3, 123));
+  background-image: linear-gradient(#000, #820986), -moz-linear-gradient(#000, #820986), -o-linear-gradient(#000, #820986);
 }
 
 #butthen {
@@ -169,11 +173,14 @@ h2 {
   line-height: normal;
   margin: auto;
   font-weight: 100;
+  margin-top: -140px;
   display: block;
   width: 90vw;
   position: relative;
   border-bottom: 2px solid #fff;
   max-width: 1000px;
+  animation-duration: 4.5s;
+  animation-fill-mode: forwards;
 }
 
 #because {
@@ -186,7 +193,7 @@ h2 {
   max-width: 1000px;
   font-size: 1.7rem;
   text-align: center;
-  margin-top: 3vh;
+  margin-top: 5vh;
 }
 
 ol {
@@ -200,34 +207,43 @@ ol li {
   line-height: normal;
 }
 
-#happier {
-  white-space: nowrap;
-  overflow: hidden;
-  display: block;
-  word-break: break-all;
-  position: relative;
-  font-size: 1.7rem;
-  text-decoration: underline wavy;
-  /*   animation: type2 4s steps(60, end); */
+li::marker {
+  animation: color 5s infinite linear alternate;
 }
 
+#happier {
+  max-width: 100%;
+  text-align: center;
+  overflow: hidden;
+  line-height: 2rem;
+  width: 100%;
+  display: block;
+  position: relative;
+  font-style: normal;
+  font-size: 1.7rem;
+  background-image: linear-gradient(to right, rgba(168, 14, 14, 50%), rgba(20, 17, 196, 0.5));
+  animation-duration: 4s;
+  animation-fill-mode: forwards;
+  text-decoration: underline wavy;
+}
 
-/* animation only on big screen
-@keyframes type2 {
-  0% {
-    width: 0;
+@media all and (min-width:0px) and (max-width:759px) {
+  #happier {
+    animation-name: scalefade;
   }
-  50% {
-    width: 0;
-  }
-  100% {
-    width: 100;
-  }
-} */
+}
 
 @media all and (min-width: 760px) {
    :root {
     font-size: 16px;
+  }
+  #happier {
+    white-space: nowrap;
+    width: 100vw;
+    border: 2px dotted white;
+    background-image: none;
+    animation-duration: 9s;
+    animation-fill-mode: forwards;
   }
 }
 
@@ -235,16 +251,6 @@ ol li {
    :root {
     font-size: 20px;
   }
-}
-
-::-webkit-scrollbar {
-  width: 3px;
-  height: 0px;
-  background-color: #000000;
-}
-
- ::-webkit-scrollbar-thumb {
-  background-color: #c68efa;
 }
 
 .scalefade {
@@ -262,20 +268,25 @@ ol li {
   }
 }
 
+.color {
+  animation-name: color;
+}
+
 @keyframes color {
   25% {
     color: #42ccdf;
   }
   50% {
-    color: #b81d91;
+    color: #d63aaf;
   }
   75% {
     color: #7681e0;
   }
 }
 
-
-/* Fading animation for slideshow */
+.colorscale {
+  animation: color 14s linear infinite alternate, scalefade 6s linear 1 normal forwards;
+}
 
 .fade {
   -webkit-animation-name: fade;
@@ -299,5 +310,43 @@ ol li {
   }
   to {
     opacity: 1
+  }
+}
+
+.grows {
+  animation-name: grows;
+}
+
+@keyframes grows {
+  0% {
+    opacity: 0;
+  }
+  60% {
+    margin-top: 20px;
+  }
+  70% {
+    margin-top: 20px;
+    transform: rotate(10deg);
+  }
+  100% {
+    margin-top: 20px;
+    transform: rotate(0deg);
+  }
+}
+
+.type {
+  animation-name: type;
+}
+
+@keyframes type {
+  0% {
+    width: 0;
+    border: none;
+  }
+  30% {
+    width: 0;
+  }
+  100% {
+    width: 100;
   }
 }
