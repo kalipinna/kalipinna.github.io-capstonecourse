@@ -29,7 +29,7 @@ $(window).on('scroll', function() {
   var elemBottom = elemTop + $elem.height();
   if (elemBottom < docViewBottom) {
 
-    $('#sentimental').addClass(' fade');
+    $('#sentimental').addClass(' sent');
   }
 });
 

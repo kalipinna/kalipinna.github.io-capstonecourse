@@ -133,6 +133,7 @@ h2 {
 #intro {
   font-family: raleway;
   animation-duration: 6s;
+  animation-delay: 1s;
   animation-fill-mode: forwards;
   opacity: 0;
   width: 90vw;
@@ -234,6 +235,7 @@ li:last-of-type {
   font-style: normal;
   font-size: 1.7rem;
   animation-duration: 4s;
+  animation-delay: 1s;
   animation-fill-mode: forwards;
   text-decoration: underline wavy;
 }
@@ -243,6 +245,7 @@ li:last-of-type {
   margin: 10vh auto;
   opacity: 0;
   animation-duration: 4s;
+  animation-delay: 1s;
   animation-fill-mode: forwards;
 }
 
@@ -252,6 +255,7 @@ li:last-of-type {
   margin: 5vh auto;
   opacity: 0;
   animation-duration: 4s;
+  animation-delay: 1s;
   animation-fill-mode: forwards;
 }
 
@@ -270,6 +274,7 @@ li:last-of-type {
     width: 100vw;
     border: 2px dotted white;
     background-image: none;
+    animation-delay: 1s;
     animation-duration: 9s;
     animation-fill-mode: forwards;
   }
@@ -278,6 +283,19 @@ li:last-of-type {
 @media all and (min-width:1023px) {
    :root {
     font-size: 20px;
+  }
+}
+
+.sent {
+  animation-name: sent;
+}
+
+@keyframes sent {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1
   }
 }
 
