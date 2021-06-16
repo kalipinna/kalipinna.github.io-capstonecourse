@@ -76,7 +76,8 @@ a {
   position: absolute;
   margin-top: 0px;
   margin-left: 0px;
-  max-width: 30vh;
+  max-width: 20vh;
+  z-index: 3;
   float: left;
 }
 
@@ -314,6 +315,9 @@ li:last-of-type {
   #happier {
     animation-name: scalefade;
   }
+  #chocobo {
+    float: right;
+  }
 }
 
 @media all and (min-width: 760px) {
@@ -324,7 +328,6 @@ li:last-of-type {
     white-space: nowrap;
     width: 100vw;
     border: 2px dotted white;
-    background-image: none;
     animation-delay: 1s;
     animation-duration: 9s;
     animation-fill-mode: forwards;
@@ -439,12 +442,15 @@ li:last-of-type {
 @keyframes type {
   0% {
     width: 0;
+    opacity: 1;
     border: none;
   }
   30% {
+    opacity: 1;
     width: 0;
   }
   100% {
+    opacity: 1;
     width: 100;
   }
 }
