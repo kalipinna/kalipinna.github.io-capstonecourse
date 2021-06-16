@@ -1,13 +1,17 @@
 /* Slideshow container */
 
-.slideshow-container {
+#slideshow-container {
   width: 90vw;
   max-width: 600px;
   position: relative;
+  top: 5vh;
   margin: auto;
+  animation-name: scalefade;
+  animation-fill-mode: forwards;
+  animation-duration: 6s;
 }
 
-.slideshow-container img {
+#slideshow-container img {
   border: 2px solid #fff;
 }
 

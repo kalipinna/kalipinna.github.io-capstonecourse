@@ -35,8 +35,8 @@
 }
 
 section,
-header,
-footer,
+#header,
+#footer,
 nav {
   width: 100vw;
   left: 0px;
