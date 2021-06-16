@@ -82,7 +82,7 @@ $(window).on('scroll', function() {
 
 
 $(window).on('scroll', function() {
-  var $elem = $('#fun');
+  var $elem = $('#stars');
   var $window = $(window);
 
   var docViewTop = $window.scrollTop();

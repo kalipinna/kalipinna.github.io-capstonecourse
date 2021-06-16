@@ -8,6 +8,12 @@
   font-size: 12px;
 }
 
+::selection {
+  background-color: #fff;
+  color: #000000;
+  text-shadow: none;
+}
+
 
 /* style-my-tootltips plugin, tooltip styling */
 

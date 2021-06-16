@@ -38,8 +38,8 @@ img {
   max-width: 80vw;
 }
 
-#slideshow-container img:hover,
-#slideshow-container img:focus,
+.myslides img:hover,
+.myslides img:focus,
 #previewimg:hover,
 #previewimg:focus,
 a:hover,
@@ -216,6 +216,11 @@ h2 {
   max-width: 1000px;
   animation-duration: 4.5s;
   animation-fill-mode: forwards;
+}
+
+#youcould {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.7rem;
 }
 
 #because {
