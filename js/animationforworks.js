@@ -1,40 +1,41 @@
-$(window).on('scroll', function() {
-  if ($("#slideshow-container").is(':visible')) {
+$(window).one('scroll', function() {
+  if ($("#footer").is(':visible')) {
     $("#intro").addClass(" scalefade");
   }
 
 });
 
-$(window).on('scroll', function() {
+$(window).one('scroll', function() {
   if ($("#intro").is(':visible')) {
     $("#sentimental").addClass(" fade");
   }
 
 });
 
-$(window).on('scroll', function() {
-  if ($("#slideshow-container").is(':visible')) {
+
+
+$(window).one('scroll', function() {
+  if ($("#because").is(':visible')) {
     $("#slideshow-container").addClass(" scalefade");
   }
 
 });
 
-$(window).on('scroll', function() {
-  if ($("#stars").is(':visible')) {
+$(window).one('scroll', function() {
+  if ($("#footer").is(':visible')) {
     $("#butthen").addClass(" grows");
   }
-
 });
 
-$(window).on('scroll', function() {
-  if ($("#happier").is(':visible')) {
-    $("#happier").addClass("type");
+$(window).one('scroll', function() {
+  if ($("#footer").is(':visible')) {
+    $("#happier").addClass(" type");
   }
 
 });
 
-$(window).on('scroll', function() {
-  if ($("#because").is(':visible')) {
+$(window).one('scroll', function() {
+  if ($("#footer").is(':visible')) {
     $("#free").addClass(" colorscale");
 
   }
