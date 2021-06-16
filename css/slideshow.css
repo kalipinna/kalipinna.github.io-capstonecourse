@@ -1,0 +1,88 @@
+/* Slideshow container */
+
+.slideshow-container {
+  width: 90vw;
+  max-width: 600px;
+  position: relative;
+  margin: auto;
+}
+
+.slideshow-container img {
+  border: 2px solid #fff;
+}
+
+
+/* Next & previous buttons */
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 20%;
+  width: auto;
+  padding: 16px;
+  color: white;
+  text-shadow: 2px 2px 2px #000;
+  font-weight: bold;
+  font-size: 2rem;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+
+/* Position the "next button" to the right */
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+
+/* On hover, add a black background color with a little bit see-through */
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+/* Caption text */
+
+#past .text {
+  font-family: raleway;
+  font-size: 1.2rem;
+  line-height: normal;
+  color: #fff;
+  margin-top: 10px;
+  width: 100%;
+  text-align: center;
+}
+
+
+/* Number text (1/3 etc) */
+
+.numbertext {
+  color: #fff;
+  padding: 8px 12px;
+  top: 0;
+}
+
+
+/* The dots/bullets/indicators */
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: rgb(197, 14, 14);
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #9f52dd;
+}

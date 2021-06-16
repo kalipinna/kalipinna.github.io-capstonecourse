@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="css/common.css">
   <link rel="stylesheet" href="css/works.css">
   <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/slideshow.css">
 
 
   <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -19,6 +20,23 @@
   <script src="https://kit.fontawesome.com/85c606ef5c.js" crossorigin="anonymous"></script>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <script src="js/animationforworks.js"></script>
+  <script src="js/jquery.style-my-tooltips.js "></script>
+  <script>
+    (function($) {
+      $(document).ready(function() {
+        $("[title] ").style_my_tooltips();
+      });
+    })(jQuery);
+  </script>
+
+  <script src="js/dropdown.js "></script>
+
+
+
+
+
   <style>
 
   </style>
@@ -27,7 +45,7 @@
 <body>
 
   <nav id="navigation">
-    <a href="https://kalipinna.github.io" title="home/pagina principale"><i class="fas fa-redo" aria-label="back to home"></i></a>
+    <a href="https://kalipinna.github.io" title="home/pagina principale"><i class="fas fa-home" aria-label="back to home"></i></a>
     <a tabindex="0" href="javascript:void(0);" onclick="ita()" title="translate in italian/traduci in italiano">ita</a>
     <a tabindex="0" href="javascript:void(0);" onclick="eng()" title="translate back to english/torna all'inglese">eng</a>
     <div class="dropdown">
@@ -46,18 +64,125 @@
   </nav>
 
   <header id="header">
+    <div id="secondbg"></div>
     <div id="headerbox">
       <div id="titlebox">
         <h1 id="title">past and future projects</h1>
       </div>
-      <img src="images/bursts.gif" id="bursts" alt="decoration with circles growing and disappearing">
-      <img src="images/bursts.gif" id="burstsB" alt="second decoration with circles growing and disappearing">
+
 
     </div>
-
+    <img src="images/bursts.gif" id="bursts" alt="decoration with circles growing and disappearing">
     <h2 id="subtitle">You'll find me on tumblr as imagesbyele, making themes/blogs, edits, giftsets and manips on my spare time - see some examples below</h2>
 
   </header>
+
+  <section id="past">
+
+
+    <h3 id="intro">The following themes will look good on screens of every width, and give you the options to pick colors, most fonts and all images straight from the customization page, so they can be personalized by anyone regardless of their knowledge in coding -
+      with the exception of the very first ones I made, here to showcase some gadgets<span id="sentimental">... and for sentimental reasons.</span>
+    </h3>
+
+
+
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+      <span class="dot" onclick="currentSlide(4)"></span>
+      <span class="dot" onclick="currentSlide(5)"></span>
+      <span class="dot" onclick="currentSlide(6)"></span>
+      <span class="dot" onclick="currentSlide(7)"></span>
+      <span class="dot" onclick="currentSlide(8)"></span>
+      <span class="dot" onclick="currentSlide(9)"></span>
+      <span class="dot" onclick="currentSlide(10)"></span>
+    </div>
+
+
+
+    <div class="slideshow-container">
+
+      <div class="mySlides fade">
+        <div class="numbertext">1 / 10</div> <img src="images/theme2b.gif" style="width:100%">
+        <div class="text">one of my most famous themes, final fantasy inspired - as it says in the preview, your readers can go in dark or light mode with one click, there is a dropdown menu on one side, sidebars move on top on small screens, blending colors and backgrounds,
+          and good old fancy titles!
+        </div>
+
+      </div>
+
+
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 10</div> <img src="images/theme3.gif" style="width:100%">
+        <div class="text">another example of how the previous theme can be customized!
+        </div>
+
+      </div>
+
+
+
+      <div class="mySlides fade">
+        <div class="numbertext">3 / 10</div> <img src="images/theme7.gif" style="width:100%">
+        <div class="text">lgbtqia+ theme, specifically dedicated to the aro-ace community! With playlist at the bottom and a background that changes every time you refresh the page </div>
+
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">4 / 10</div> <img src="images/theme11.gif" style="width:100%">
+        <div class="text">lotr theme! preview image from the customization page to show how you can pick if you want animated moving nazguls as your links or regular roman numbers, as well as picking the position and size of your banner image! </div>
+
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">5 / 10</div> <img src="images/theme1.gif" style="width:100%">
+        <div class="text">my Super Mario-inspired theme! naturally everything that moves is a link, but really, isn't saying 'super Mario' enough? </div>
+
+      </div>
+      <div class="mySlides fade">
+        <div class="numbertext">6 / 10</div> <img src="images/theme6.gif" style="width:100%">
+        <div class="text">Optional banner, number of columns and so on, plus all updates and column text can be added directly from the customization page, no need to touch the code </div>
+
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">7 / 10</div><img src="images/theme6b.gif" style="width:100%">
+        <div class="text">Same theme as before, just a little example of how simply picking a few different options can start giving it a much more personalized, different look </div>
+
+      </div>
+
+
+      <div class="mySlides fade">
+        <div class="numbertext">8 / 10</div> <img src="images/theme5.gif" style="width:100%">
+        <div class="text">a theme where I played with the dark-mode button so that on top of it, your reader can actually enjoy a second theme - also a little image of your choosing will separate your posts. The second theme I've ever made (and as such not responsive for
+          mobile).
+        </div>
+
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">9 / 10</div> <img src="images/theme5b.gif" style="width:100%">
+        <div class="text">another example of the previous theme, specifically of how it could be edited and customized by a Doctor Who fan.
+        </div>
+
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">10 / 10</div> <img src="images/theme9.gif" style="width:100%">
+        <div class="text">last, ironically, my very first theme: also not responsive, but it has a very special place in my heart... and who doesn't like popup navigation menus and stars?
+        </div>
+
+      </div>
+
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    </div>
+    <h3>
+      <div id="free">all of them are free and can also be found on my <a href="https://ko-fi.com/kalipinna">ko-fi</a> page!</div>
+      </div>
+    </h3>
+
+  </section>
 
   <section id="wondering">
     <div id="wondering-text">
@@ -78,28 +203,19 @@
 
   </section>
 
-  <footer id="footer ">
+  <footer id="footer">
     <h2 id="credits ">credits:</h2>
 
     <p id="p1">icons: fontawesome <br> animated Vivi running @<a href="https://gifer.com/en/ZZ57">gifer</a> <br> fonts:google fonts and 1001 fonts</p>
     <hr>
-    <p id="p2 ">
+    <p id="p2">
       portfolio created for 'Web Design for Everybody: Basics of Web Development & Coding Specialization'
     </p>
 
   </footer>
-  <script src="js/jquery.style-my-tooltips.js "></script>
 
+  <script src="js/slideshow.js"></script>
 
-  <script>
-    (function($) {
-      $(document).ready(function() {
-        $("[title] ").style_my_tooltips();
-      });
-    })(jQuery);
-  </script>
-
-  <script src="js/dropdown.js "></script>
 </body>
 
 </html>
