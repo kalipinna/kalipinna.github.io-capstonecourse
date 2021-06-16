@@ -140,6 +140,7 @@ h2 {
   font-family: raleway;
   font-size: 1.3rem;
   line-height: normal;
+  text-align: center;
   animation-duration: 6s;
   animation-delay: 0.5s;
   animation-fill-mode: forwards;
