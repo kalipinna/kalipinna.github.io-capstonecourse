@@ -18,11 +18,17 @@
 
 /* Next & previous buttons */
 
+#arrows {
+  display: block;
+  width: 100%;
+  margin: auto;
+}
+
 .prev,
 .next {
   cursor: pointer;
-  position: absolute;
-  top: 20px;
+  display: inline-block;
+  position: relative;
   width: auto;
   padding: 16px;
   color: white;
@@ -38,8 +44,12 @@
 /* Position the "next button" to the right */
 
 .next {
-  right: 0;
+  float: right;
   border-radius: 3px 0 0 3px;
+}
+
+.prev {
+  float: left;
 }
 
 

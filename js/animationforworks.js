@@ -44,7 +44,7 @@ $(window).on('scroll', function() {
   var elemBottom = elemTop + $elem.height();
   if (elemBottom < docViewBottom) {
 
-    $('#soon, #previewimg').addClass(' scalefade');
+    $('#soon, #previewimg, #figcaption').addClass(' scalefade');
   }
 });
 
@@ -79,7 +79,7 @@ $(window).on('scroll', function() {
 
 
 $(window).on('scroll', function() {
-  var $elem = $('#butthen');
+  var $elem = $('#stars');
   var $window = $(window);
 
   var docViewTop = $window.scrollTop();

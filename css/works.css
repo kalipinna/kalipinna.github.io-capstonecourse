@@ -247,6 +247,7 @@ li:last-of-type {
   overflow: hidden;
   line-height: 2rem;
   width: 100%;
+  opacity: 0;
   display: block;
   position: relative;
   font-style: normal;
@@ -262,6 +263,7 @@ li:last-of-type {
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
+  padding-bottom: 4vh;
 }
 
 #soon {
@@ -283,15 +285,18 @@ li:last-of-type {
   animation-fill-mode: forwards;
 }
 
-figcaption {
+#figcaption {
   font-family: raleway;
   font-size: 1.2rem;
   color: #fff;
   max-width: 60vw;
   text-align: center;
+  opacity: 0;
   margin: auto;
-  margin-bottom: 4vh;
   display: block;
+  animation-duration: 4s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
 }
 
 @media all and (min-width:0px) and (max-width:759px) {
