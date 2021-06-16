@@ -12,6 +12,12 @@ $(window).one('scroll', function() {
 
 });
 
+$(window).one('scroll', function() {
+  if ($("#soon, #previewimg").is(':visible')) {
+    $("#soon, #previewimg").addClass(" scalefade");
+  }
+
+});
 
 
 $(window).one('scroll', function() {
@@ -22,7 +28,7 @@ $(window).one('scroll', function() {
 });
 
 $(window).one('scroll', function() {
-  if ($("#butthen").is(':visible')) {
+  if ($("#wondering").is(':visible')) {
     $("#butthen").addClass(" grows");
   }
 });

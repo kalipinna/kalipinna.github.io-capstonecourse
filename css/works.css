@@ -20,6 +20,12 @@ html {
   font-family: 'Raleway', sans-serif;
 }
 
+img {
+  display: block;
+  margin: auto;
+  max-width: 80vw;
+}
+
 #secondbg {
   background-color: rgba(0, 0, 0, 30%);
   height: 100%;
@@ -208,6 +214,10 @@ ol li {
 
 li::marker {
   animation: color 5s infinite linear alternate;
+}
+
+li:last-of-type {
+  margin-top: 15px;
 }
 
 #happier {
