@@ -28,6 +28,7 @@ body {
 
 footer {
   background-color: #000;
+  padding-bottom: 10vh;
 }
 
 img {
@@ -298,6 +299,14 @@ li:last-of-type {
   animation-duration: 4s;
   animation-delay: 1s;
   animation-fill-mode: forwards;
+}
+
+#creditscont {
+  background-color: #000;
+  display: block;
+  width: 100vw;
+  min-height: 15vh;
+  padding: 1vh 2vw;
 }
 
 @media all and (min-width:0px) and (max-width:759px) {
