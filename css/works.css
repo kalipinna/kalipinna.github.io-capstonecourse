@@ -20,6 +20,7 @@ html {
 }
 
 body {
+  background-color: #000;
   background-image: url(../images/universestarsmoving.gif);
   background-attachment: fixed;
   background-size: cover;
@@ -69,6 +70,9 @@ a {
   display: block;
   margin: auto;
   margin-top: -6vh;
+  animation-name: choco;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
   transform: scale(0.5);
 }
 
@@ -143,7 +147,7 @@ h2 {
   font-size: 1.3rem;
   line-height: normal;
   text-align: center;
-  animation-duration: 6s;
+  animation-duration: 5s;
   animation-delay: 0.5s;
   animation-fill-mode: forwards;
   opacity: 0;
@@ -173,7 +177,7 @@ h2 {
   font-size: 1.5rem;
   margin-right: 3vw;
   position: relative;
-  margin-top: 10vh;
+  margin-top: 20vh;
 }
 
 #past img {
@@ -255,9 +259,6 @@ li:last-of-type {
   position: relative;
   font-style: normal;
   font-size: 1.7rem;
-  animation-duration: 4s;
-  animation-delay: 0.6s;
-  animation-fill-mode: forwards;
   text-decoration: underline wavy;
 }
 
@@ -313,7 +314,7 @@ li:last-of-type {
 
 @media all and (min-width:0px) and (max-width:759px) {
   #happier {
-    animation-name: scalefade;
+    animation: scalefade 4s forwards, bordercolor 20s infinite linear;
   }
   #chocobo {
     float: right;
@@ -327,8 +328,8 @@ li:last-of-type {
   #happier {
     white-space: nowrap;
     width: 100vw;
-    border: 2px dotted white;
-    animation-delay: 1s;
+    border: 2px dotted #fff;
+    opacity: 0;
     animation-duration: 9s;
     animation-fill-mode: forwards;
   }
@@ -406,10 +407,10 @@ li:last-of-type {
 
 @keyframes fade {
   from {
-    opacity: .4
+    opacity: .4;
   }
   to {
-    opacity: 1
+    opacity: 1;
   }
 }
 
@@ -436,21 +437,55 @@ li:last-of-type {
 }
 
 .type {
-  animation-name: type;
+  animation: type 9s forwards, bordercolor 6s infinite;
 }
 
 @keyframes type {
   0% {
     width: 0;
-    opacity: 1;
     border: none;
   }
   30% {
-    opacity: 1;
+    opacity: 0;
     width: 0;
   }
   100% {
     opacity: 1;
+    border: #42ccdf 2px dotted;
     width: 100;
+  }
+}
+
+@keyframes bordercolor {
+  0% {
+    border: #d63aaf 2px dotted;
+    color: #d63aaf
+  }
+  ;
+  20% {
+    border: #42ccdf 2px dotted;
+    color: #42ccdf
+  }
+  40% {
+    border: #675cc7 2px dotted;
+    color: #675cc7;
+  }
+  60% {
+    border: #d68710 2px dotted;
+    color: #d68710
+  }
+  80% {
+    border: #fff 2px dotted;
+    color: #fff
+  }
+  100% {
+    border: #d63aaf 2px dotted;
+    color: #d63aaf
+  }
+}
+
+@keyframes choco {
+  0% {
+    transform: scale(0.2);
   }
 }

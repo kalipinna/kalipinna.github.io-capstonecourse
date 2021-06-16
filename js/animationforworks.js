@@ -3,6 +3,9 @@ by http://jsfiddle.net/ravimallya/mhfcwyk8/1/
 */
 
 
+
+
+
 $(window).on('scroll', function() {
   var $elem = $('#intro');
   var $window = $(window);
@@ -20,7 +23,7 @@ $(window).on('scroll', function() {
 
 
 $(window).on('scroll', function() {
-  var $elem = $('#intro');
+  var $elem = $('.next');
   var $window = $(window);
 
   var docViewTop = $window.scrollTop();
@@ -79,7 +82,7 @@ $(window).on('scroll', function() {
 
 
 $(window).on('scroll', function() {
-  var $elem = $('#happier');
+  var $elem = $('#fun');
   var $window = $(window);
 
   var docViewTop = $window.scrollTop();
