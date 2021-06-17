@@ -1,13 +1,5 @@
-/* 
-by http://jsfiddle.net/ravimallya/mhfcwyk8/1/ 
-*/
-
-
-
-
-
 $(window).on('scroll', function() {
-  var $elem = $('#header');
+  var $elem = $('#intro');
   var $window = $(window);
 
   var docViewTop = $window.scrollTop();
