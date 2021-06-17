@@ -1,0 +1,138 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+  <title>portfolio</title>
+  <link rel="icon" type="image/gif" href="favicon.ico" />
+  <meta charset="utf-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,  minimum-scale=1.0">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/fonts.css">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Raleway:wght@600&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/85c606ef5c.js" crossorigin="anonymous"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+
+<body onload="ita()">
+
+  <nav id="navigation">
+    <a href="index.ita.html" title="refresh/aggiorna"><i class="fas fa-redo" aria-label="refresh page"></i></a>
+    <a tabindex="0" href="javascript:void(0);" onclick="ita()" title="translate in italian/traduci in italiano">ita</a>
+    <a tabindex="0" href="javascript:void(0);" onclick="eng()" title="translate back to english/torna all'inglese">eng</a>
+    <div class="dropdown">
+      <button id="dropbutton" class="dropbtn" onclick="myFunction()" aria-label="opens dropdown menu with more links" title="more links/altri link">more links
+        <i class="fa  fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content" id="myDropdown">
+        <a href="works.ita.html" target="_blank">works page</a>
+        <a href="about.html" target="_blank">about me page</a>
+        <a href="https://imagesbyele.tumblr.com" target="_blank">my tumblr blog</a>
+        <a href="https://ko-fi.com/kalipinna" target="_blank">my ko-fi page</a>
+        <a href="#footer">credits</a>
+      </div>
+    </div>
+
+
+  </nav>
+
+  <header id="header">
+    <div id="secondbg"></div>
+    <div class="titlebox zoom-in">
+      <h1 id="myname">Mariangela<br>Pinna</h1>
+      <h2 id="subtitle">web designer, writer, tvshow-enthusiast*</h2>
+      <img src="images/9.gif" alt="portrait that is meant to represent me" class="portrait">
+
+    </div>
+    <div id="description" class="zoom-in">*this portfolio is a capstone for a web-design course, but my life is not exactly full of adventure and I don't have much to showcase: I did make tumblr themes before and edited images, but the 'about me' section will be 'embellished' a lot.<br>This
+      because all my free time is actually spent at my laptop and that's not exactly <strong> cool</strong>.</div>
+  </header>
+
+  <section id="works">
+    <div id="thirdbg"></div>
+
+    <h2 id="worktitle">What can I do? <br>What am I working on?<br> Click to find out! </h2>
+    <div id="imgcontainer">
+      <a href="works.ita.html" target="_blank" title="go to works page"><img src="images/theme5.gif" alt="first preview of a previous job and link to new page" id="previewimg1"> </a>
+      <a href="works.ita.html" target="_blank" title="go to works page"><img src="images/theme1.gif" alt="second preview of a previous job and link to new page" id="previewimg2"> </a>
+    </div>
+
+  </section>
+
+  <section id="about">
+    <div id="fourthbg"></div>
+
+    <h2 id="about-title">about <span class="me">me</span></h2>
+
+
+    <div id="icons">
+
+      <i class="fas fa-gamepad" aria-label="gamepad meant to represent I love videogames"></i>
+      <i class="fas fa-tv" aria-label="tv meant to represent I love tv"></i>
+      <i class="fas fa-bed" aria-label="bed meant to represent I'm lazy"></i>
+      <i class="fas fa-pizza-slice" aria-label="slice of pizza meant to represent I love food and especially pizza"></i>
+
+    </div>
+    <!-- end of icons-->
+    <a href="about.html" title="go to about me page" target="_blank"> <img src="images/17.jpg" alt="woman working with laptop and coffee" id="previewimg3"></a>
+
+    <div id="vivicontainer">
+
+      <img src="images/vivi.gif" alt="character from final fantasy (Vivi) running as a decoration" id="vivi"></div>
+  </section>
+
+  <section id="contact-me">
+
+    <h2 id="contact-title">how to contact me:</h2>
+    <form action="mailto:eliachaan+githubportfolio@hotmail.it" method="post" enctype="text/plain">
+
+      <fieldset>
+        <label id="labelmessage">Hi and welcome! Currently I'm not taking any job, but feel free to say hello!<input type='text' id='message' placeholder='hi!...' required></label>
+
+        <label id="labelname">Your name:<input type='text' id = 'name'   placeholder='John Smith'></label>
+
+        <!-- didn't add the 'name' attribute because this is meant to be sent as an email-->
+
+        <input type='submit' id="submit" value="send email">
+      </fieldset>
+    </form>
+  </section>
+
+  <footer id="footer">
+    <h2 id="credits">credits:</h2>
+
+    <div id="creditscont">
+      <p id="p1">icons: fontawesome <br> animated Vivi running @<a href="https://gifer.com/en/ZZ57">gifer</a> <br> fonts: google fonts and 1001fonts<br> script for animations happening on scroll by <a href="http://jsfiddle.net/ravimallya/mhfcwyk8/1/" target="_blank">@ravimallya</a><br>background-images
+        edited by me, original static art by ractapopulous.</p>
+      <hr>
+      <p id="p2">
+        portfolio created for 'Web Design for Everybody: Basics of Web Development & Coding Specialization'.
+      </p>
+    </div>
+
+  </footer>
+
+  <script src="js/animation-on-scroll.js">
+  </script>
+  <script src="js/translate-index.js"></script>
+
+  <script src="js/jquery.style-my-tooltips.js"></script>
+
+
+  <script>
+    (function($) {
+      $(document).ready(function() {
+        $("[title]").style_my_tooltips();
+      });
+    })(jQuery);
+  </script>
+  <script src="js/dropdown.js"></script>
+</body>
+
+</html>
