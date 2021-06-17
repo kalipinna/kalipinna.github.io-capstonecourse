@@ -1,6 +1,6 @@
 <!doctype html>
 
-<html lang="eng">
+<html lang="en">
 
 <head>
   <title>portfolio - about me</title>
@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="css/fonts.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-  </script>
+
 
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Raleway:wght@600&display=swap" rel="stylesheet">
@@ -43,7 +43,7 @@
     }
     
     a {
-      transition: all 0.6 linear;
+      transition: all 0.6s linear;
       color: inherit;
     }
     
@@ -69,7 +69,7 @@
     #title {
       font-size: 3rem;
       text-align: center;
-      text-decoration: underline 3px;
+      text-decoration: underline;
     }
     
     #tale {
@@ -146,9 +146,8 @@
         transform: rotate3d(1, 360, 3, 180deg);
       }
       20% {
-        transform: none
+        transform: none;
       }
-      ;
       100% {
         transform: none;
       }
@@ -214,7 +213,7 @@
     
     @keyframes rotate2 {
       0% {
-        transcorm: rotate(0deg);
+        transform: rotate(0deg);
         margin-right: 0%;
       }
       100% {
@@ -335,12 +334,12 @@
       border-radius: 8px;
     }
     
-    .fa,
-    .fas,
-    .fab {
+    #examples .fa,
+    #examples .fas,
+    #examples .fab {
       font-size: 2.5rem;
       line-height: 2.4rem;
-      transition: all 0.3 linear;
+      transition: all 0.3s linear;
     }
     
     #iconsbox {
@@ -370,6 +369,15 @@
     
     #examples p {
       display: none;
+    }
+    
+    #previewimg {
+      max-width: 80vw;
+      height: 300px;
+      display: block;
+      background-image: url('images/6.jpg');
+      background-size: cover;
+      margin: 4vh auto;
     }
   </style>
 </head>
@@ -429,15 +437,18 @@
 
     <h2 id="click">click on a topic to learn more!</h2>
     <div id="iconsbox">
-      <i class="fa fa-graduation-cap" aria> studies</i>
-      <p>I have a 3 years degree in psychological sciences and techniques and a 2 years specialization in psychology of social and workplace-related processes and of development (although I have a strong interest in clinical too). </p>
+      <i class="fa fa-graduation-cap" style="background-image:url('images/16.jpg')" aria-hidden="true" onclick="show(this)"> studies</i>
+      <p>I have a 3 years degree in psychological sciences and techniques and took a 2 years specialization in psychology of social and workplace-related processes and of development (although I have a strong interest in clinical too). Still waiting to be
+        able to start my intership, but truthfully I carry everything I study with me and end up having long debates with friends even about fictional characters and how a real person would not react the way they do - which brought me to write a thesis
+        about ptsd out of annoyance towards how lightly it was treated in a tvshow I used to watch (and of course over my extreme interest in the topic). <br>Needless to say I read up far too much about every possible topic that hits me, though my favorite
+        sources are always the people who share their journeys, giving a completely different point of view on therapy and society expectations that no book can offer.</p>
       <i class="fa fa-steam" aria-label="steam gamepad"> videogames</i>
-      <i class="fas fa-dog" aria-hidden="true"> animals</i>
+      <i class="fas fa-dog" aria-hidden="true" onclick="show(this)"> animals</i>
       <i class="fas fa-bread-slice" aria-hidden="true"> food</i>
       <i class="fa fa-keyboard-o" aria-hidden="true"> writing</i>
       <i class="fab fa-tumblr" aria-hidden="true"> blogs</i>
       <i class="fa fa-language" aria-hidden="true"> languages</i>
-      <i class="fa fa-tv" aria-hidden="true"> tv</i>
+      <i class="fa fa-tv " aria-hidden="true"> tv</i>
       <i class="fas fa-book-reader" aria-hidden="true"> books</i>
       <i class="fa fa-table" aria-hidden="true"> data analysis</i>
       <i class="fa fa-image" aria-hidden="true"> photo editing</i>
@@ -462,8 +473,8 @@
     </div>
 
   </footer>
-  <script src="js/dropdown.js"></script>
-  <script src="js/jquery.style-my-tooltips.js"></script>
+  <script src="js/dropdown.js "></script>
+  <script src="js/jquery.style-my-tooltips.js "></script>
   <script>
     (function($) {
       $(document).ready(function() {
@@ -472,7 +483,7 @@
     })(jQuery);
   </script>
 
-
+  <script src="js/about.js "></script>
 </body>
 
 </html>
