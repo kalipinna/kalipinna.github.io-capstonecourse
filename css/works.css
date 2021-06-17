@@ -440,6 +440,9 @@ li:last-of-type {
   75% {
     color: #7681e0;
   }
+  100% {
+    color: #fff;
+  }
 }
 
 .colorscale {
