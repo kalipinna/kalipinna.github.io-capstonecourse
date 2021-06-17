@@ -41,6 +41,11 @@
   z-index: 99999;
 }
 
+body {
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
 section,
 #header,
 #footer,
@@ -51,6 +56,10 @@ nav {
   box-sizing: border-box;
   display: block;
   height: max-content;
+}
+
+#header {
+  margin-top: 2.4rem;
 }
 
 section {
