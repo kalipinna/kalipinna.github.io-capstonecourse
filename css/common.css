@@ -142,7 +142,11 @@ dropdown {
   position: relative;
   height: max-content;
   text-align: center;
-  padding: 2vh 2vw;
+  padding: 0vh 2vw 2vh 2vw;
+}
+
+#footer h2 {
+  line-height: 0;
 }
 
 #p1,

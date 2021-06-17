@@ -205,7 +205,7 @@ h2 {
 }
 
 #wondering {
-  padding: 13vh 3vw;
+  padding: 13vh 3vw 1vh 3vw;
   height: max-content;
   background-image: url(../images/universestarsmoving.gif);
   background-attachment: fixed;
@@ -219,7 +219,7 @@ h2 {
   font-size: 2.4rem;
   margin: auto;
   font-weight: 100;
-  margin-top: -120px;
+  margin-top: -100px;
   display: block;
   width: 90vw;
   position: relative;
@@ -288,6 +288,60 @@ li:last-of-type {
   font-style: normal;
   font-size: 1.7rem;
   text-decoration: underline wavy;
+}
+
+#contacts {
+  display: block;
+  position: relative;
+  margin: auto;
+  margin-top: 20vh;
+  margin-bottom: 1vh;
+  padding: 1%;
+  opacity: 0;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px #d10404;
+  border: 3px double #d10404;
+  font-family: berkshire;
+  font-size: 1.4rem;
+  background-color: #000;
+  width: 150px;
+  text-align: center;
+  transition: all 2s ease-in;
+}
+
+.contacts {
+  animation: contacts 3s linear forwards;
+}
+
+@keyframes contacts {
+  0% {
+    opacity: 0;
+    transform: rotate(10deg);
+  }
+  50% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+}
+
+#contacts:hover,
+#contacts:focus {
+  background-color: rgba(209, 4, 4, 50%);
+  box-shadow: 0px 0px 10px #fff;
+  border: 3px double #fff;
+  transition: all 2s ease-in;
+}
+
+#contacts a,
+#contacts a:hover,
+#contacts a:focus {
+  text-decoration: none;
+  border: none;
+  box-shadow: none;
+  color: #fff;
 }
 
 #future {
@@ -423,14 +477,14 @@ li:last-of-type {
     opacity: 1;
   }
   60% {
-    margin-top: 20px;
+    margin-top: 40px;
   }
   70% {
-    margin-top: 20px;
+    margin-top: 40px;
     transform: rotate(10deg);
   }
   100% {
-    margin-top: 20px;
+    margin-top: 40px;
     transform: rotate(0deg);
     opacity: 1;
   }
@@ -539,5 +593,8 @@ li:last-of-type {
   }
   #soon {
     margin: 8vh auto;
+  }
+  #contacts {
+    width: 300px;
   }
 }
