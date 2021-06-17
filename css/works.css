@@ -1,3 +1,10 @@
+#past,
+#future,
+#wondering,
+#header {
+  text-shadow: 2px 2px 2px #000;
+}
+
 ::-webkit-scrollbar {
   width: 3px;
   height: 0px;
@@ -14,17 +21,10 @@ html {
   color: #fff;
   box-sizing: border-box;
   padding: 0px;
-  line-height: 2em;
+  line-height: normal;
   overflow-x: hidden;
-  font-family: 'Raleway', sans-serif;
-}
-
-body {
   background-color: #000;
-  background-image: url(../images/universestarsmoving.gif);
-  background-attachment: fixed;
-  background-size: cover;
-  background-repeat: no-repeat;
+  font-family: 'Raleway', sans-serif;
 }
 
 img {
@@ -44,15 +44,6 @@ a:focus {
   transition: all 1s linear;
 }
 
-#secondbg {
-  background-color: rgba(0, 0, 0, 30%);
-  height: calc(100% + 20vh);
-  width: calc(100% + 20vw);
-  position: absolute;
-  top: 0px;
-  left: 0px;
-}
-
 a {
   transition: all 0.6 linear;
   color: inherit;
@@ -60,7 +51,6 @@ a {
 
 #header {
   color: #ffffff;
-  background-image: url('../images/32.gif');
   background-image: url('../images/fallingstars.gif');
   background-size: cover;
   background-position: left;
@@ -145,7 +135,11 @@ h2 {
 }
 
 #past {
-  padding: 3vw 3vh;
+  padding-bottom: 2vh;
+  background: url('../images/1.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 #intro {
@@ -160,7 +154,8 @@ h2 {
   width: 90vw;
   display: block;
   margin: auto;
-  margin-bottom: 4vh;
+  margin-top: 4vh;
+  margin-bottom: 2vh;
 }
 
 .leftfade {
@@ -170,7 +165,7 @@ h2 {
 @keyframes leftfade {
   0% {
     opacity: 0;
-    margin-left: -50%;
+    margin-left: -50vw;
     transform: scale(0.7);
   }
   100% {
@@ -202,6 +197,7 @@ h2 {
   margin-right: 3vw;
   position: relative;
   margin-top: 20vh;
+  margin-bottom: 10vh;
 }
 
 #past img {
@@ -211,13 +207,16 @@ h2 {
 #wondering {
   padding: 13vh 3vw;
   height: max-content;
+  background-image: url(../images/universestarsmoving.gif);
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 #butthen {
   text-align: center;
   font-family: 'dancing script';
   font-size: 2.4rem;
-  line-height: normal;
   margin: auto;
   font-weight: 100;
   margin-top: -120px;
@@ -292,90 +291,56 @@ li:last-of-type {
 }
 
 #future {
-  background-image: url(../images/fallingstars.gif);
+  background: url('../images/35.gif');
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  padding-bottom: 4vh;
+  padding: 4vh 2vw;
   min-width: 20vh;
 }
 
 #soon {
   max-width: 80vw;
-  margin: 10vh auto;
+  margin: 4vh auto;
   opacity: 0;
+  background-color: rgba(0, 0, 0, 60%);
+  border-top: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  animation-duration: 4s;
+  animation-fill-mode: forwards;
+}
+
+#prevbox {
+  display: block;
+  border: 2px solid #fff;
+  margin: 4vh auto;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 60%);
+  padding: 4%;
+  max-width: 80vw;
   animation-duration: 4s;
   animation-fill-mode: forwards;
 }
 
 #previewimg {
-  border: 2px solid #fff;
   display: block;
-  margin: 5vh auto;
-  opacity: 0;
-  animation-duration: 4s;
-  animation-fill-mode: forwards;
+  border: 2px solid #fff;
+  margin: auto;
+  z-index: 1;
 }
 
 #figcaption {
   font-family: raleway;
   font-size: 1.2rem;
   color: #fff;
-  max-width: 60vw;
+  padding: 1%;
   text-align: center;
-  opacity: 0;
+  text-shadow: 2px 2px 2px #000;
   margin: auto;
+  margin-top: -2px;
   display: block;
-  animation-duration: 4s;
-  animation-delay: 0.4s;
-  animation-fill-mode: forwards;
-}
-
-@media all and (min-width:0px) and (max-width:759px) {
-  #happier {
-    animation: scalefade 4s forwards, bordercolor 20s infinite linear;
-  }
-  #chocobo {
-    float: right;
-  }
-}
-
-@media all and (min-width: 760px) {
-   :root {
-    font-size: 16px;
-  }
-  #happier {
-    white-space: nowrap;
-    width: 100vw;
-    border: 2px dotted #fff;
-    opacity: 0;
-    animation-duration: 9s;
-    animation-fill-mode: forwards;
-  }
-}
-
-@media all and (min-width:1023px) {
-   :root {
-    font-size: 20px;
-  }
-  #intro {
-    width: 80vw;
-  }
-  @keyframes leftfade {
-    0% {
-      opacity: 0;
-      margin-left: -20vw;
-      transform: scale(0.7);
-    }
-    100% {
-      opacity: 1;
-      margin-left: 10vw;
-      transform: scale(1);
-    }
-  }
-  #because {
-    font-size: 1.5rem;
-  }
+  border-top: 2px solid;
+  border-bottom: 2px solid;
 }
 
 .sent {
@@ -423,12 +388,10 @@ li:last-of-type {
 }
 
 .colorscale {
-  animation: color 14s linear infinite alternate, scalefade 6s linear 1 normal forwards;
+  animation: color 14s linear infinite alternate, scalefade 3s linear 1 normal forwards;
 }
 
 .fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
   animation-name: fade;
   animation-duration: 1.5s;
 }
@@ -526,5 +489,55 @@ li:last-of-type {
   }
   100% {
     transform: scale(0.5);
+  }
+}
+
+@media all and (min-width:0px) and (max-width:759px) {
+  #happier {
+    animation: scalefade 4s forwards, bordercolor 20s infinite linear;
+  }
+  #chocobo {
+    float: right;
+  }
+}
+
+@media all and (min-width: 760px) {
+   :root {
+    font-size: 16px;
+  }
+  #happier {
+    white-space: nowrap;
+    width: 100vw;
+    border: 2px dotted #fff;
+    opacity: 0;
+    animation-duration: 9s;
+    animation-fill-mode: forwards;
+  }
+}
+
+@media all and (min-width:1023px) {
+   :root {
+    font-size: 20px;
+  }
+  #intro {
+    width: 80vw;
+  }
+  @keyframes leftfade {
+    0% {
+      opacity: 0;
+      margin-left: -20vw;
+      transform: scale(0.7);
+    }
+    100% {
+      opacity: 1;
+      margin-left: 10vw;
+      transform: scale(1);
+    }
+  }
+  #because {
+    font-size: 1.5rem;
+  }
+  #soon {
+    margin: 8vh auto;
   }
 }

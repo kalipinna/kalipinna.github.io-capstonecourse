@@ -37,7 +37,7 @@ function eng() {
   document.getElementById('descr8').innerhtml = "a theme where I played with the dark-mode button so that on top of it, your reader can actually enjoy a second theme - also a little image of your choosing will separate your posts. The second theme I've ever made (and as such not responsive for mobile)"
   document.getElementById('descr9').innerhtml = "another example of the previous theme, specifically of how it could be edited and customized by a Doctor Who fan."
   document.getElementById('descr10').innerHTML = "last, ironically, my very first theme: also not responsive, but it has a very special place in my heart... and who doesn't like popup navigation menus and stars? ";
-  document.getElementById('free').innerHTML = "all of them are free and can also be found on my <a href='https://ko-fi.com/kalipinna'>ko-fi</a> page!";
+  document.getElementById('free').innerHTML = "all of them are free and can also be found in my <a href='https://ko-fi.com/kalipinna'>ko-fi</a> page!";
   document.getElementById('soon').innerHTML = "coming soon:";
   document.getElementById('figcaption').innerHTML = "a theme meant to remind you of 'pick your character' screens in videogames, in which a click on the small preview will bring up the corresponding description and image. Dark mode/light mode button included!";
   document.getElementById('butthen').innerHTML = "<em>but then</em>,<span id='youcould'> you could ask,</span> <em>why did you take an *introduction* to web design course?";

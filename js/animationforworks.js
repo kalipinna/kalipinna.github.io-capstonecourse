@@ -7,7 +7,7 @@ by http://jsfiddle.net/ravimallya/mhfcwyk8/1/
 
 
 $(window).on('scroll', function() {
-  var $elem = $('#intro');
+  var $elem = $('#header');
   var $window = $(window);
 
   var docViewTop = $window.scrollTop();
@@ -47,7 +47,7 @@ $(window).on('scroll', function() {
   var elemBottom = elemTop + $elem.height();
   if (elemBottom < docViewBottom) {
 
-    $('#soon, #previewimg, #figcaption').addClass(' scalefade');
+    $('#soon, #prevbox').addClass(' scalefade');
   }
 });
 
