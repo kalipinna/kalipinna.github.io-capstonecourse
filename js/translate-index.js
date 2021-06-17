@@ -8,7 +8,7 @@ function ita() {
   document.getElementById('labelname').innerHTML = "Il tuo nome:<input type='text' id='name' placeholder='Mario Rossi'>";
   document.getElementById('submit').setAttribute("value", "invia email");
   document.getElementById('credits').innerHTML = "crediti";
-  document.getElementById('p1').innerHTML = "icone: fontawesome <br>Vivi che corre <a href='https://gifer.com/en/ZZ57' target='_blank'>@gifer</a> <br> fonts:google fonts e 1001fonts";
+  document.getElementById('p1').innerHTML = "icone: fontawesome <br>Vivi che corre <a href='https://gifer.com/en/ZZ57' target='_blank'>@gifer</a> <br> fonts: google fonts e 1001fonts";
   document.getElementById('p2').innerHTML = "script per le animazioni quando si scrolla da <a href='http://jsfiddle.net/ravimallya/mhfcwyk8/1/' target='_blank'>@ravimallya</a><br> immagini di sfondo modificate da me, arte originale by ractapopulous.<br>portfolio creato per il corso 'Web Design for Everybody: Basics of Web Development & Coding Specialization'";
   document.getElementById('dropbutton').innerHTML = "altro <i class='fa fa-caret-down'></i>";
 }
@@ -24,7 +24,7 @@ function eng() {
   document.getElementById('labelname').innerHTML = "Your name:<input type='text' id='name' placeholder='John Smith'>";
   document.getElementById('submit').setAttribute("value", "send email");
   document.getElementById('credits').innerHTML = "credits";
-  document.getElementById('p1').innerHTML = "icons: @fontawesome <br>animated Vivi running @<a href='https://gifer.com/en/ZZ57'>gifer</a> <br> fonts:google fonts and 1001fonts";
+  document.getElementById('p1').innerHTML = "icons: @fontawesome <br>animated Vivi running @<a href='https://gifer.com/en/ZZ57'>gifer</a> <br> fonts: google fonts and 1001fonts";
   document.getElementById('p2').innerHTML = "  script for animations happening on scroll by <a href='http://jsfiddle.net/ravimallya/mhfcwyk8/1/' target='_blank'>@ravimallya</a><br> background-images edited by me, original static art by ractapopulous.<br>portfolio created for 'Web Design for Everybody: Basics of Web Development & Coding Specialization'";
   document.getElementById('dropbutton').innerHTML = "more links <i class='fa fa-caret-down'></i>";
 
