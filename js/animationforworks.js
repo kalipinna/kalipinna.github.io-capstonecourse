@@ -16,7 +16,7 @@ $(window).on('scroll', function() {
   var elemBottom = elemTop + $elem.height();
   if (elemBottom < docViewBottom) {
 
-    $('#intro').addClass(' scalefade');
+    $('#intro').addClass(' leftfade');
   }
 });
 

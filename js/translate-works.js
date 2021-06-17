@@ -27,8 +27,7 @@ function eng() {
   document.getElementById('title').innerHTML = "past and future projects";
   document.getElementById('subtitle').innerHTML = "you'll find me on tumblr too, making themes/blogs, edits, giftsets and manips on my spare time - see some examples below";
   document.getElementById('intro').innerHTML = "The following themes will look good on screens of every width, and give you the options to pick colors, most fonts and all images straight from the customization page, so they can be personalized by anyone regardless of their knowledge in coding - with the exception of the very first ones I made, here to showcase some gadgets<span id='sentimental'>... and for sentimental reasons.</span>";
-  document.getElementById('descr1').innerHTML = "one of my most famous themes, final fantasy inspired - as it says in the preview, your readers can go in dark or light mode with one click, there is a dropdown menu on one side, sidebars move on top on small screens, blending colors and backgrounds,
-  and good old fancy titles!";
+  document.getElementById('descr1').innerHTML = "one of my most famous themes, final fantasy inspired - as it says in the preview, your readers can go in dark or light mode with one click, there is a dropdown menu on one side, sidebars move on top on small screens, blending colors and backgrounds, and good old fancy titles!";
   document.getElementById('descr2').innerhtml = "another example of how the previous theme can be customized!";
   document.getElementById('descr3').innerhtml = "lgbtqia+ theme, specifically dedicated to the aro-ace community! With playlist at the bottom and a background that changes every time you refresh the page";
   document.getElementById('descr4').innerhtml = "lotr theme! preview image from the customization page to show how you can pick if you want animated moving nazguls as your links or regular roman numbers, as well as picking the position and size of your banner image!";
