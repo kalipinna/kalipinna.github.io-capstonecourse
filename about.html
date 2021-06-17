@@ -232,18 +232,18 @@
       margin: 50px 0;
       position: relative;
       display: block;
-      color: red;
+      color: #ff0000;
       width: 0px;
       height: 0px;
       border-right: 100px solid transparent;
-      border-bottom: 70px solid red;
+      border-bottom: 70px solid #ff0000;
       border-left: 100px solid transparent;
       transform: rotate(35deg);
       transform: scale(0.5);
     }
     
     #star-five:before {
-      border-bottom: 80px solid red;
+      border-bottom: 80px solid #ff0000;
       border-left: 30px solid transparent;
       border-right: 30px solid transparent;
       position: absolute;
@@ -259,13 +259,13 @@
     #star-five:after {
       position: absolute;
       display: block;
-      color: red;
+      color: #ff0000;
       top: 3px;
       left: -105px;
       width: 0px;
       height: 0px;
       border-right: 100px solid transparent;
-      border-bottom: 70px solid red;
+      border-bottom: 70px solid #ff0000;
       border-left: 100px solid transparent;
       transform: rotate(-70deg);
       content: '';
@@ -275,18 +275,18 @@
       margin: 50px 0;
       position: relative;
       display: block;
-      color: blue;
+      color: #0000ff;
       width: 0px;
       height: 0px;
       border-right: 100px solid transparent;
-      border-bottom: 70px solid blue;
+      border-bottom: 70px solid #0000ff;
       border-left: 100px solid transparent;
       transform: rotate(35deg);
       transform: scale(0.5);
     }
     
     #star-five2:before {
-      border-bottom: 80px solid blue;
+      border-bottom: 80px solid #0000ff;
       border-left: 30px solid transparent;
       border-right: 30px solid transparent;
       position: absolute;
@@ -302,13 +302,13 @@
     #star-five2:after {
       position: absolute;
       display: block;
-      color: blue;
+      color: #0000ff;
       top: 3px;
       left: -105px;
       width: 0px;
       height: 0px;
       border-right: 100px solid transparent;
-      border-bottom: 70px solid blue;
+      border-bottom: 70px solid #0000ff;
       border-left: 100px solid transparent;
       transform: rotate(-70deg);
       content: '';
@@ -320,7 +320,7 @@
     }
     
     #introsection {
-      background-image: url('images/28.gif');
+      background-image: url('images/32.gif');
       background-repeat: no-repeat;
       background-size: cover;
       background-attachment: fixed;
@@ -333,6 +333,43 @@
     #intro-to-bio {
       background-color: rgba(0, 0, 0, 60%);
       border-radius: 8px;
+    }
+    
+    .fa,
+    .fas,
+    .fab {
+      font-size: 2.5rem;
+      line-height: 2.4rem;
+      transition: all 0.3 linear;
+    }
+    
+    #iconsbox {
+      width: 100%;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-evenly;
+      row-gap: 2rem;
+      column-gap: 2rem;
+    }
+    
+    .fa:hover,
+    .fa:focus,
+    .fas:hover,
+    .fas:focus,
+    .fab:hover,
+    fab:focus {
+      color: #ff0000;
+      transition: all 1s linear;
+      border-bottom: 2px solid;
+    }
+    
+    #click {
+      font-family: boecklins;
+      font-size: 3rem;
+    }
+    
+    #examples p {
+      display: none;
     }
   </style>
 </head>
@@ -389,12 +426,24 @@
   </section>
 
   <section id="examples">
-    <div id="iconsbox">
 
-      <i class="fa fa-address-book-o" aria-hidden="true"></i>
+    <h2 id="click">click on a topic to learn more!</h2>
+    <div id="iconsbox">
+      <i class="fa fa-graduation-cap" aria> studies</i>
+      <p>I have a 3 years degree in psychological sciences and techniques and a 2 years specialization in psychology of social and workplace-related processes and of development (although I have a strong interest in clinical too). </p>
+      <i class="fa fa-steam" aria-label="steam gamepad"> videogames</i>
+      <i class="fas fa-dog" aria-hidden="true"> animals</i>
+      <i class="fas fa-bread-slice" aria-hidden="true"> food</i>
+      <i class="fa fa-keyboard-o" aria-hidden="true"> writing</i>
+      <i class="fab fa-tumblr" aria-hidden="true"> blogs</i>
+      <i class="fa fa-language" aria-hidden="true"> languages</i>
+      <i class="fa fa-tv" aria-hidden="true"> tv</i>
+      <i class="fas fa-book-reader" aria-hidden="true"> books</i>
+      <i class="fa fa-table" aria-hidden="true"> data analysis</i>
+      <i class="fa fa-image" aria-hidden="true"> photo editing</i>
+
     </div>
     <div id="bigcontainer">
-
       <div id="previewimg"></div>
       <div id="description"></div>
 
