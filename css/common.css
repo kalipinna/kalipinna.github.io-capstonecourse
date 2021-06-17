@@ -38,6 +38,7 @@
   font-size: 1rem;
   line-height: 1.2rem;
   color: #fff;
+  z-index: 99999;
 }
 
 section,
