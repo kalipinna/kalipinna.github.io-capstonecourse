@@ -154,28 +154,32 @@ h2 {
   text-shadow: 2px 2px 2px #000000;
   display: block;
   opacity: 0;
+  margin: 2vh auto;
   z-index: 9;
   animation-fill-mode: forwards;
   animation-duration: 2s;
-  animation-delay: .8s;
 }
 
 #imgcontainer {
-  padding: 0vh 3vw;
-  margin: 2vh 3vw;
+  padding: 1vh 2vw;
+  margin: 2vh 2vw;
+  display: inline-flex;
+  flex-flow: row wrap;
+  max-width: 800px;
+  justify-content: space-between;
 }
 
 #previewimg1 {
-  margin: 5vh 3vw;
   display: block;
   opacity: 0;
+  margin: 2vh auto;
   animation-duration: 4s;
   animation-fill-mode: forwards;
 }
 
 #previewimg2 {
   display: block;
-  margin: auto;
+  margin: 2vh auto;
   opacity: 0;
   animation-fill-mode: forwards;
   animation-duration: 5s;
@@ -189,7 +193,7 @@ h2 {
   background-position: center;
   background-repeat: no-repeat;
   position: relative;
-  min-height: 80vh;
+  min-height: 60vh;
   padding: 2vh 2vw;
 }
 
@@ -228,7 +232,7 @@ h2 {
   z-index: 9;
   animation-fill-mode: forwards;
   animation-duration: 3s;
-  animation-delay: 1s;
+  animation-delay: 2s;
   width: 80vw;
 }
 
@@ -374,16 +378,30 @@ input:hover {
     height: max-content;
     display: flex;
     flex-flow: row nowrap;
-    justify-content: space-evenly;
   }
   #about {
-    display: flex;
+    display: inline-flex;
     flex-flow: row nowrap;
-    justify-content: space-evenly;
+  }
+  #about-title {
+    font-size: 2.8rem;
+    float: left;
+  }
+  #previewimg3 {
+    transform: scale(0.8);
+  }
+  #icons {
+    margin-right: 2vw;
+    position: absolute;
+    align-self: center;
+  }
+  h2 {
+    font-size: 2.4rem;
   }
   #worktitle {
-    clear: both;
     display: block;
+    margin-top: 15vh;
+    max-width: 40vw;
   }
   .portrait {
     height: 25vh;
@@ -392,6 +410,14 @@ input:hover {
   #description {
     max-width: 80vw;
     font-size: 0.9rem;
+    max-width: 40vw;
+  }
+  #imgcontainer {
+    margin-right: 1vw;
+    padding: 1vh 0vw;
+    margin-left: 0.5vw;
+    top: 4vh;
+    max-width: 48vw;
   }
   #previewimg1 {
     float: left;
@@ -421,8 +447,8 @@ input:hover {
   }
   #imgcontainer {
     display: block;
-    max-width: 90vw;
-    margin: auto;
+    max-width: 55vw;
+    float: right;
   }
   #vivi {
     animation-duration: 50s;
@@ -436,15 +462,13 @@ input:hover {
 @keyframes zoom-in-left {
   0% {
     opacity: 0;
-    transform: scale(0.5);
-    margin-left: -100%;
+    transform: scale(0.7);
+    margin-left: -20%;
   }
   100% {
     opacity: 1;
     transform: scale(1);
-    margin-left: 0;
-    margin-right: 0;
-    margin: auto;
+    margin-left: 0%;
   }
 }
 

@@ -15,7 +15,7 @@ $(window).on('scroll', function() {
 
 
 $(window).on('scroll', function() {
-  var $elem = $('#worktitle');
+  var $elem = $('#previewimg1');
   var $window = $(window);
 
   var docViewTop = $window.scrollTop();

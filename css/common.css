@@ -150,29 +150,35 @@ dropdown {
   display: block;
 }
 
-#creditscont {
-  background-color: #000;
-  display: block;
-  width: 100vw;
-  min-height: 15vh;
-  padding: 1vh 2vw;
+@media all and (min-width: 600px) {
+  footer p {
+    font-size: 1.2rem;
+  }
 }
 
 @media all and (min-width:1023px) {
   footer p {
     display: inline-block;
     width: 30vw;
-    font-size: 1.1rem;
+    font-size: 1rem;
     text-align: left;
     background-color: inherit;
   }
   hr {
     display: none;
   }
-  #p1 {
-    float: left;
+  #creditscont {
+    background-color: #000;
+    display: block;
+    width: 100vw;
+    min-height: 15vh;
+    padding: 1vh 2vw;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-end;
+    justify-content: space-evenly;
   }
-  #p2 {
-    float: right;
+  p1 {
+    float: left;
   }
 }
