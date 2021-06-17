@@ -282,14 +282,6 @@ h2 {
   animation-iteration-count: infinite;
 }
 
-#creditscont {
-  background-color: #000;
-  display: block;
-  width: 100vw;
-  min-height: 15vh;
-  padding: 1vh 2vw;
-}
-
 @keyframes run {
   0% {
     margin-left: 1vw;
