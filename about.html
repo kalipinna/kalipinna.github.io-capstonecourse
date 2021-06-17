@@ -56,22 +56,71 @@
       background-repeat: no-repeat;
       background-attachment: fixed;
       max-width: 100vw;
-      display: flex;
-      flex-flow: column nowrap;
       justify-content: center;
     }
     
     #titlebox {
       max-width: 90vw;
       margin: auto;
+      margin-top: -110%;
+      animation: comein 2s forwards;
     }
     
     #title {
-      margin-top: -110%;
-      max-width: 90vw;
-      animation: comein 2s forwards;
       font-size: 3rem;
       text-align: center;
+      text-decoration: underline 3px;
+    }
+    
+    #tale {
+      font-family: dancing script;
+      margin: auto;
+      width: 90vw;
+      text-align: center;
+      display: block;
+      font-size: 3.7rem;
+      line-height: 0px;
+      text-decoration: none;
+    }
+    
+    #tale1 {
+      animation: tale1 2s forwards 2s linear;
+    }
+    
+    @keyframes tale1 {
+      100% {
+        color: rgb(241, 31, 31);
+      }
+    }
+    
+    #tale2 {
+      animation: tale2 2s forwards 3s linear;
+    }
+    
+    @keyframes tale2 {
+      100% {
+        color: rgb(50, 50, 221);
+      }
+    }
+    
+    #tale3 {
+      animation: tale3 2s forwards 4s linear;
+    }
+    
+    @keyframes tale3 {
+      100% {
+        color: rgb(255, 244, 86);
+      }
+    }
+    
+    #tale4 {
+      animation: tale4 2s forwards 5s linear;
+    }
+    
+    @keyframes tale4 {
+      100% {
+        color: rgb(167, 19, 167);
+      }
     }
     
     @keyframes comein {
@@ -88,7 +137,8 @@
       width: 100%;
       max-width: 250px;
       margin: auto;
-      animation: rotatepic 10s alternate infinite;
+      display: block;
+      animation: rotatepic 10s alternate 2s infinite;
     }
     
     @keyframes rotatepic {
@@ -106,6 +156,7 @@
     
     #dotbox {
       margin-top: 5vh;
+      text-align: center;
     }
     
     .dot {
@@ -120,12 +171,12 @@
     
     .dot:nth-of-type(1) {
       background-color: rgb(241, 31, 31);
-      animation: dot 2s forwards;
+      animation: dot 2s forwards 2s;
     }
     
     .dot:nth-of-type(2) {
       background-color: rgb(50, 50, 221);
-      animation: dot 2s forwards 2s;
+      animation: dot 2s forwards 3s;
     }
     
     .dot:nth-of-type(3) {
@@ -134,8 +185,8 @@
     }
     
     .dot:nth-of-type(4) {
-      background-color: rgb(77, 233, 111);
-      animation: dot 2s forwards 6s;
+      background-color: rgb(167, 19, 167);
+      animation: dot 2s forwards 5s;
     }
     
     @keyframes dot {
@@ -143,72 +194,201 @@
         transform: scale(2)
       }
     }
+    
+    #starbox1 {
+      position: absolute;
+      animation: rotate 10s alternate infinite;
+    }
+    
+    @keyframes rotate {
+      100% {
+        transform: rotate(360deg);
+        margin-left: 65vw;
+      }
+    }
+    
+    #starbox2 {
+      float: right;
+      animation: rotate2 10s alternate infinite;
+    }
+    
+    @keyframes rotate2 {
+      0% {
+        transcorm: rotate(0deg);
+        margin-right: 0%;
+      }
+      100% {
+        transform: rotate(-360deg);
+        margin-right: 65vw;
+      }
+    }
+    
+    #bigstarbox {
+      width: 100vw;
+      height: 110px;
+    }
+    
+    #star-five {
+      margin: 50px 0;
+      position: relative;
+      display: block;
+      color: red;
+      width: 0px;
+      height: 0px;
+      border-right: 100px solid transparent;
+      border-bottom: 70px solid red;
+      border-left: 100px solid transparent;
+      transform: rotate(35deg);
+      transform: scale(0.5);
+    }
+    
+    #star-five:before {
+      border-bottom: 80px solid red;
+      border-left: 30px solid transparent;
+      border-right: 30px solid transparent;
+      position: absolute;
+      height: 0;
+      width: 0;
+      top: -45px;
+      left: -65px;
+      display: block;
+      content: '';
+      transform: rotate(-35deg);
+    }
+    
+    #star-five:after {
+      position: absolute;
+      display: block;
+      color: red;
+      top: 3px;
+      left: -105px;
+      width: 0px;
+      height: 0px;
+      border-right: 100px solid transparent;
+      border-bottom: 70px solid red;
+      border-left: 100px solid transparent;
+      transform: rotate(-70deg);
+      content: '';
+    }
+    
+    #star-five2 {
+      margin: 50px 0;
+      position: relative;
+      display: block;
+      color: blue;
+      width: 0px;
+      height: 0px;
+      border-right: 100px solid transparent;
+      border-bottom: 70px solid blue;
+      border-left: 100px solid transparent;
+      transform: rotate(35deg);
+      transform: scale(0.5);
+    }
+    
+    #star-five2:before {
+      border-bottom: 80px solid blue;
+      border-left: 30px solid transparent;
+      border-right: 30px solid transparent;
+      position: absolute;
+      height: 0;
+      width: 0;
+      top: -45px;
+      left: -65px;
+      display: block;
+      content: '';
+      transform: rotate(-35deg);
+    }
+    
+    #star-five2:after {
+      position: absolute;
+      display: block;
+      color: blue;
+      top: 3px;
+      left: -105px;
+      width: 0px;
+      height: 0px;
+      border-right: 100px solid transparent;
+      border-bottom: 70px solid blue;
+      border-left: 100px solid transparent;
+      transform: rotate(-70deg);
+      content: '';
+    }
   </style>
+</head>
 
-  <body>
-    <nav id="navigation">
-      <a href="https://kalipinna.github.io" title="home/pagina principale"><i class="fas fa-home" aria-label="back to homepage"></i></a>
-      <a tabindex="0" href="javascript:void(0);" onclick="ita()" title="translate in italian/traduci in italiano">ita</a>
-      <a tabindex="0" href="javascript:void(0);" onclick="eng()" title="translate back to english/torna all'inglese">eng</a>
-      <div class="dropdown">
-        <button id="dropbutton" class="dropbtn" onclick="myFunction()" aria-label="opens dropdown menu with more links" title="more links/altri link">more links
+<body>
+  <nav id="navigation">
+    <a href="https://kalipinna.github.io" title="home/pagina principale"><i class="fas fa-home" aria-label="back to homepage"></i></a>
+    <a tabindex="0" href="javascript:void(0);" onclick="ita()" title="translate in italian/traduci in italiano">ita</a>
+    <a tabindex="0" href="javascript:void(0);" onclick="eng()" title="translate back to english/torna all'inglese">eng</a>
+    <div class="dropdown">
+      <button id="dropbutton" class="dropbtn" onclick="myFunction()" aria-label="opens dropdown menu with more links" title="more links/altri link">more links
           <i class="fa fa-caret-down"></i>
         </button>
-        <div class="dropdown-content" id="myDropdown">
-          <a href="about.html" target="_blank">about me page</a>
-          <a href="https://imagesbyele.tumblr.com" target="_blank">my tumblr blog</a>
-          <a href="https://ko-fi.com/kalipinna" target="_blank">my ko-fi page</a>
-          <a href="#footer">credits</a>
-        </div>
+      <div class="dropdown-content" id="myDropdown">
+        <a href="about.html" target="_blank">about me page</a>
+        <a href="https://imagesbyele.tumblr.com" target="_blank">my tumblr blog</a>
+        <a href="https://ko-fi.com/kalipinna" target="_blank">my ko-fi page</a>
+        <a href="#footer">credits</a>
       </div>
-    </nav>
+    </div>
+  </nav>
 
 
-    <header id="header">
-      <div id="titlebox">
-        <h1 id="title">behind the screen:<br> a tale of hyperfocusing</h1>
+  <header id="header">
+    <div id="titlebox">
+      <h1 id="title">behind the screen</h1>
+      <h2 id="tale"><span id="tale1">a</span> <span id="tale2">tale</span> <span id="tale3">of</span> <span id="tale4">hyperfocusing</span></h2>
 
-        <div id="dotbox">
-          <div class="dot"></div>
-          <div class="dot"></div>
-          <div class="dot"></div>
-          <div class="dot"></div>
-        </div>
-        <!-- end of dotbox-->
+      <div id="dotbox">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
       </div>
-      <!-- end of titlebox-->
+      <!-- end of dotbox-->
+    </div>
+    <!-- end of titlebox-->
 
-      <img src="images/me.png" alt="my photo" id="me">
-
-    </header>
-    <section id="section1">
-      <h2>hello again</h2>
-    </section>
-
-    <footer id="footer">
-      <h2 id="credits">credits:</h2>
-
-      <div id="creditscont">
-        <p id="p1">icons: fontawesome <br> animated Chocobo @<a href="https://gifer.com/en/4qGj" target="_blank">gifer</a> <br> fonts:google fonts and 1001 fonts</p>
-        <hr>
-        <p id="p2">
-          script for animations happening on scroll by <a href="https://jsfiddle.net/ravimallya/mhfcwyk8/1/" target="_blank">@ravimallya</a><br> backgrounds and decorative gifs by <a href="https://scottvandyne.tumblr.com" target="_blank">scottvandyne</a>(first
-          and last), me (second and third), and kaeeveoh-art(decorations).
-        </p>
+    <img src="images/me.png" alt="my photo" id="me">
+    <div id="bigstarbox">
+      <div id="starbox1">
+        <div id="star-five"></div>
       </div>
+      <div id="starbox2">
+        <div id="star-five2"></div>
+      </div>
+    </div>
 
-    </footer>
-    <script src="js/dropdown.js"></script>
-    <script src="js/jquery.style-my-tooltips.js"></script>
-    <script>
-      (function($) {
-        $(document).ready(function() {
-          $("[title] ").style_my_tooltips();
-        });
-      })(jQuery);
-    </script>
+  </header>
+  <section id="section1">
+    <h2>hello again</h2>
+  </section>
+
+  <footer id="footer">
+    <h2 id="credits">credits:</h2>
+
+    <div id="creditscont">
+      <p id="p1">icons: fontawesome <br> animated Chocobo @<a href="https://gifer.com/en/4qGj" target="_blank">gifer</a> <br> fonts:google fonts and 1001 fonts</p>
+      <hr>
+      <p id="p2">
+        script for animations happening on scroll by <a href="https://jsfiddle.net/ravimallya/mhfcwyk8/1/" target="_blank">@ravimallya</a><br> backgrounds and decorative gifs by <a href="https://scottvandyne.tumblr.com" target="_blank">scottvandyne</a>(first
+        and last), me (second and third), and kaeeveoh-art(decorations).
+      </p>
+    </div>
+
+  </footer>
+  <script src="js/dropdown.js"></script>
+  <script src="js/jquery.style-my-tooltips.js"></script>
+  <script>
+    (function($) {
+      $(document).ready(function() {
+        $("[title] ").style_my_tooltips();
+      });
+    })(jQuery);
+  </script>
 
 
-  </body>
+</body>
 
 </html>
