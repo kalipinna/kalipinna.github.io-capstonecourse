@@ -102,7 +102,7 @@ h2 {
   margin-top: 1rem;
   width: 20vh;
   height: 20vh;
-  max-width: 230;
+  max-width: 230px;
   max-height: 230px;
   object-fit: cover;
   box-shadow: 0px 0px 10px #ffffff;
