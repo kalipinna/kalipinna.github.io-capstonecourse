@@ -176,7 +176,7 @@ h2 {
   margin: 2vh 2vw;
   display: inline-flex;
   flex-flow: row wrap;
-  max-width: 800px;
+  max-width: 100%;
   justify-content: space-between;
 }
 
@@ -523,7 +523,7 @@ input:hover {
     margin: 2vh 2vw;
     display: inline-flex;
     flex-flow: column nowrap;
-    max-width: 700px;
+    max-width: 800px;
     max-height: 700px;
     max-width: 100%;
     justify-content: space-between;
@@ -534,7 +534,7 @@ input:hover {
     width: 500px;
     height: 250px;
     max-width: 100vw;
-    margin: 2vh auto;
+    margin-left: 0px;
     animation-duration: 4s;
     animation-fill-mode: forwards;
   }
@@ -545,6 +545,7 @@ input:hover {
     width: 500px;
     max-width: 100vw;
     height: 232px;
+    margin-left: 50px;
     animation-fill-mode: forwards;
     animation-duration: 5s;
     animation-delay: 0.3s;
@@ -558,5 +559,8 @@ input:hover {
   #portrait {
     max-width: 230px;
     max-height: 230px;
+  }
+  #imgcontainer {
+    max-height: 700px;
   }
 }

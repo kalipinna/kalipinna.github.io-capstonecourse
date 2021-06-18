@@ -8,7 +8,7 @@ $(window).on('scroll', function() {
   var elemBottom = elemTop + $elem.height();
   if (elemBottom < docViewBottom) {
 
-    $('#click').addClass(' skewing');
+    $('#click, #clickandscroll').addClass(' skewing');
   }
 });
 
