@@ -100,10 +100,10 @@ h2 {
 .portrait {
   border-radius: 100%;
   margin-top: 1rem;
-  width: 20vh;
-  height: 20vh;
-  max-width: 200px;
-  max-height: 200px;
+  width: 20vw;
+  height: 20vw;
+  max-width: 130px;
+  max-height: 130px;
   object-fit: cover;
   box-shadow: 0px 0px 10px #ffffff;
   border: 2px solid #ffffff;
@@ -372,6 +372,56 @@ input:hover {
   margin: auto;
 }
 
+.zoom-in-left {
+  animation-name: zoom-in-left;
+}
+
+@keyframes zoom-in-left {
+  0% {
+    opacity: 0;
+    transform: scale(0.7);
+    margin-left: -20%;
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    margin-left: 0%;
+  }
+}
+
+.zoom-in-center {
+  animation-name: zoom-in-center;
+}
+
+@keyframes zoom-in-center {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.zoom-in-icons {
+  animation-name: zoom-in-icons;
+}
+
+@keyframes zoom-in-icons {
+  0% {
+    opacity: 0;
+    transform: scale(0.6);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    margin-right: 0px;
+    margin-left: 0px;
+    margin: auto;
+  }
+}
+
 @media all and (min-width: 600px) {
    :root {
     font-size: 16px;
@@ -404,10 +454,6 @@ input:hover {
     display: block;
     margin-top: 15vh;
     max-width: 40vw;
-  }
-  .portrait {
-    height: 25vw;
-    width: 25vw;
   }
   #description {
     max-width: 80vw;
@@ -456,52 +502,9 @@ input:hover {
   }
 }
 
-.zoom-in-left {
-  animation-name: zoom-in-left;
-}
-
-@keyframes zoom-in-left {
-  0% {
-    opacity: 0;
-    transform: scale(0.7);
-    margin-left: -20%;
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1);
-    margin-left: 0%;
-  }
-}
-
-.zoom-in-center {
-  animation-name: zoom-in-center;
-}
-
-@keyframes zoom-in-center {
-  0% {
-    opacity: 0;
-    transform: scale(0.5);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-.zoom-in-icons {
-  animation-name: zoom-in-icons;
-}
-
-@keyframes zoom-in-icons {
-  0% {
-    opacity: 0;
-    transform: scale(0.6);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1);
-    margin-right: 0px;
-    margin-left: 0px;
-    margin: auto;
+@media all and (min-height:900px) {
+  #portrait {
+    max-width: 230px;
+    max-height: 230px;
   }
 }
