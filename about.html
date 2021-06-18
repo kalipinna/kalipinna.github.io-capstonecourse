@@ -527,6 +527,7 @@
     #ido3 {
       opacity: 0;
       margin-left: -100%;
+      animation-timing-function: linear;
     }
     
     .move {
@@ -534,18 +535,18 @@
     }
     
     #ido1 {
-      animation-duration: 3s;
+      animation-duration: 2s;
       animation-fill-mode: forwards;
     }
     
     #ido2 {
-      animation-duration: 3s;
+      animation-duration: 2s;
       animation-fill-mode: forwards;
       animation-delay: 1.4s;
     }
     
     #ido3 {
-      animation-duration: 3s;
+      animation-duration: 2s;
       animation-fill-mode: forwards;
       animation-delay: 2.4s;
     }
@@ -553,6 +554,7 @@
     @keyframes move {
       75% {
         opacity: 0;
+        margin-left: -20%;
       }
       100% {
         margin-left: 0%;
