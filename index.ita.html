@@ -22,16 +22,15 @@
 <body onload="ita()">
 
   <nav id="navigation">
-    <a href="index.ita.html" title="refresh/aggiorna"><i class="fas fa-redo" aria-label="refresh page"></i></a>
+    <a href="https://kalipinna.github.io/index.ita.html" title="refresh/aggiorna"><i class="fas fa-redo" aria-label="refresh page"></i></a>
     <a tabindex="0" href="javascript:void(0);" onclick="ita()" title="translate in italian/traduci in italiano">ita</a>
     <a tabindex="0" href="javascript:void(0);" onclick="eng()" title="translate back to english/torna all'inglese">eng</a>
     <div class="dropdown">
-      <button id="dropbutton" class="dropbtn" onclick="myFunction()" aria-label="opens dropdown menu with more links" title="more links/altri link">altri link
-        <i class="fa  fa-caret-down"></i>
+      <button id="dropbutton" class="dropbtn" onclick="myFunction()" aria-label="opens dropdown menu with more links" title="more links/altri link">altri link <i class="fa  fa-caret-down"></i>
       </button>
       <div class="dropdown-content" id="myDropdown">
         <a href="works.ita.html" target="_blank">works page</a>
-        <a href="about.html" target="_blank">about me page</a>
+        <a href="about.ita.html" target="_blank">about me page</a>
         <a href="https://imagesbyele.tumblr.com" target="_blank">my tumblr blog</a>
         <a href="https://ko-fi.com/kalipinna" target="_blank">my ko-fi page</a>
         <a href="#footer">credits</a>
@@ -56,7 +55,9 @@
   <section id="works">
     <div id="thirdbg"></div>
 
-    <h2 id="worktitle">What can I do? <br>What am I working on?<br> Click to find out! </h2>
+    <a href="works.ita.html" target="_blank" title="go to works page">
+      <h2 id="worktitle"> What can I do? <br>What am I working on?<br> Click to find out! </h2>
+    </a>
     <div id="imgcontainer">
       <a href="works.ita.html" target="_blank" title="go to works page"><img src="images/theme5.gif" alt="first preview of a previous job and link to new page" id="previewimg1"> </a>
       <a href="works.ita.html" target="_blank" title="go to works page"><img src="images/theme1.gif" alt="second preview of a previous job and link to new page" id="previewimg2"> </a>
@@ -66,20 +67,25 @@
 
   <section id="about">
     <div id="fourthbg"></div>
+    <div id="aboutandicons">
+      <a href="about.ita.html" title="go to about me page" target="_blank">
+        <h2 id="about-title">about <span class="me">me</span></h2>
+      </a>
 
-    <h2 id="about-title">about <span class="me">me</span></h2>
+      <div id="icons">
+        <a href="about.ita.html" title="go to about me page" target="_blank">
 
-
-    <div id="icons">
-
-      <i class="fas fa-gamepad" aria-label="gamepad meant to represent I love videogames"></i>
-      <i class="fas fa-tv" aria-label="tv meant to represent I love tv"></i>
-      <i class="fas fa-bed" aria-label="bed meant to represent I'm lazy"></i>
-      <i class="fas fa-pizza-slice" aria-label="slice of pizza meant to represent I love food and especially pizza"></i>
+          <i class="fas fa-gamepad" aria-label="gamepad meant to represent I love videogames"></i>
+          <i class="fas fa-tv" aria-label="tv meant to represent I love tv"></i>
+          <i class="fas fa-bed" aria-label="bed meant to represent I'm lazy"></i>
+          <i class="fas fa-pizza-slice" aria-label="slice of pizza meant to represent I love food and especially pizza"></i>
+        </a>
+      </div>
+      <!-- end of icons-->
 
     </div>
-    <!-- end of icons-->
-    <a href="about.html" title="go to about me page" target="_blank"> <img src="images/17.jpg" alt="woman working with laptop and coffee" id="previewimg3"></a>
+    <!--end of about and icons-->
+    <a href="about.ita.html" title="go to about me page" target="_blank"> <img src="images/17.jpg" alt="woman working with laptop and coffee" id="previewimg3"></a>
 
     <div id="vivicontainer">
 

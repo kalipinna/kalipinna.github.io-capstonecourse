@@ -25,6 +25,17 @@ html {
 a {
   text-decoration: none;
   color: inherit;
+  transition: color 2s linear;
+}
+
+a:hover,
+a:focus,
+#worktitle:hover,
+#worktitle:focus,
+#about-title:focus,
+#about-title:hover {
+  color: #c68efa;
+  transition: color 2s linear;
 }
 
 img {
@@ -156,6 +167,7 @@ h2 {
   opacity: 0;
   margin: 2vh auto;
   z-index: 9;
+  transition: color 2s linear;
   animation-fill-mode: forwards;
   animation-duration: 2s;
 }
@@ -208,10 +220,13 @@ h2 {
   display: block;
   margin: 2vh auto;
   max-width: 50vw;
-  height: auto;
   animation-fill-mode: forwards;
   animation-duration: 5s;
   animation-delay: 1s;
+}
+
+#aboutandicons {
+  display: block;
 }
 
 #about-title {
@@ -222,6 +237,7 @@ h2 {
   width: 100%;
   border-radius: 4px;
   opacity: 0;
+  transition: color 2s linear;
   animation-duration: 4s;
   animation-fill-mode: forwards;
 }
@@ -229,8 +245,8 @@ h2 {
 #icons {
   display: inline-block;
   opacity: 0;
+  position: relative;
   margin: auto;
-  z-index: 9;
   animation-fill-mode: forwards;
   animation-duration: 3s;
   animation-delay: 2s;
@@ -307,14 +323,21 @@ h2 {
   background-attachment: fixed;
   position: relative;
   min-height: max-content;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
 }
 
 #contact-title {
   background-color: rgba(0, 0, 0, 50%);
+  color: #fff;
   max-width: max-content;
   padding: 2vh 2vw;
+  margin-top: 4vh;
   text-align: center;
   margin: auto;
+  border-top: 2px dotted;
+  border-left: 2px dotted;
+  border-right: 2px dotted;
   border-radius: 2px;
 }
 
@@ -324,6 +347,7 @@ form {
   margin: auto;
   z-index: 9;
   border: 2px dotted;
+  margin-bottom: 10vh;
 }
 
 fieldset {
@@ -431,20 +455,18 @@ input:hover {
     display: flex;
     flex-flow: row nowrap;
   }
-  #about {
-    display: inline-flex;
-    flex-flow: row nowrap;
-  }
   #about-title {
     font-size: 2.8rem;
-    float: left;
+    margin-left: -12vw;
   }
   #previewimg3 {
-    transform: scale(0.8);
+    transform: scale(0.7);
+    margin-top: 10vh;
+    margin-bottom: 6vh;
+    display: block;
   }
   #icons {
     margin-right: 2vw;
-    position: absolute;
     align-self: center;
   }
   h2 {
@@ -496,6 +518,9 @@ input:hover {
     display: block;
     max-width: 55vw;
     float: right;
+  }
+  #icons {
+    margin-top: 7vh;
   }
   #vivi {
     animation-duration: 50s;
