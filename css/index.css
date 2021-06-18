@@ -315,7 +315,7 @@ h2 {
 }
 
 #contact-me {
-  background-image: url('../images/8.jpg');
+  background-image: url('../images/13.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -327,7 +327,7 @@ h2 {
 }
 
 #contact-title {
-  background-color: rgba(0, 0, 0, 50%);
+  background-color: rgba(0, 0, 0, 70%);
   color: #fff;
   max-width: max-content;
   padding: 2vh 2vw;
@@ -352,7 +352,7 @@ form {
 fieldset {
   border: none;
   padding: 4vh 4vw;
-  background-color: rgba(0, 0, 0, 50%);
+  background-color: rgba(0, 0, 0, 70%);
 }
 
 label {
@@ -365,7 +365,7 @@ label {
 
 input {
   display: block;
-  background-color: rgba(151, 148, 154, 30%);
+  background-color: rgba(151, 148, 154, 40%);
   line-height: 2em;
   font-size: 1.5rem;
   transition: all 1s linear;
