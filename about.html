@@ -49,7 +49,7 @@
     
     #header {
       min-height: 70vh;
-      padding: 5vh 5vw;
+      padding: 5vh 3vw;
       background-color: rgb(0, 0, 0);
       background-image: url('images/23.jpg');
       background-size: cover;
@@ -70,16 +70,18 @@
       font-size: 3.6rem;
       text-align: center;
       text-decoration: underline;
+      margin-bottom: 0.3rem;
     }
     
     #tale {
       font-family: dancing script;
       margin: auto;
       width: 90vw;
+      max-width: 100%;
       text-align: center;
       display: block;
-      font-size: 3.7rem;
-      line-height: 0px;
+      font-size: 3.6rem;
+      line-height: 3rem;
       text-decoration: none;
     }
     
@@ -319,31 +321,57 @@
     }
     
     #introsection {
-      background-image: url('images/32.gif');
+      background-image: url('images/22.jpg'), linear-gradient(rgb(77, 10, 139), #fff);
+      background-blend-mode: color-burn;
       background-repeat: no-repeat;
       background-size: cover;
       background-attachment: fixed;
-      background-position: top;
+      background-position: left bottom;
       padding-top: 10vh;
       padding-bottom: 10vh;
       text-align: center;
     }
     
-    #intro-to-bio {
-      background-color: rgba(0, 0, 0, 60%);
+    #intro-to-bio,
+    #intro-to-bio2 {
       border-radius: 8px;
+      color: #fff;
+      font-size: 1.9rem;
+      opacity: 0;
+    }
+    
+    #intro-to-bio2 {
+      animation-delay: 1s;
+    }
+    
+    .small {
+      animation: small 1.3s forwards;
+    }
+    
+    @keyframes small {
+      50% {
+        transform: scale(0.9);
+        opacity: .8;
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
     }
     
     #examples {
       background-image: linear-gradient(to right, #000, #4d043d);
+      background-image: url('images/21.jpg');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+      padding: 3vh;
     }
     
-    #examples .fa,
-    #examples .fas,
-    #examples .fab {
-      font-size: 2.5rem;
-      line-height: 2.4rem;
-      transition: all 0.3s linear;
+    #click {
+      color: rgb(14, 0, 0);
+      text-shadow: #fff 2px 2px 2px;
+      text-align: center;
     }
     
     #iconsbox {
@@ -355,14 +383,27 @@
       column-gap: 2rem;
     }
     
-    .fa:hover,
-    .fa:focus,
-    .fas:hover,
-    .fas:focus,
-    .fab:hover,
-    fab:focus {
+    #examples .fa,
+    #examples .fas,
+    #examples .fab {
+      font-size: 2rem;
+      line-height: 2.2rem;
+      max-height: 2.1rem;
+      border-radius: 10px;
+      border: 2px solid #fff;
+      transition: all 0.3s linear;
+    }
+    
+    #examples .fa:hover,
+    #examples .fa:focus,
+    #examples .fas:hover,
+    #examples .fas:focus,
+    #examples .fab:hover,
+    #examples fab:focus {
       transition: all 1s linear;
       border-bottom: 2px solid;
+      font-size: 2.1rem;
+      text-shadow: 4px 4px 4px #000;
       cursor: pointer;
     }
     
@@ -371,31 +412,180 @@
       font-size: 3rem;
     }
     
+    #click::after {
+      content: ' and scroll to learn more!';
+    }
+    
+    .skewing {
+      animation: skewing 6s forwards;
+    }
+    
+    @keyframes skewing {
+      30% {
+        transform: skew(20deg);
+      }
+      60% {
+        transform: skew(-20deg)
+      }
+    }
+    
     #examples p {
       display: none;
     }
     
     #previewimg {
-      max-width: 80vw;
-      height: 300px;
+      width: 80vw;
+      max-width: 500px;
+      min-height: 300px;
       display: block;
       background-image: url('images/6.jpg');
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
       margin: 4vh auto;
-      border: 3px double #fff;
       border-radius: 8px;
+      border: 3px double #fff;
       box-shadow: 0px 0px 10px #fff;
+      transition: all 2s linear;
+    }
+    
+    #previewimg:focus,
+    #previewimg:hover {
+      border: 3px double #c68efa;
+      box-shadow: 0px 0px 15px #c68efa;
+      transition: all 2s linear;
     }
     
     #description {
       font-family: 'montserrat', Arial, Helvetica, sans-serif;
-      max-width: 78vw;
+      width: 78vw;
+      max-width: 480px;
       margin: auto;
       text-align: center;
+      border-radius: 8px;
       font-size: 1.5rem;
+      padding: 10px;
+      box-sizing: border-box;
+      background-color: rgba(0, 0, 0, 60%);
+      border-bottom: 3px double rgb(20, 1, 1);
+    }
+    
+    #whatelse {
+      padding: 4vh 3vw;
+      background-image: url('images/24.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-attachment: fixed;
+    }
+    
+    .scale3d {
+      animation: scale3d 3s forwards;
+    }
+    
+    @keyframes scale3d {
+      50% {
+        transform: scale3d(.7, 1, .05);
+      }
+    }
+    
+    #ido {
+      font-family: marker;
+      font-size: 3.2rem;
       border-bottom: 3px double #fff;
+      display: inline-block;
+    }
+    
+    #x {
+      font-size: 2rem;
+      display: none;
+    }
+    
+    #listdos {
+      font-size: 1.6rem;
+      padding: 2rem;
+    }
+    
+    #thanks {
+      font-family: chopin;
+      font-size: 4rem;
+      text-align: center;
+      opacity: 0;
+    }
+    
+    .thanks {
+      animation: thanks 3s forwards;
+    }
+    
+    @keyframes thanks {
+      100% {
+        opacity: 1
+      }
+    }
+    
+    #ido1,
+    #ido2,
+    #ido3 {
+      opacity: 0;
+      margin-left: -100%;
+    }
+    
+    .move {
+      animation-name: move;
+    }
+    
+    #ido1 {
+      animation-duration: 3s;
+      animation-fill-mode: forwards;
+    }
+    
+    #ido2 {
+      animation-duration: 3s;
+      animation-fill-mode: forwards;
+      animation-delay: 1.4s;
+    }
+    
+    #ido3 {
+      animation-duration: 3s;
+      animation-fill-mode: forwards;
+      animation-delay: 2.4s;
+    }
+    
+    @keyframes move {
+      75% {
+        opacity: 0;
+      }
+      100% {
+        margin-left: 0%;
+        opacity: 1;
+      }
+    }
+    
+    #goodbye {
+      background-image: url('images/16.jpg');
+      background-size: cover;
+      background-position: top;
+      border-bottom: 3px solid #fff;
+    }
+    
+    @media all and (min-width:1024px) {
+      #iconsandprev {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+        max-width: 1300px;
+        margin: auto;
+      }
+      #iconsbox {
+        max-width: 40vw;
+        column-gap: 1rem;
+      }
+      #description {
+        max-height: 280px;
+        overflow-y: scroll;
+      }
+      #click:after {
+        content: ' to learn more!';
+      }
     }
   </style>
 </head>
@@ -447,81 +637,101 @@
   </header>
   <section id="introsection">
 
-    <h2 id="intro-to-bio">If you are the type of person who likes to go the extra mile and get to know <em>who</em> is working for them personally, or simply someone who saw this portfolio and got curious about who is 'Kali', this is the page for you! <br> Now, the tone may
-      not always be the most serious, it wouldn't be a honest 'about me' if it didn't convey my sense of humor or didn't show frivolous interests, but I hope this page will also show that when I love something, doesn't matter if it's a hobby or a job,
-      I <em>love</em> it and I will give it my best.<br>If you take anything away from this page, let it be that I dedicate all of myself to everything I do.</h2>
+    <h2 id="intro-to-bio">If you are the type of person who likes to go the extra mile and get to know <em>who</em> is working for them personally, or simply someone who saw this portfolio and got curious about who is 'Kali', this is the page for you!</h2>
+    <h2 id="intro-to-bio2"> Now, the tone may not always be the most serious, it wouldn't be a honest 'about me' if it didn't convey my sense of humor or didn't show frivolous interests, but I hope this page will also show that when I love something, doesn't matter if it's a
+      hobby or a job, I <em>love</em> it and I will give it my best.<br>If you take anything away from this page, let it be that I dedicate all of myself to everything I do.</h2>
   </section>
 
   <section id="examples">
 
-    <h2 id="click">click on a topic to learn more about my interests!</h2>
-    <div id="iconsbox">
-      <i class="fa fa-steam" aria-label="steam gamepad" style="background-image:url('images/neria.jpg')" onclick="show(this)"> videogames</i>
-      <p>once I start playing a new game, often rpgs, I'm dead to the world just as much as when I'm creating blogs: Skyrim, Dragon Age, Final Fantasy, Tomb Raider... I prefer long games, possibly with sequels that involve the same characters and the same
-        themes, and that aren't too hard to play because somehow growing up I lost most of my gaming skills. I used to be fantastic at shooting games and fighting ones, now I can't even look in Call of Duty's direction!</p>
-      <i class="fas fa-dog" aria-hidden="true" style="background-image:url('images/pug.jpg')" onclick="show(this)"> animals</i>
-      <p>not going to lie, 95% of my instagram is dedicated to pages about dogs, cats, otters and cute animals because they just make my day better. Need to recharge? Some happy music and a few dogs in costumes and I'm good to go!</p>
-      <i class="fas fa-bread-slice" aria-hidden="true" style="background-image:url('images/pizza.jpg')" onclick="show(this)"> food</i>
-      <p>if there is one thing that makes me the most stereotypical Italian is my strong relationship with food. You know those jokes about how italian grandmothers will ask you to get the chicken leg from a chicken that has lived in a specific mountain
-        and that was then preserved in secret place, in the dark, for no less than six months? I'm that grandmother. I'm that specific about what food I want, I'm going to enjoy every single second of every meal I have, as long as it's composed by dishes
-        I like and hate every second of its something I don't like much but choose to eat because healthy. No in between.</p>
-      <i class="fa fa-keyboard-o" aria-hidden="true" style="background-image:url('images/posts.jpg')" onclick="show(this)"> writing</i>
-      <p>I found myself writing original (admittedly very clichè-y) stories as a middle-schooler, which evolved into writing fanfiction (aka: I hate what happened to that character, I'm going to write what I think would be a better path for them), which
-        turned into collaborative writing on tumblr, having too much fun creating characters that fit in a pre-existing world and coming up with their inner world, development and reaction to what other people wrote. Sort of like writing tvshows except
-        that instead of focusing on one character I ended up making dozens, and a few of them were written for at least six years straight. That also led me to wanting each character to have its own blog with a specific look - and I met HTML and CSS for
-        the first time! </p>
-      <i class="fab fa-tumblr" aria-hidden="true" style="background-image:url('images/tumblr.jpg')" onclick="show(this)"> blogging</i>
-      <p>I don't only like tumblr because of the opportunities it offers in terms of learning skills - web designers and coders offering tutorials for free, me learning English through writing - but because of the chance it gives to connect with people all
-        over the world and learn about different cultures, about communities directly from people who belong in them, and rare obscure things that wouldn't be discussed anywhere else.</p>
-      <i class="fa fa-language" aria-hidden="true" style="background-image:url('images/lesson.jpg')" onclick="show(this)"> languages</i>
-      <p>I'm Italian, English is a second language and I'm starting to give a first look at Spanish grammar lessons, though there are only so many hours in a day and I gave priority to coding. I admire and want to emulate people who know 5-6 languages, because
-        I know how many doors English opened for me. It led me to tumblr, which led me to not only a better understanding of many subjects including psychology, but also to take an interest in web designing, in Photoshop, and in following courses that
-        had me noticing other topics such as data analysis and human resources, but it also made me write more, reminded me I'm curious about other languages, and so on.</p>
-      <i class="fa fa-tv " aria-hidden="true" style="background-image:url('images/buffy.jpg')" onclick="show(this)"> tv</i>
-      <p>I was never the sports-kid (shocking, I know), favoring tv instead. It's actually Buffy the Vampire Slayer and its dvds that taught me how to actually communicate in an English that wasn't stiff and directly from schoolbooks, because I loved it
-        so much that I just had to listen to it in original language with Italian subs. While I still watch heavy tvshows, though, in the last couple of years I focused mostly on sitcoms and comedies, as I find them a great way to relax in my spare time,
-        with all their silliness and hope. Rewatches of Friends, Will&Grace, Scrubs, Gilmore Girls, Leverage, and other early 2000s shows often accompany my meals! Somehow there is always too much to do to watch a 90min movie, but somehow watching 5 episodes
-        of a 20 minutes sitcom in a row works.</p>
-      <i class="fas fa-book-reader" aria-hidden="true" style="background-image:url('images/lotr.jpg')" onclick="show(this)"> books</i>
-      <p>I wasn't just the tv-kid, I was also the kid who forgot to look up from her books unless someone managed to get her attention. I read too fast, though, so I always ended up with nothing new to read! Jurassic Park, the first book that was directly
-        gifted to me, lasted about six hours. High school was all about Stephen King and Terry Pratchett, as well as re-reading Lord of the Rings about a million times. Manga, too, no shame in reading light, at time ridiculous stories, though when it
-        comes to them for the past few years there was only Gintama.</p>
-      <i class="fa fa-table" aria-hidden="true" style="background-image:url('images/data.jpg')" onclick="show(this)"> data analysis</i>
-      <p>this is a recent development, but having had the opportunity to take the google Data Analytics specialization I found out I love the idea of coming up with ways to solve a problem, work on how to gather the data which is something that I had already
-        read about during my university classes but I hadn't seen put in practice (don't ask leading questions, make sure you are not guided by your bias etc.), then actually find ways to gather said data, clean it, analyze it, make a presentation...
-        I find it incredibly interesting as well as useful (not only for marketing reasons but for human resources) and while I don't have access to big databases and tools necessary for it, I still plan on learning more about it!</p>
-      <i class="fa fa-image" aria-hidden="true" style="background-image:url('images/28.gif')" onclick="show(this)"> photo editing</i>
-      <p>this one was kinda obvious but it had to be mentioned at least once: as you can tell from most of the backgrounds used in this portfolio, I love taking photos, paintings, obviously with the permission of the owner, and edit them to make backgrounds,
-        covers, or simply pretty pictures!</p>
-      <i class="fa fa-graduation-cap" style="background-image:url('images/psych.jpg')" aria-hidden="true" onclick="show(this)"> studies</i>
-      <p>I have a 3 years degree in psychological sciences and techniques and took a 2 years specialization in psychology of social and workplace-related processes and of development (although I have a strong interest in clinical too). Still waiting to be
-        able to start my internship! <br>Truthfully I carry everything I study with me and end up having long debates with friends even about fictional characters (now, that's just for fun and hypothetical! I know you can't actually analyze them!) and
-        how a real person would not react the way they do - which brought me to write a thesis about PTSD out of annoyance towards how lightly it was treated in media (and of course over my extreme interest in the topic).<br>Needless to say I read up
-        far too much about every possible topic that hits me, though my favorite sources of learning are always the people who share their struggles and journeys, giving me a completely different point of view on therapy and society expectations that
-        no book can offer.</p>
+    <h2 id="click">click on a topic</h2>
+
+    <div id="iconsandprev">
+
+      <div id="iconsbox">
+        <i class="fa fa-steam" aria-label="steam gamepad" style="background-image:url('images/neria.jpg')" onclick="show(this)"> videogames</i>
+        <p>once I start playing a new game, often rpgs, I'm dead to the world just as much as when I'm creating blogs: Skyrim, Dragon Age, Final Fantasy, Tomb Raider... I prefer long games, possibly with sequels that involve the same characters and the same
+          themes, and that aren't too hard to play because somehow growing up I lost most of my gaming skills. I used to be fantastic at shooting games and fighting ones, now I can't even look in Call of Duty's direction!</p>
+        <i class="fas fa-dog" aria-hidden="true" style="background-image:url('images/pug.jpg')" onclick="show(this)"> animals</i>
+        <p>not going to lie, 95% of my instagram is dedicated to pages about dogs, cats, otters and cute animals because they just make my day better. Need to recharge? Some happy music and a few dogs in costumes and I'm good to go!</p>
+        <i class="fas fa-bread-slice" aria-hidden="true" style="background-image:url('images/pizza.jpg')" onclick="show(this)"> food</i>
+        <p>if there is one thing that makes me the most stereotypical Italian is my strong relationship with food. You know those jokes about how italian grandmothers will ask you to get the chicken leg from a chicken that has lived in a specific mountain
+          and that was then preserved in secret place, in the dark, for no less than six months? I'm that grandmother. I'm that specific about what food I want, I'm going to enjoy every single second of every meal I have, as long as it's composed by dishes
+          I like and hate every second of its something I don't like much but choose to eat because healthy. No in between.</p>
+        <i class="fa fa-keyboard-o" aria-hidden="true" style="background-image:url('images/posts.jpg')" onclick="show(this)"> writing</i>
+        <p>I found myself writing original (admittedly very clichè-y) stories as a middle-schooler, which evolved into writing fanfiction (aka: I hate what happened to that character, I'm going to write what I think would be a better path for them), which
+          turned into collaborative writing on tumblr, having too much fun creating characters that fit in a pre-existing world and coming up with their inner world, development and reaction to what other people wrote. Sort of like writing tvshows except
+          that instead of focusing on one character I ended up making dozens, and a few of them were written for at least six years straight. That also led me to wanting each character to have its own blog with a specific look - and I met HTML and CSS
+          for the first time! </p>
+        <i class="fab fa-tumblr" aria-hidden="true" style="background-image:url('images/tumblr.jpg')" onclick="show(this)"> blogging</i>
+        <p>I don't only like tumblr because of the opportunities it offers in terms of learning skills - web designers and coders offering tutorials for free, me learning English through writing - but because of the chance it gives to connect with people
+          all over the world and learn about different cultures, about communities directly from people who belong in them, and rare obscure things that wouldn't be discussed anywhere else.</p>
+        <i class="fas fa-language" aria-hidden="true" style="background-image:url('images/lesson.jpg')" onclick="show(this)"> languages</i>
+        <p>I'm Italian, English is a second language and I'm starting to give a first look at Spanish grammar lessons, though there are only so many hours in a day and I gave priority to coding. I admire and want to emulate people who know 5-6 languages,
+          because I know how many doors English opened for me. It led me to tumblr, which led me to not only a better understanding of many subjects including psychology, but also to take an interest in web designing, in Photoshop, and in following courses
+          that had me noticing other topics such as data analysis and human resources, but it also made me write more, reminded me I'm curious about other languages, and so on.</p>
+        <i class="fas fa-tv " aria-hidden="true" style="background-image:url('images/buffy.jpg')" onclick="show(this)"> tv</i>
+        <p>I was never the sports-kid (shocking, I know), favoring tv instead. It's actually Buffy the Vampire Slayer and its dvds that taught me how to actually communicate in an English that wasn't stiff and directly from schoolbooks, because I loved it
+          so much that I just had to listen to it in original language with Italian subs. While I still watch heavy tvshows, though, in the last couple of years I focused mostly on sitcoms and comedies, as I find them a great way to relax in my spare
+          time, with all their silliness and hope. Rewatches of Friends, Will&Grace, Scrubs, Gilmore Girls, Leverage, and other early 2000s shows often accompany my meals! Somehow there is always too much to do to watch a 90min movie, but somehow watching
+          5 episodes of a 20 minutes sitcom in a row works.</p>
+        <i class="fas fa-book-reader" aria-hidden="true" style="background-image:url('images/lotr.jpg')" onclick="show(this)"> books</i>
+        <p>I wasn't just the tv-kid, I was also the kid who forgot to look up from her books unless someone managed to get her attention. I read too fast, though, so I always ended up with nothing new to read! Jurassic Park, the first book that was directly
+          gifted to me, lasted about six hours. High school was all about Stephen King and Terry Pratchett, as well as re-reading Lord of the Rings about a million times. Manga, too, no shame in reading light, at time ridiculous stories, though when it
+          comes to them for the past few years there was only Gintama.</p>
+        <i class="fas fa-table" aria-hidden="true" style="background-image:url('images/data.jpg')" onclick="show(this)"> data analysis</i>
+        <p>this is a recent development, but having had the opportunity to take the google Data Analytics specialization I found out I love the idea of coming up with ways to solve a problem, work on how to gather the data which is something that I had already
+          read about during my university classes but I hadn't seen put in practice (don't ask leading questions, make sure you are not guided by your bias etc.), then actually find ways to gather said data, clean it, analyze it, make a presentation...
+          I find it incredibly interesting as well as useful (not only for marketing reasons but for human resources) and while I don't have access to big databases and tools necessary for it, I still plan on learning more about it!</p>
+        <i class="fas fa-image" aria-hidden="true" style="background-image:url('images/28.gif')" onclick="show(this)"> photo editing</i>
+        <p>this one was kinda obvious but it had to be mentioned at least once: as you can tell from most of the backgrounds used in this portfolio, I love taking photos, paintings, obviously with the permission of the owner, and edit them to make backgrounds,
+          covers, or simply pretty pictures!</p>
+        <i class="fas fa-graduation-cap" style="background-image:url('images/psych.jpg')" aria-hidden="true" onclick="show(this)"> studies</i>
+        <p>I have a 3 years degree in psychological sciences and techniques and took a 2 years specialization in psychology of social and workplace-related processes and of development (although I have a strong interest in clinical too). Still waiting to
+          be able to start my internship! <br>Truthfully I carry everything I study with me and end up having long debates with friends even about fictional characters (now, that's just for fun and hypothetical! I know you can't actually analyze them!)
+          and how a real person would not react the way they do - which brought me to write a thesis about PTSD out of annoyance towards how lightly it was treated in media (and of course over my extreme interest in the topic).<br>Needless to say I read
+          up far too much about every possible topic that hits me, though my favorite sources of learning are always the people who share their struggles and journeys, giving me a completely different point of view on therapy and society expectations
+          that no book can offer.</p>
+
+      </div>
+      <div id="bigcontainer">
+        <div id="previewimg">
+          <div id="x" onclick="back()">X</div>
+        </div>
+        <div id="description">if you haven't clicked on anything, here's a nice landscape for you.</div>
+
+      </div>
+
 
     </div>
-    <div id="bigcontainer">
-      <div id="previewimg"></div>
-      <div id="description">if you haven't clicked on anything, here's a nice landscape for you.</div>
+    <!-- end of iconsandprev-->
+
+  </section>
+
+  <section id="whatelse">
+
+    <h2 id="ido">what else:</h2>
+
+    <div id="listdos">
+      <div id="ido1"> I translated a comic book from Italian to English</div> <br>
+      <div id="ido2"> I'm a part-time caregiver for an elderly man (this would be the time when most of the hobbies above happen: he feels like watching tv? I can edit pictures on photoshop or play a game)</div> <br>
+      <div id="ido3"> I take online classes to learn new interesting subjects or to advance in old ones</div>
 
     </div>
   </section>
 
   <section id="goodbye">
-
-    thank you for
-
+    <h2 id="thanks">thank you for your attention!</h2>
   </section>
 
   <footer id="footer">
     <h2 id="credits">credits:</h2>
 
     <div id="creditscont">
-      <p id="p1">icons: fontawesome <br> fonts:google fonts and 1001 fonts</p>
+      <p id="p1">icons: fontawesome <br> fonts: google fonts and 1001 fonts</p>
       <hr>
       <p id="p2">
-        script for animations happening on scroll by <a href="https://jsfiddle.net/ravimallya/mhfcwyk8/1/" target="_blank">@ravimallya</a><br> backgrounds and decorations by me.
+        script for animations happening on scroll by <a href="https://jsfiddle.net/ravimallya/mhfcwyk8/1/" target="_blank">@ravimallya</a><br>
       </p>
     </div>
 
@@ -537,6 +747,7 @@
   </script>
 
   <script src="js/about.js "></script>
+  <script src="js/animation-for-about.js"></script>
 </body>
 
 </html>

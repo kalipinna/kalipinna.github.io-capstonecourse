@@ -165,12 +165,18 @@ dropdown {
 }
 
 @media all and (min-width: 600px) {
+   :root {
+    font-size: 16px;
+  }
   footer p {
     font-size: 1.2rem;
   }
 }
 
 @media all and (min-width:1023px) {
+   :root {
+    font-size: 20px;
+  }
   footer p {
     display: inline-block;
     width: 30vw;

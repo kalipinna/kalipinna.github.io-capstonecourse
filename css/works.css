@@ -560,9 +560,6 @@ li:last-of-type {
 }
 
 @media all and (min-width: 760px) {
-   :root {
-    font-size: 16px;
-  }
   #happier {
     white-space: nowrap;
     width: 100vw;
@@ -574,9 +571,6 @@ li:last-of-type {
 }
 
 @media all and (min-width:1023px) {
-   :root {
-    font-size: 20px;
-  }
   #intro {
     width: 80vw;
   }
