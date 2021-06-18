@@ -32,9 +32,10 @@ function ita() {
 
   document.getElementById('ido').innerHTML = "che altro dire:"
   document.getElementById('ido1').innerHTML = "ho tradotto un fumetto dall'italiano all'inglese";
-  document.getElementById('ido2').innerHTML = "sono una caregiver part-time per un uomo anziano (il momento della giornata in cui la maggior parte degli hobby discussi sopra avvengono: lui vuole guardarsi un po' di tv? Io nel frattempo modifico immagini o gioco a qualcosa)";
-  document.getElementById('id3').innerHTML = "seguo classi online per imparare nuovi argomenti o migliorare vecchie abilità";
-  document.getElementById('thanks').innerHTML = "grazie per l'attenzione!"
+  document.getElementById('ido2').innerHTML = "sono una caregiver part-time per un anziano (il momento della giornata in cui la maggior parte degli hobby discussi sopra avvengono: lui vuole guardarsi un po' di tv? Io nel frattempo modifico immagini o gioco a qualcosa)";
+  document.getElementById('ido3').innerHTML = "seguo classi online per imparare nuovi argomenti o migliorare vecchie abilità";
+  document.getElementById('thanks').innerHTML = "grazie per l'attenzione!";
+  document.getElementById('thanks').style.fontFamily = "dancing script";
   document.getElementById('credits').innerHTML = "crediti:";
   document.getElementById('p1').innerHTML = "icone: fontawesome<br>fonts da google e 1001fonts.";
   document.getElementById('p2').innerHTML = "script per le animazioni quando si scrolla da <a href='http://jsfiddle.net/ravimallya/mhfcwyk8/1/' target='_blank'>@ravimallya</a>";
