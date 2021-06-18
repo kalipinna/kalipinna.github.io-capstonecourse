@@ -24,21 +24,21 @@
   </style>
 </head>
 
-<body>
+<body onload="ita()">
   <nav id="navigation">
-    <a href="https://kalipinna.github.io" title="home/pagina principale"><i class="fas fa-home" aria-label="back to homepage"></i></a>
-    <a tabindex="0" href="javascript:void(0);" onclick="ita()" title="translate in italian/traduci in italiano">it</a>
-    <a tabindex="0" href="javascript:void(0);" onclick="eng()" title="translate back to english/torna all'inglese">en</a>
-    <a href="https://kalipinna.github.io/ita.html" title="puoi passare direttamente all'intero portfolio italiano se preferisci!">portfolio italiano</a>
+    <a href="https://kalipinna.github.io/ita.html" title="aggiorna"><i class="fas fa-redo" aria-label="refresh page"></i></a>
+    <a tabindex="0" href="javascript:void(0);" onclick="eng()" title="passa all'inglese">eng</a>
+    <a tabindex="0" href="javascript:void(0);" onclick="ita()" title="torna all'italiano">ita</a>
+
     <div class="dropdown">
-      <button id="dropbutton" class="dropbtn" onclick="myFunction()" aria-label="opens dropdown menu with more links" title="more links/altri link">more links
+      <button id="dropbutton" class="dropbtn" onclick="myFunction()" aria-label="apre menù con altri link" title="altri link">altri link
           <i class="fa fa-caret-down"></i>
         </button>
       <div class="dropdown-content" id="myDropdown">
-        <a href="works.html" target="_blank">previous work page</a>
-        <a href="https://imagesbyele.tumblr.com" target="_blank">my tumblr blog</a>
-        <a href="https://ko-fi.com/kalipinna" target="_blank">my ko-fi page</a>
-        <a href="#footer">credits</a>
+        <a href="works.ita.html" target="_blank">lavori precedenti</a>
+        <a href="https://imagesbyele.tumblr.com" target="_blank">il mio blog su tumblr</a>
+        <a href="https://ko-fi.com/kalipinna" target="_blank">la mia pagina ko-fi</a>
+        <a href="#footer">crediti</a>
       </div>
     </div>
   </nav>
