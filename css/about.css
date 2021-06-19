@@ -315,7 +315,7 @@ section {
 #intro-to-bio2 {
   border-radius: 8px;
   color: #fff;
-  font-size: 1.9rem;
+  font-size: 1.6rem;
   opacity: 0;
 }
 
@@ -549,6 +549,9 @@ section {
 }
 
 @media all and (min-width:1024px) {
+   :root {
+    font-size: 18px;
+  }
   #iconsandprev {
     display: flex;
     flex-flow: row wrap;
