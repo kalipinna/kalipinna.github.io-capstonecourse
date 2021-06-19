@@ -29,7 +29,6 @@ a {
 #header {
   min-height: 70vh;
   padding: 5vh 3vw;
-  background-color: rgb(0, 0, 0);
   background-image: url('../images/23.jpg');
   background-size: cover;
   background-repeat: no-repeat;
@@ -339,7 +338,6 @@ section {
 }
 
 #examples {
-  background-image: linear-gradient(to right, #000, #4d043d);
   background-image: url('../images/21.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
