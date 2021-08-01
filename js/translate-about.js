@@ -78,6 +78,7 @@ function eng() {
   document.getElementById('ido2').innerHTML = "I'm a part-time caregiver for an elderly man (this would be the time when most of the hobbies above happen: he feels like watching tv? I can edit pictures on photoshop or play a game)";
   document.getElementById('id3').innerHTML = " I take online classes to learn new interesting subjects or to advance in old ones";
   document.getElementById('thanks').innerHTML = "thank you for your attention!"
+  document.getElementById('thanks').style.fontFamily = "chopin";
   document.getElementById('credits').innerHTML = "credits:";
   document.getElementById('p1').innerHTML = "icons: fontawesome <br> fonts: google fonts and 1001 fonts";
   document.getElementById('p2').innerHTML = "script for animations happening on scroll from <a href='http://jsfiddle.net/ravimallya/mhfcwyk8/1/' target='_blank'>@ravimallya</a>";
