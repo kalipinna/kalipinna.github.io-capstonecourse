@@ -21,6 +21,7 @@ function ita() {
   document.getElementById('credits').innerHTML = "crediti";
   document.getElementById('p1').innerHTML = "icone:fontawesome<br>Chocobo animato da <a href='https://gifer.com/en/4qGj' target='_blank'>@gifer</a>fonts da google e 1001fonts.";
   document.getElementById('p2').innerHTML = "script per le animazioni quando si scrolla da <a href='http://jsfiddle.net/ravimallya/mhfcwyk8/1/' target='_blank'>@ravimallya</a><br> immagini di sfondo e gif decorative rispettivamente da <a href='https://scottvandyne.tumblr.com' target='_blank'>scottvandyne</a> (la prima e ultima), me (sfondi di mezzo), e kaeeveoh-art (decorazioni)";
+  document.getElementById('contacts').innerHTML = "contattatemi qui! <i class='far fa-envelope'></i>"
 }
 
 function eng() {
@@ -46,4 +47,5 @@ function eng() {
   document.getElementById('credits').innerHTML = "credits";
   document.getElementById('p1').innerHTML = "icons: fontawesome <br> animated Chocobo @<a href='https://gifer.com/en/4qGj' target='_blank'>gifer</a> <br> fonts:google fonts and 1001 fonts</p>";
   document.getElementById('p2').innerHTML = "script for animations happening on scroll by <a href='https://jsfiddle.net/ravimallya/mhfcwyk8/1/' target='_blank'>@ravimallya</a><br> background and decorative gifs by <a href='https://scottvandyne.tumblr.com' target='_blank'>scottvandyne</a> (first and last), me (second and third), and kaeeveoh-art(decorations).";
+  document.getElementById('contacts').innerHTML = "contact me! <i class='far fa-envelope'></i>"
 }

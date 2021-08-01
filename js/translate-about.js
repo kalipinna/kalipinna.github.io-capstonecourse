@@ -26,10 +26,8 @@ function ita() {
   document.getElementById('ps').innerHTML = " photoshop";
   document.getElementById('ps').nextElementSibling.innerHTML = "questo è abbastanza ovvio ma dovevo menzionarlo qui almeno una volta: come potete notare guardando la maggior parte degli sfondi in questo portfolio, amo prendere foto, dipinti, con il permesso dell'autore, e modificarli per farne sfondi, copertine, o semplicemente gifs!";
   document.getElementById('studi').innerHTML = " studi";
-  document.getElementById('studi').nextElementSibling.innerHTML = "ho una laurea in scienze e tecniche psicologiche e una magistrale in psicologio dello sviluppo e dei processi socio-lavorativi (e un grande amore per la clinica). Sto ancora aspettando di poter fare il mio tirocinio! La verità è che porto con me tutto ciò che ho studiato, e che a volte ho persino dibattuto con amici a proposito di personaggi di telefilm (ora, è soltanto per divertimento e sono tutte ipotesi! So che personaggi immaginari non possono essere analizzati davvero!) e di come le persone reali non reagirebbe così a ciò che gli accade - ciò mi ha portato a scrivere una tesi sul disturbo post-traumatico proprio per la rabbia contro il modo in cui i traumi venivano trattati con leggerezza dai media (e naturalmente anche per il mio enorme interesse nell'argomento). Non c'è probabilmente bisogno di dire che leggo anche troppo su qualsiasi argomento mi colpisca, anche se le mie fonti di apprendimento preferite sono altre persone che condividono le loro lotte e i loro percorsi, dandomi un punto di vista sulla terapia e sulle aspettative che la società ha verso di loro che nessun libro potrebbe offrirmi."
-
+  document.getElementById('studi').nextElementSibling.innerHTML = "ho una laurea in scienze e tecniche psicologiche e una magistrale in psicologia dello sviluppo e dei processi socio-lavorativi (e un grande amore per la clinica). Sto ancora aspettando di poter fare il mio tirocinio! La verità è che porto con me tutto ciò che ho studiato, e che a volte ho persino dibattuto con amici a proposito di personaggi di telefilm (ora, è soltanto per divertimento e sono tutte ipotesi! So che personaggi immaginari non possono essere analizzati davvero!) e di come le persone reali non reagirebbe così a ciò che gli accade - ciò mi ha portato a scrivere una tesi sul disturbo post-traumatico proprio per la rabbia contro il modo in cui i traumi venivano trattati con leggerezza dai media (e naturalmente anche per il mio enorme interesse nell'argomento). Non c'è probabilmente bisogno di dire che leggo anche troppo su qualsiasi argomento mi colpisca, anche se le mie fonti di apprendimento preferite sono altre persone che condividono le loro lotte e i loro percorsi, dandomi un punto di vista sulla terapia e sulle aspettative che la società ha verso di loro che nessun libro potrebbe offrirmi."
   document.getElementById('description').innerHTML = "se non hai cliccato su nulla, ecco un bel paesaggio per te."
-
   document.getElementById('ido').innerHTML = "che altro dire:"
   document.getElementById('ido1').innerHTML = "ho tradotto un fumetto dall'italiano all'inglese";
   document.getElementById('ido2').innerHTML = "sono una caregiver part-time per un anziano (il momento della giornata in cui la maggior parte degli hobby discussi sopra avvengono: lui vuole guardarsi un po' di tv? Io nel frattempo modifico immagini o gioco a qualcosa)";
@@ -75,8 +73,8 @@ function eng() {
 
   document.getElementById('ido').innerHTML = "what else:"
   document.getElementById('ido1').innerHTML = "I translated a comic book from Italian to English";
-  document.getElementById('ido2').innerHTML = "I'm a part-time caregiver for an elderly man (this would be the time when most of the hobbies above happen: he feels like watching tv? I can edit pictures on photoshop or play a game)";
-  document.getElementById('id3').innerHTML = " I take online classes to learn new interesting subjects or to advance in old ones";
+  document.getElementById('ido2').innerHTML = "I am a part-time caregiver for an elderly man (this would be the time when most of the hobbies above happen: he feels like watching tv? I can edit pictures on photoshop or play a game)";
+  document.getElementById('ido3').innerHTML = "I take online classes to learn new interesting subjects or to advance in old ones";
   document.getElementById('thanks').innerHTML = "thank you for your attention!"
   document.getElementById('thanks').style.fontFamily = "chopin";
   document.getElementById('credits').innerHTML = "credits:";
